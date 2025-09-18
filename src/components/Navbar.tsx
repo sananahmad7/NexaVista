@@ -10,16 +10,16 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-sm ">
-      <div className=" py-2 max-w-full mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="  flex justify-between items-center h-20">
+      <div className=" py-2 max-w-full mx-auto px-6 sm:px-8 lg:px-2">
+        <div className="  flex justify-between items-center h-17">
           {/* Logo Section - Left */}
           <div className="flex-shrink-0">
             <Image
               src="/logo.png" // replace with your logo path
               alt="Logo"
               className="object-contain"
-              height={60}
-              width={80}
+              height={50}
+              width={70}
             />
           </div>
 
@@ -27,7 +27,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center space-x-13">
             <Link
               href="/"
-              className="text-[#5c5558]  hover:text-[#775d3b] text-2xl font-semibold transition-colors duration-200"
+              className="text-[#5c5558]  hover:text-[#775d3b] text-lg lg:text-xl font-semibold transition-colors duration-200"
             >
               Home
             </Link>
@@ -36,7 +36,7 @@ const Navbar = () => {
             <div className="relative">
               <button
                 onClick={() => setIsServicesOpen(!isServicesOpen)}
-                className="flex items-center space-x-1 text-[#5c5558]  hover:text-[#775d3b] text-2xl font-semibold transition-colors duration-200"
+                className="flex items-center space-x-1 text-[#5c5558]  hover:text-[#775d3b] text-lg lg:text-xl font-semibold transition-colors duration-200"
               >
                 <span>Services</span>
                 <ChevronDown
@@ -51,28 +51,28 @@ const Navbar = () => {
                 <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50">
                   <Link
                     href="/services/web-development"
-                    className="block px-4 py-2 text-[#5c5558]  hover:text-[#775d3b] text-lg font-semibold transition-colors duration-200"
+                    className="block px-4 py-2 text-[#5c5558]  hover:text-[#775d3b] text-md font-normal transition-colors duration-200"
                     onClick={() => setIsServicesOpen(false)}
                   >
                     Web Development
                   </Link>
                   <Link
                     href="/services/mobile-apps"
-                    className="block px-4 py-2 text-[#5c5558]  hover:text-[#775d3b] text-lg font-semibold transition-colors duration-200"
+                    className="block px-4 py-2 text-[#5c5558]  hover:text-[#775d3b] text-md font-normal transition-colors duration-200"
                     onClick={() => setIsServicesOpen(false)}
                   >
                     Mobile Applications
                   </Link>
                   <Link
                     href="/services/consulting"
-                    className="block px-4 py-2 text-[#5c5558]  hover:text-[#775d3b] text-lg font-semibold transition-colors duration-200"
+                    className="block px-4 py-2 text-[#5c5558]  hover:text-[#775d3b] text-md font-normal transition-colors duration-200"
                     onClick={() => setIsServicesOpen(false)}
                   >
                     IT Consulting
                   </Link>
                   <Link
                     href="/services/digital-marketing"
-                    className="block px-4 py-2 text-[#5c5558]  hover:text-[#775d3b] text-lg font-semibold transition-colors duration-200"
+                    className="block px-4 py-2 text-[#5c5558]  hover:text-[#775d3b] text-md font-normal transition-colors duration-200"
                     onClick={() => setIsServicesOpen(false)}
                   >
                     Digital Marketing
@@ -83,14 +83,14 @@ const Navbar = () => {
 
             <Link
               href="/customers"
-              className=" text-[#5c5558]  hover:text-[#775d3b] text-2xl font-semibold transition-colors duration-200"
+              className=" text-[#5c5558]  hover:text-[#775d3b] text-lg lg:text-xl font-semibold transition-colors duration-200"
             >
               Customers
             </Link>
 
             <Link
               href="/About"
-              className="text-[#5c5558]  hover:text-[#775d3b] text-2xl font-semibold transition-colors duration-200"
+              className="text-[#5c5558]  hover:text-[#775d3b] text-lg lg:text-xl font-semibold transition-colors duration-200"
             >
               About Us
             </Link>
@@ -100,7 +100,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center">
             <Link
               href="/contact"
-              className="bg-[#5c5558] hover:bg-[#775d3b] text-white px-8 py-3 rounded-lg font-medium text-lg transition-colors duration-200"
+              className="bg-[#5c5558] hover:bg-[#775d3b] text-white px-8 py-3 rounded-lg font-medium text-sm transition-colors duration-200"
             >
               Book an appointment
             </Link>
@@ -113,9 +113,9 @@ const Navbar = () => {
               className="text-black hover:text-[#775d3b] p-2"
             >
               {isMobileMenuOpen ? (
-                <X className="w-12 h-12" />
+                <X className="w-8 h-8" />
               ) : (
-                <Menu className="w-12 h-12" />
+                <Menu className="w-8 h-8" />
               )}
             </button>
           </div>
@@ -127,7 +127,7 @@ const Navbar = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
               <Link
                 href="/"
-                className="block px-3 py-2 text-black hover:text-[#775d3b] font-medium text-lg transition-colors duration-200"
+                className="block px-3 py-2 text-black hover:text-[#775d3b] font-medium text-sm transition-colors duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Home
@@ -135,7 +135,7 @@ const Navbar = () => {
 
               <Link
                 href="/services"
-                className="block px-3 py-2 text-black hover:text-[#775d3b] font-medium text-lg transition-colors duration-200"
+                className="block px-3 py-2 text-black hover:text-[#775d3b] font-medium text-sm transition-colors duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Services
@@ -143,7 +143,7 @@ const Navbar = () => {
 
               <Link
                 href="/customers"
-                className="block px-3 py-2 text-black hover:text-[#775d3b] font-medium text-lg transition-colors duration-200"
+                className="block px-3 py-2 text-black hover:text-[#775d3b] font-medium text-sm transition-colors duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Customers
@@ -151,7 +151,7 @@ const Navbar = () => {
 
               <Link
                 href="/About"
-                className="block px-3 py-2 text-black hover:text-[#775d3b] font-medium text-lg transition-colors duration-200"
+                className="block px-3 py-2 text-black hover:text-[#775d3b] font-medium text-sm transition-colors duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 About Us
@@ -161,7 +161,7 @@ const Navbar = () => {
               <div className="pt-4">
                 <Link
                   href="/contact"
-                  className="block w-full text-center bg-[#5c5558] hover:bg-[#775d3b] text-white px-8 py-3 rounded-lg font-medium text-lg transition-colors duration-200"
+                  className="block w-full text-center bg-[#5c5558] hover:bg-[#775d3b] text-white px-8 py-3 rounded-lg font-medium text-sm transition-colors duration-200"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Book an appointment
