@@ -1,62 +1,81 @@
 "use client";
-
+import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import React, { useState } from "react";
+import { ChevronDown, X, Menu } from "lucide-react";
 
 const Navbar = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-sm border-b border-gray-100">
-      <div className=" border max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo Section - Left placeholder */}
+    <nav className="bg-white shadow-sm ">
+      <div className=" py-2 max-w-full mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="  flex justify-between items-center h-20">
+          {/* Logo Section - Left */}
           <div className="flex-shrink-0">
-            <div className="w-20 h-8 bg-gray-200 rounded flex items-center justify-center text-sm text-gray-500">
-              Logo
-            </div>
+            <Image
+              src="/logo.png" // replace with your logo path
+              alt="Logo"
+              className="object-contain"
+              height={60}
+              width={80}
+            />
           </div>
 
           {/* Navigation Links - Center */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-13">
+            <Link
+              href="/"
+              className="text-[#5c5558]  hover:text-[#775d3b] text-2xl font-semibold transition-colors duration-200"
+            >
+              Home
+            </Link>
+
             {/* Services Dropdown */}
             <div className="relative">
               <button
                 onClick={() => setIsServicesOpen(!isServicesOpen)}
-                className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+                className="flex items-center space-x-1 text-[#5c5558]  hover:text-[#775d3b] text-2xl font-semibold transition-colors duration-200"
               >
                 <span>Services</span>
-                <ChevronDown 
+                <ChevronDown
                   className={`w-4 h-4 transition-transform duration-200 ${
-                    isServicesOpen ? 'rotate-180' : ''
-                  }`} 
+                    isServicesOpen ? "rotate-180" : ""
+                  }`}
                 />
               </button>
-              
+
               {/* Dropdown Menu */}
               {isServicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50">
                   <Link
                     href="/services/web-development"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"
+                    className="block px-4 py-2 text-[#5c5558]  hover:text-[#775d3b] text-lg font-semibold transition-colors duration-200"
                     onClick={() => setIsServicesOpen(false)}
                   >
                     Web Development
                   </Link>
                   <Link
                     href="/services/mobile-apps"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"
+                    className="block px-4 py-2 text-[#5c5558]  hover:text-[#775d3b] text-lg font-semibold transition-colors duration-200"
                     onClick={() => setIsServicesOpen(false)}
                   >
                     Mobile Applications
                   </Link>
                   <Link
                     href="/services/consulting"
-                    className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"
+                    className="block px-4 py-2 text-[#5c5558]  hover:text-[#775d3b] text-lg font-semibold transition-colors duration-200"
                     onClick={() => setIsServicesOpen(false)}
                   >
                     IT Consulting
+                  </Link>
+                  <Link
+                    href="/services/digital-marketing"
+                    className="block px-4 py-2 text-[#5c5558]  hover:text-[#775d3b] text-lg font-semibold transition-colors duration-200"
+                    onClick={() => setIsServicesOpen(false)}
+                  >
+                    Digital Marketing
                   </Link>
                 </div>
               )}
@@ -64,59 +83,99 @@ const Navbar = () => {
 
             <Link
               href="/customers"
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+              className=" text-[#5c5558]  hover:text-[#775d3b] text-2xl font-semibold transition-colors duration-200"
             >
               Customers
             </Link>
 
             <Link
-              href="/company"
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
+              href="/About"
+              className="text-[#5c5558]  hover:text-[#775d3b] text-2xl font-semibold transition-colors duration-200"
             >
-              Company
+              About Us
             </Link>
-
-            <Link
-              href="/careers"
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
-            >
-              Careers
-            </Link>
-
-            {/* Resources Dropdown */}
-            <div className="relative">
-              <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
-                <span>Resources</span>
-                <ChevronDown className="w-4 h-4" />
-              </button>
-            </div>
           </div>
 
-          {/* Get In Touch Button - Right */}
-          <div className="flex items-center">
+          {/* Book an appointment Button - Right */}
+          <div className="hidden lg:flex items-center">
             <Link
               href="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
+              className="bg-[#5c5558] hover:bg-[#775d3b] text-white px-8 py-3 rounded-lg font-medium text-lg transition-colors duration-200"
             >
-              Get In Touch
+              Book an appointment
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button className="text-gray-700 hover:text-blue-600">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+          <div className="lg:hidden">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-black hover:text-[#775d3b] p-2"
+            >
+              {isMobileMenuOpen ? (
+                <X className="w-12 h-12" />
+              ) : (
+                <Menu className="w-12 h-12" />
+              )}
             </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="lg:hidden relative z-50">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+              <Link
+                href="/"
+                className="block px-3 py-2 text-black hover:text-[#775d3b] font-medium text-lg transition-colors duration-200"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Home
+              </Link>
+
+              <Link
+                href="/services"
+                className="block px-3 py-2 text-black hover:text-[#775d3b] font-medium text-lg transition-colors duration-200"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Services
+              </Link>
+
+              <Link
+                href="/customers"
+                className="block px-3 py-2 text-black hover:text-[#775d3b] font-medium text-lg transition-colors duration-200"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Customers
+              </Link>
+
+              <Link
+                href="/About"
+                className="block px-3 py-2 text-black hover:text-[#775d3b] font-medium text-lg transition-colors duration-200"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                About Us
+              </Link>
+
+              {/* Mobile CTA Button */}
+              <div className="pt-4">
+                <Link
+                  href="/contact"
+                  className="block w-full text-center bg-[#5c5558] hover:bg-[#775d3b] text-white px-8 py-3 rounded-lg font-medium text-lg transition-colors duration-200"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Book an appointment
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Overlay to close dropdown when clicking outside */}
       {isServicesOpen && (
-        <div 
-          className="fixed inset-0 z-40" 
+        <div
+          className="fixed inset-0 z-40"
           onClick={() => setIsServicesOpen(false)}
         />
       )}
