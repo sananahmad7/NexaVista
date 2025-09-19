@@ -3,7 +3,7 @@ import React from "react";
 const AboutUs = () => {
   return (
     <div>
-      <p>This should show in small screen</p>
+      <p className="hidden xs:flex">This should show in xs screen</p>
       <p className="hidden md:flex">
         This should show in medium and above screen
       </p>

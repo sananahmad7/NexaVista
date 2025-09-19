@@ -14,64 +14,74 @@ interface Service {
 
 const services: Service[] = [
   {
-    id: "advisory",
-    title: "Advisory",
-    description: "Expert guidance to drive digital growth",
+    id: "webapp",
+    title: "Full-Stack Web Apps",
+    description:
+      "Modern, scalable web applications built for performance and growth",
     features: [
-      "Discovery Workshop",
-      "Market Research",
-      "Technical Feasibility Study",
-      "UX Design",
-      "Digital Transformation",
+      "Custom Web Development",
+      "API & Backend Integration",
+      "Responsive UI/UX",
+      "E-Commerce Solutions",
+      "Cloud Deployment",
     ],
     bgColor: "bg-[#1b232e]",
     textColor: "text-white",
-    icon: <Image src="/img.png" alt="advisory" height={400} width={400} />,
+    icon: <Image src="/img.png" alt="web app" height={400} width={400} />,
   },
   {
-    id: "ai",
-    title: "Artificial Intelligence",
-    description: "AI solutions that automate and innovate",
+    id: "mobile",
+    title: "Mobile Applications",
+    description: "Seamless mobile experiences across iOS and Android",
     features: [
-      "Machine Learning Models",
-      "Natural Language Processing",
-      "Computer Vision",
-      "Predictive Analytics",
-      "AI Integration",
+      "Cross-Platform Apps",
+      "Native App Development",
+      "App Store Deployment",
+      "Mobile UI/UX Design",
+      "Maintenance & Support",
     ],
     bgColor: "bg-gray-200",
     textColor: "text-gray-800",
-    icon: <Image src="/ai.png" alt="advisory" height={400} width={400} />,
+    icon: <Image src="/ai.png" alt="mobile app" height={400} width={400} />,
   },
   {
-    id: "engineering",
-    title: "Engineering",
-    description: "Building robust, future-ready digital solutions",
+    id: "marketing",
+    title: "Digital Marketing",
+    description: "Data-driven strategies to boost your brand visibility",
     features: [
-      "Application Modernization",
-      "Application Development",
-      "PoC Development",
-      "Cloud Engineering",
-      "Product Development",
+      "SEO & SEM Campaigns",
+      "Social Media Marketing",
+      "Content Strategy",
+      "Email Marketing",
+      "Analytics & Reporting",
     ],
-    bgColor: "bg-blue-600",
+    bgColor: "bg-[#1F59BC]",
     textColor: "text-white",
-    icon: <Image src="/eng.png" alt="advisory" height={400} width={400} />,
+    icon: (
+      <Image src="/eng.png" alt="digital marketing" height={400} width={400} />
+    ),
   },
   {
-    id: "business",
-    title: "Business Enablement",
-    description: "Tools to boost operational efficiency",
+    id: "design",
+    title: "Graphic Design",
+    description: "Creative visuals that connect with your audience",
     features: [
-      "Process Automation",
-      "Business Intelligence",
-      "Workflow Optimization",
-      "Performance Analytics",
-      "Integration Solutions",
+      "Brand Identity & Logos",
+      "Marketing Collateral",
+      "UI/UX Mockups",
+      "Illustrations & Icons",
+      "Print & Digital Assets",
     ],
     bgColor: "bg-[#04338c]",
     textColor: "text-white",
-    icon: <Image src="/business.png" alt="advisory" height={400} width={400} />,
+    icon: (
+      <Image
+        src="/business.png"
+        alt="graphic design"
+        height={400}
+        width={400}
+      />
+    ),
   },
 ];
 
@@ -93,26 +103,26 @@ const Services: React.FC = () => {
         </div>
 
         {/* Services Grid */}
-        <div className=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {services.map((service) => (
             <div
-              onMouseEnter={() => setHoveredService(service.id)}
-              onMouseLeave={() => setHoveredService(null)}
               key={service.id}
-              className="relative max-w-sm mx-auto h-[60vh] lg:h-[70vh] cursor-pointer  mb-15 transition-all duration-300 ease-in-out"
+              className="relative max-w-3xl mx-1 h-[60vh] lg:h-[70vh] cursor-pointer  mb-15 transition-all duration-300 ease-in-out"
             >
               {/* Main Service Card */}
               <div
                 className={`
                 relative h-full ${service.bgColor} ${service.textColor} p-8 
                 flex flex-col justify-between overflow-hidden
-                transition-transform duration-300 ease-in-out
+                transition-transform duration-300 ease-in-out rounded-3xl
                   ${
                     hoveredService === service.id
                       ? "transform -translate-y-[-20]"
                       : ""
                   }
                 `}
+                onMouseEnter={() => setHoveredService(service.id)}
+                onMouseLeave={() => setHoveredService(null)}
               >
                 {/* Icon */}
                 <div className="flex-1 flex items-center justify-center">

@@ -33,6 +33,7 @@
   --font-mono: var(--font-geist-mono);
    --font-poppins: "Poppins", sans-serif;
 
+  --breakpoint-xs: 360px;
 
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
