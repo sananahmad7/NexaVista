@@ -66,8 +66,8 @@ const OurImpact: React.FC = () => {
               <br />
               system efficiency boost.
             </h2>
-            <button className="bg-gray-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:transform hover:scale-105 shadow-lg hover:shadow-xl">
-              Let's Work Together
+            <button className="bg-gray-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:transform hover:scale-101 shadow-lg hover:shadow-xl">
+              Let&apos;s Work Together
             </button>
           </div>
 
