@@ -27,7 +27,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center space-x-13">
             <Link
               href="/"
-              className="text-[#5c5558]  hover:text-[#775d3b] text-lg lg:text-xl font-semibold transition-colors duration-200"
+              className="text-[#5c5558]  hover:text-[#775d3b] text-md lg:text-lg font-semibold transition-colors duration-200"
             >
               Home
             </Link>
@@ -36,7 +36,7 @@ const Navbar = () => {
             <div className="relative">
               <button
                 onClick={() => setIsServicesOpen(!isServicesOpen)}
-                className="flex items-center space-x-1 text-[#5c5558]  hover:text-[#775d3b] text-lg lg:text-xl font-semibold transition-colors duration-200"
+                className="flex items-center space-x-1 text-[#5c5558]  hover:text-[#775d3b] text-md lg:text-lg font-semibold transition-colors duration-200"
               >
                 <span>Services</span>
                 <ChevronDown
@@ -83,14 +83,14 @@ const Navbar = () => {
 
             <Link
               href="/customers"
-              className=" text-[#5c5558]  hover:text-[#775d3b] text-lg lg:text-xl font-semibold transition-colors duration-200"
+              className=" text-[#5c5558]  hover:text-[#775d3b] text-md lg:text-lg font-semibold transition-colors duration-200"
             >
               Customers
             </Link>
 
             <Link
               href="/About"
-              className="text-[#5c5558]  hover:text-[#775d3b] text-lg lg:text-xl font-semibold transition-colors duration-200"
+              className="text-[#5c5558]  hover:text-[#775d3b] text-md lg:text-lg font-semibold transition-colors duration-200"
             >
               About Us
             </Link>
