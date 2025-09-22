@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Stat = () => {
   return (
     <section className="bg-[#252223] text-white py-20 px-9 lg:px-12 ">
@@ -25,23 +27,29 @@ const Stat = () => {
                 {/* Team Photos */}
                 <div className="flex -space-x-3">
                   <div className="w-14 h-14 rounded-full border-3 border-[#252223] overflow-hidden">
-                    <img
+                    <Image
                       src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=64&h=64&fit=crop&crop=face"
                       alt="Team member"
+                      width={56}
+                      height={56}
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="w-14 h-14 rounded-full border-3 border-[#252223] overflow-hidden">
-                    <img
+                    <Image
                       src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=64&h=64&fit=crop&crop=face"
                       alt="Team member"
+                      width={56}
+                      height={56}
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="w-14 h-14 rounded-full border-3 border-[#252223] overflow-hidden">
-                    <img
+                    <Image
                       src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=64&h=64&fit=crop&crop=face"
                       alt="Team member"
+                      width={56}
+                      height={56}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -54,16 +62,18 @@ const Stat = () => {
             {/* Description */}
             <p className="text-gray-400 text-base leading-relaxed">
               We specialize in delivering cutting-edge solutions tailored to
-              your needs. Whether you're looking you succeed.
+              your needs. Whether you&apos;re looking you succeed.
             </p>
           </div>
 
           {/* Office Image */}
           <div className="mb-0">
             <div className="rounded-t-2xl overflow-hidden">
-              <img
+              <Image
                 src="/office.png"
                 alt="Modern office meeting"
+                width={800}
+                height={300}
                 className="w-full h-[300px] object-cover"
               />
             </div>
@@ -118,23 +128,29 @@ const Stat = () => {
                   {/* Team Photos */}
                   <div className="flex -space-x-3">
                     <div className="w-16 h-16 rounded-full border-3 border-[#252223] overflow-hidden">
-                      <img
+                      <Image
                         src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=64&h=64&fit=crop&crop=face"
                         alt="Team member"
+                        width={64}
+                        height={64}
                         className="w-full h-full object-cover"
                       />
                     </div>
                     <div className="w-16 h-16 rounded-full border-3 border-[#252223] overflow-hidden">
-                      <img
+                      <Image
                         src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=64&h=64&fit=crop&crop=face"
                         alt="Team member"
+                        width={64}
+                        height={64}
                         className="w-full h-full object-cover"
                       />
                     </div>
                     <div className="w-16 h-16 rounded-full border-3 border-[#252223] overflow-hidden">
-                      <img
+                      <Image
                         src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=64&h=64&fit=crop&crop=face"
                         alt="Team member"
+                        width={64}
+                        height={64}
                         className="w-full h-full object-cover"
                       />
                     </div>
@@ -149,7 +165,7 @@ const Stat = () => {
               {/* Description */}
               <p className="text-gray-400 text-lg max-w-xl leading-relaxed">
                 We specialize in delivering cutting-edge solutions tailored to
-                your needs. Whether you're looking you succeed.
+                your needs. Whether you&apos;re looking you succeed.
               </p>
 
               {/* Circular Explore Badge */}
@@ -213,9 +229,11 @@ const Stat = () => {
               {/* Office Image */}
               <div className="flex-1">
                 <div className="rounded-l-2xl overflow-hidden shadow-2xl">
-                  <img
+                  <Image
                     src="/office.png"
                     alt="Modern office meeting"
+                    width={800}
+                    height={500}
                     className="w-full h-[500px] object-cover"
                   />
                 </div>

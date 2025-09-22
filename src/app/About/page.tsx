@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const timelineEvents = [
@@ -67,16 +67,17 @@ export default function AboutPage() {
   return (
     <main className="bg-white">
       {/* Full Screen Hero Section */}
-      <section className="relative h-screen w-full overflow-hidden">
+      <section className="relative w-full h-[80vh] lg:h-[88vh] xl:h-[80vh] 2xl:h-[75vh] overflow-hidden">
         <div className="absolute inset-0">
-          <img
+          <Image
             src="/office.jpg"
             alt="Software development team"
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            priority
           />
           <div className="absolute inset-0 bg-[#3F3A34]/60"></div>
         </div>
-
         <div className="relative z-10 flex items-center justify-center h-full text-center px-6">
           <div className="max-w-4xl">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -88,7 +89,6 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
@@ -167,16 +167,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Values Section - Modern Design */}
+      {/* Our Values Section */}
       <section className="py-16 px-6 lg:px-12 bg-gradient-to-br from-[#3F3A34] to-[#4A453E] relative overflow-hidden">
-        {/* Background Pattern - Subtle */}
         <div className="absolute inset-0 opacity-3">
           <div className="absolute top-32 left-32 w-64 h-64 bg-[#6C6259] rounded-full blur-3xl"></div>
           <div className="absolute bottom-32 right-32 w-80 h-80 bg-[#6C6259] rounded-full blur-3xl"></div>
         </div>
-
         <div className="max-w-6xl mx-auto relative z-10">
-          {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-2 tracking-tight">
               Our{" "}
@@ -192,7 +189,7 @@ export default function AboutPage() {
 
           {/* Values Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {/* Innovation Card */}
+            {/* Innovation */}
             <div className="group relative">
               <div className="absolute inset-0 bg-gradient-to-br from-[#6C6259] to-[#a68353] rounded-2xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
               <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 p-10 rounded-2xl hover:bg-white/8 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
@@ -222,17 +219,17 @@ export default function AboutPage() {
                       Innovation is at the heart of everything we do. We are
                       constantly exploring new technologies and methodologies to
                       provide our clients with cutting-edge solutions that give
-                      them a competitive edge. Whether it's developing a custom
-                      website, creating a mobile app, or crafting a digital
-                      marketing strategy, we approach each project with fresh
-                      ideas and a forward-thinking mindset.
+                      them a competitive edge. Whether it&apos;s developing a
+                      custom website, creating a mobile app, or crafting a
+                      digital marketing strategy, we approach each project with
+                      fresh ideas and a forward-thinking mindset.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Client-Centricity Card */}
+            {/* Client-Centricity */}
             <div className="group relative">
               <div className="absolute inset-0 bg-gradient-to-br from-[#a68353] to-[#6C6259] rounded-2xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
               <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 p-10 rounded-2xl hover:bg-white/8 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
@@ -272,7 +269,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Excellence Card */}
+            {/* Excellence */}
             <div className="group relative">
               <div className="absolute inset-0 bg-gradient-to-br from-[#6C6259] to-[#a68353] rounded-2xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
               <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 p-10 rounded-2xl hover:bg-white/8 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
@@ -311,7 +308,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Integrity Card */}
+            {/* Integrity */}
             <div className="group relative">
               <div className="absolute inset-0 bg-gradient-to-br from-[#a68353] to-[#6C6259] rounded-2xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
               <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 p-10 rounded-2xl hover:bg-white/8 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl">
@@ -353,7 +350,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Our Story Section */}
       <section className="py-20 px-6 lg:px-12 bg-white">
         <div className="max-w-6xl mx-auto">
@@ -389,16 +385,18 @@ export default function AboutPage() {
               <p className="text-gray-200 text-lg leading-relaxed">
                 At NexaVista Technologies, our mission is simple: to help our
                 clients succeed in the digital world. We aim to deliver tailored
-                solutions that not only meet but exceed our clients’
+                solutions that not only meet but exceed our clients&apos;
                 expectations. By combining our technical expertise with a deep
-                understanding of our clients’ needs, we create digital
+                understanding of our clients&apos; needs, we create digital
                 experiences that are not only functional but also impactful.
               </p>
             </div>
             <div className="lg:w-1/2">
-              <img
+              <Image
                 src="/mission.jpg"
                 alt="Business partnership and digital innovation"
+                width={800}
+                height={600}
                 className="w-full h-auto rounded-lg shadow-lg"
               />
             </div>
@@ -415,16 +413,18 @@ export default function AboutPage() {
                 Our <span className="text-[#6C6259]">Vision</span>
               </h2>
               <p className="text-gray-700 text-lg leading-relaxed">
-                In today’s mobile-first world, having an app that connects with
-                your audience is crucial. We specialize in developing mobile
-                applications that are intuitive, responsive, and engaging,
-                ensuring that your brand is always within reach.
+                In today&apos;s mobile-first world, having an app that connects
+                with your audience is crucial. We specialize in developing
+                mobile applications that are intuitive, responsive, and
+                engaging, ensuring that your brand is always within reach.
               </p>
             </div>
             <div className="lg:w-1/2">
-              <img
+              <Image
                 src="/vision.jpg"
                 alt="Digital targeting and strategy"
+                width={800}
+                height={600}
                 className="w-full h-150 rounded-lg"
               />
             </div>
