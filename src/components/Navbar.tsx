@@ -27,7 +27,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center space-x-13">
             <Link
               href="/"
-              className="text-[#5c5558]  hover:text-[#775d3b] text-md lg:text-lg font-semibold transition-colors duration-200"
+              className="text-[#3F3A34]  hover:text-[#775d3b] text-md lg:text-lg font-semibold transition-colors duration-200"
             >
               Home
             </Link>
@@ -36,7 +36,7 @@ const Navbar = () => {
             <div className="relative">
               <button
                 onClick={() => setIsServicesOpen(!isServicesOpen)}
-                className="flex items-center space-x-1 text-[#5c5558]  hover:text-[#775d3b] text-md lg:text-lg font-semibold transition-colors duration-200"
+                className="flex items-center space-x-1 text-[#3F3A34]  hover:text-[#3F3A34] text-md lg:text-lg font-semibold transition-colors duration-200"
               >
                 <span>Services</span>
                 <ChevronDown
@@ -51,28 +51,28 @@ const Navbar = () => {
                 <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50">
                   <Link
                     href="/services/web-development"
-                    className="block px-4 py-2 text-[#5c5558]  hover:text-[#775d3b] text-md font-normal transition-colors duration-200"
+                    className="block px-4 py-2 text-[#3F3A34]  hover:text-[#3F3A34] text-md font-normal transition-colors duration-200"
                     onClick={() => setIsServicesOpen(false)}
                   >
                     Web Development
                   </Link>
                   <Link
                     href="/services/mobile-apps"
-                    className="block px-4 py-2 text-[#5c5558]  hover:text-[#775d3b] text-md font-normal transition-colors duration-200"
+                    className="block px-4 py-2 text-[#3F3A34]  hover:text-[#3F3A34] text-md font-normal transition-colors duration-200"
                     onClick={() => setIsServicesOpen(false)}
                   >
                     Mobile Applications
                   </Link>
                   <Link
                     href="/services/consulting"
-                    className="block px-4 py-2 text-[#5c5558]  hover:text-[#775d3b] text-md font-normal transition-colors duration-200"
+                    className="block px-4 py-2 text-[#3F3A34]  hover:text-[#3F3A34] text-md font-normal transition-colors duration-200"
                     onClick={() => setIsServicesOpen(false)}
                   >
                     IT Consulting
                   </Link>
                   <Link
                     href="/services/digital-marketing"
-                    className="block px-4 py-2 text-[#5c5558]  hover:text-[#775d3b] text-md font-normal transition-colors duration-200"
+                    className="block px-4 py-2 text-[#3F3A34]  hover:text-[#3F3A34] text-md font-normal transition-colors duration-200"
                     onClick={() => setIsServicesOpen(false)}
                   >
                     Digital Marketing
@@ -83,14 +83,14 @@ const Navbar = () => {
 
             <Link
               href="/customers"
-              className=" text-[#5c5558]  hover:text-[#775d3b] text-md lg:text-lg font-semibold transition-colors duration-200"
+              className=" text-[#3F3A34]  hover:text-[#775d3b] text-md lg:text-lg font-semibold transition-colors duration-200"
             >
               Customers
             </Link>
 
             <Link
               href="/About"
-              className="text-[#5c5558]  hover:text-[#775d3b] text-md lg:text-lg font-semibold transition-colors duration-200"
+              className="text-[#3F3A34]  hover:text-[#775d3b] text-md lg:text-lg font-semibold transition-colors duration-200"
             >
               About Us
             </Link>
@@ -100,7 +100,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center">
             <Link
               href="/contact"
-              className="bg-[#5c5558] hover:bg-[#775d3b] text-white px-8 py-3 rounded-lg font-medium text-sm transition-colors duration-200"
+              className="bg-[#3F3A34] hover:bg-[#775d3b] text-white px-8 py-3 rounded-lg font-medium text-sm transition-colors duration-200"
             >
               Book an appointment
             </Link>
