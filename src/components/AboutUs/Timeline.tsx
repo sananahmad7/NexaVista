@@ -53,7 +53,7 @@ const Timeline = () => {
           }
         });
       },
-      { threshold: 0.9 }
+      { threshold: 0 }
     );
 
     const timelineItems = document.querySelectorAll(".timeline-item");
@@ -94,7 +94,7 @@ const Timeline = () => {
                 {/* Year */}
                 <div className="md:w-1/2 flex justify-center md:justify-end">
                   <div
-                    className={`text-6xl md:text-7xl font-bold text-[#6C6259] ${
+                    className={`text-6xl md:text-7xl font-bold text-[#A68353] ${
                       event.side === "left"
                         ? "md:text-left md:pl-12"
                         : "md:text-right md:pr-12"

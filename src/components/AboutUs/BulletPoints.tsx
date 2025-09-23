@@ -1,4 +1,4 @@
-import { ArrowUpRight, DollarSign, Star, Shield } from "lucide-react";
+import { DollarSign, Star, Shield } from "lucide-react";
 import Image from "next/image";
 
 export default function CreativeSolutions() {

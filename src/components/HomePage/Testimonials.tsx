@@ -76,15 +76,6 @@ const TestimonialSection = () => {
     return () => clearInterval(interval);
   }, [testimonials.length]);
 
-  const getVisibleTestimonials = () => {
-    const visible = [];
-    for (let i = 0; i < 2; i++) {
-      const index = (currentIndex + i) % testimonials.length;
-      visible.push({ ...testimonials[index], displayIndex: i });
-    }
-    return visible;
-  };
-
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
@@ -133,7 +124,7 @@ const TestimonialSection = () => {
                   {/* Content */}
                   <div className="mb-6">
                     <p className="text-white text-lg leading-relaxed">
-                      "{testimonial.content}"
+                      &quot;{testimonial.content}&quot;
                     </p>
                   </div>
 

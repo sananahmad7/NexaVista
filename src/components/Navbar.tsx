@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <div className="w-full px-6 py-3">
       {/* ✅ Glassmorphism effect navbar */}
-      <nav className="max-w-6xl z-40 mx-auto bg-white/20 backdrop-blur-xl border border-white/30 shadow-md rounded-full">
+      <nav className="max-w-6xl z-0 mx-auto bg-white/20 backdrop-blur-xl border border-white/30 shadow-md rounded-full">
         <div className="flex items-center justify-between px-8 py-2">
           {/* Logo */}
           <div className="flex items-center space-x-3">
@@ -108,7 +108,7 @@ const Navbar = () => {
             </Link>
 
             <Link
-              href="/contact"
+              href="/Contact"
               className="text-gray-700 hover:text-gray-900 font-medium text-base transition-colors duration-200"
             >
               Contact Us
@@ -192,7 +192,7 @@ const Navbar = () => {
               </div>
 
               <Link
-                href="/about"
+                href="/About"
                 className="block py-2 text-gray-700 hover:text-gray-900 font-medium text-base"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -200,7 +200,7 @@ const Navbar = () => {
               </Link>
 
               <Link
-                href="/contact"
+                href="/Contact"
                 className="block py-2 text-gray-700 hover:text-gray-900 font-medium text-base"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
