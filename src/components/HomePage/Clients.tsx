@@ -24,7 +24,7 @@ export default function Client() {
               className="text-sm font-semibold tracking-[0.2em] uppercase mb-3 relative"
               style={{ color: "#6C6259" }}
             >
-              CLIENTS I&apos;VE WORKED WITH
+              CLIENTS WE HAVE WORKED WITH
             </h2>
             <div
               className="w-16 h-0.5 mx-auto"

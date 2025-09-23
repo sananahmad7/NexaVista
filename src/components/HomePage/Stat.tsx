@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Stat = () => {
   return (
-    <section className="bg-[#252223] text-white py-20 px-9 lg:px-12 ">
+    <section className="bg-[#252223] text-white py-16 px-9 lg:px-12 ">
       <div className="max-w-8xl mx-auto">
         {/* Mobile Layout */}
         <div className="lg:hidden">

@@ -136,26 +136,27 @@ const Services: React.FC = () => {
               {/* Features Panel - Slides up from bottom */}
               <div
                 className={`
-                absolute bottom-0 left-0 right-0 shadow shadow-gray-500 rounded-3xl  ${
-                  service.bgColor
-                } ${service.textColor}
-                transition-all duration-300 ease-in-out
-                ${
-                  hoveredService === service.id
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-full opacity-0"
-                }
-              `}
+                    absolute bottom-0 left-0 right-0 shadow shadow-gray-500 rounded-3xl  
+                    ${service.bgColor} ${service.textColor}
+                    transition-all duration-300 ease-in-out
+                    ${
+                      hoveredService === service.id
+                        ? "translate-y-0 opacity-100"
+                        : "translate-y-full opacity-0"
+                    }
+                  `}
               >
-                <div className="p-6 space-y-3">
+                <div className="p-6">
                   <h4 className="text-lg font-semibold mb-4 opacity-90">
                     Services Include:
                   </h4>
-                  <div className="space-y-2">
+
+                  {/* Flex row with wrapping */}
+                  <div className="flex flex-wrap gap-2">
                     {service.features.map((feature, index) => (
-                      <div
+                      <span
                         key={feature}
-                        className="transform transition-all duration-300 ease-in-out"
+                        className="inline-block px-2 py-1 rounded-full border border-current text-xs opacity-80 hover:opacity-100 transition-opacity duration-200"
                         style={{
                           transitionDelay:
                             hoveredService === service.id
@@ -163,15 +164,8 @@ const Services: React.FC = () => {
                               : "0ms",
                         }}
                       >
-                        <span
-                          className="
-                          inline-block px-4 py-2 rounded-full border border-current 
-                          text-sm opacity-80 hover:opacity-100 transition-opacity duration-200
-                        "
-                        >
-                          {feature}
-                        </span>
-                      </div>
+                        {feature}
+                      </span>
                     ))}
                   </div>
                 </div>
