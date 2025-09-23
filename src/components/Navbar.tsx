@@ -1,42 +1,66 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { ChevronDown, X, Menu } from "lucide-react";
 
 const Navbar = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsServicesOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
-    <nav className="bg-white shadow-sm ">
-      <div className=" py-2 max-w-full mx-auto px-6 sm:px-8 lg:px-2">
-        <div className="  flex justify-between items-center h-17">
-          {/* Logo Section - Left */}
-          <div className="flex-shrink-0">
+    <div className="w-full px-6 py-3">
+      {/* ✅ Glassmorphism effect navbar */}
+      <nav className="max-w-6xl z-40 mx-auto bg-white/20 backdrop-blur-xl border border-white/30 shadow-md rounded-full">
+        <div className="flex items-center justify-between px-8 py-2">
+          {/* Logo */}
+          <div className="flex items-center space-x-3">
             <Image
-              src="/logo.png" // replace with your logo path
-              alt="Logo"
+              src="/logo.png"
+              alt="CRAFT Logo"
+              width={32}
+              height={32}
               className="object-contain"
-              height={50}
-              width={70}
             />
           </div>
 
-          {/* Navigation Links - Center */}
-          <div className="hidden lg:flex items-center space-x-13">
+          {/* Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
             <Link
               href="/"
-              className="text-[#3F3A34]  hover:text-[#775d3b] text-md lg:text-lg font-semibold transition-colors duration-200"
+              className="text-gray-700 hover:text-gray-900 font-medium text-base transition-colors duration-200"
             >
               Home
             </Link>
 
-            {/* Services Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => setIsServicesOpen(!isServicesOpen)}
-                className="flex items-center space-x-1 text-[#3F3A34]  hover:text-[#3F3A34] text-md lg:text-lg font-semibold transition-colors duration-200"
+            {/* Services dropdown */}
+            <div
+              className="relative"
+              ref={dropdownRef}
+              onMouseEnter={() => setIsServicesOpen(true)}
+              onMouseLeave={() => setIsServicesOpen(false)}
+            >
+              <Link
+                href="/services"
+                className="flex items-center space-x-1 text-gray-700 hover:text-gray-900 font-medium text-base transition-colors duration-200"
               >
                 <span>Services</span>
                 <ChevronDown
@@ -44,36 +68,31 @@ const Navbar = () => {
                     isServicesOpen ? "rotate-180" : ""
                   }`}
                 />
-              </button>
+              </Link>
 
-              {/* Dropdown Menu */}
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50">
+                <div className="absolute top-4 left-1/2 transform -translate-x-1/2 mt-2 w-56 bg-white backdrop-blur-md rounded-2xl shadow-lg border border-white/40 py-2 z-40">
                   <Link
                     href="/services/web-development"
-                    className="block px-4 py-2 text-[#3F3A34]  hover:text-[#3F3A34] text-md font-normal transition-colors duration-200"
-                    onClick={() => setIsServicesOpen(false)}
+                    className="block px-6 py-3 text-gray-700 hover:text-gray-900 hover:bg-white/40 text-sm font-medium rounded-lg mx-2 transition-all"
                   >
                     Web Development
                   </Link>
                   <Link
-                    href="/services/mobile-apps"
-                    className="block px-4 py-2 text-[#3F3A34]  hover:text-[#3F3A34] text-md font-normal transition-colors duration-200"
-                    onClick={() => setIsServicesOpen(false)}
+                    href="/services/mobile-development"
+                    className="block px-6 py-3 text-gray-700 hover:text-gray-900 hover:bg-white/40 text-sm font-medium rounded-lg mx-2 transition-all"
                   >
-                    Mobile Applications
+                    Mobile Development
                   </Link>
                   <Link
-                    href="/services/consulting"
-                    className="block px-4 py-2 text-[#3F3A34]  hover:text-[#3F3A34] text-md font-normal transition-colors duration-200"
-                    onClick={() => setIsServicesOpen(false)}
+                    href="/services/graphic-designing"
+                    className="block px-6 py-3 text-gray-700 hover:text-gray-900 hover:bg-white/40 text-sm font-medium rounded-lg mx-2 transition-all"
                   >
-                    IT Consulting
+                    Graphic Designing
                   </Link>
                   <Link
                     href="/services/digital-marketing"
-                    className="block px-4 py-2 text-[#3F3A34]  hover:text-[#3F3A34] text-md font-normal transition-colors duration-200"
-                    onClick={() => setIsServicesOpen(false)}
+                    className="block px-6 py-3 text-gray-700 hover:text-gray-900 hover:bg-white/40 text-sm font-medium rounded-lg mx-2 transition-all"
                   >
                     Digital Marketing
                   </Link>
@@ -82,27 +101,27 @@ const Navbar = () => {
             </div>
 
             <Link
-              href="/customers"
-              className=" text-[#3F3A34]  hover:text-[#775d3b] text-md lg:text-lg font-semibold transition-colors duration-200"
-            >
-              Customers
-            </Link>
-
-            <Link
               href="/About"
-              className="text-[#3F3A34]  hover:text-[#775d3b] text-md lg:text-lg font-semibold transition-colors duration-200"
+              className="text-gray-700 hover:text-gray-900 font-medium text-base transition-colors duration-200"
             >
               About Us
             </Link>
-          </div>
 
-          {/* Book an appointment Button - Right */}
-          <div className="hidden lg:flex items-center">
             <Link
               href="/contact"
-              className="bg-[#3F3A34] hover:bg-[#775d3b] text-white px-8 py-3 rounded-lg font-medium text-sm transition-colors duration-200"
+              className="text-gray-700 hover:text-gray-900 font-medium text-base transition-colors duration-200"
             >
-              Book an appointment
+              Contact Us
+            </Link>
+          </div>
+
+          {/* CTA */}
+          <div className="hidden lg:flex items-center">
+            <Link
+              href="/book-appointment"
+              className="bg-black hover:bg-gray-800 text-white px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-200 hover:shadow-lg hover:scale-105"
+            >
+              Book an Appointment
             </Link>
           </div>
 
@@ -110,12 +129,12 @@ const Navbar = () => {
           <div className="lg:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-black hover:text-[#775d3b] p-2"
+              className="text-gray-700 hover:text-gray-900 p-2 rounded-full"
             >
               {isMobileMenuOpen ? (
-                <X className="w-8 h-8" />
+                <X className="w-6 h-6" />
               ) : (
-                <Menu className="w-8 h-8" />
+                <Menu className="w-6 h-6" />
               )}
             </button>
           </div>
@@ -123,63 +142,86 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden relative z-50">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+          <div className="lg:hidden border-t border-white/30 bg-white/20 backdrop-blur-xl rounded-b-3xl mt-2 shadow-lg">
+            <div className="px-6 pt-4 pb-6 space-y-3">
               <Link
                 href="/"
-                className="block px-3 py-2 text-black hover:text-[#775d3b] font-medium text-sm transition-colors duration-200"
+                className="block py-2 text-gray-700 hover:text-gray-900 font-medium text-base"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Home
               </Link>
 
-              <Link
-                href="/services"
-                className="block px-3 py-2 text-black hover:text-[#775d3b] font-medium text-sm transition-colors duration-200"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Services
-              </Link>
+              {/* Mobile Services */}
+              <div className="space-y-2">
+                <Link
+                  href="/services"
+                  className="block py-2 text-gray-700 hover:text-gray-900 font-medium text-base"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Services
+                </Link>
+                <Link
+                  href="/services/web-development"
+                  className="block py-2 pl-4 text-gray-600 hover:text-gray-900 text-base"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Web Development
+                </Link>
+                <Link
+                  href="/services/mobile-development"
+                  className="block py-2 pl-4 text-gray-600 hover:text-gray-900 text-base"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Mobile Development
+                </Link>
+                <Link
+                  href="/services/graphic-designing"
+                  className="block py-2 pl-4 text-gray-600 hover:text-gray-900 text-base"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Graphic Designing
+                </Link>
+                <Link
+                  href="/services/digital-marketing"
+                  className="block py-2 pl-4 text-gray-600 hover:text-gray-900 text-base"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Digital Marketing
+                </Link>
+              </div>
 
               <Link
-                href="/customers"
-                className="block px-3 py-2 text-black hover:text-[#775d3b] font-medium text-sm transition-colors duration-200"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Customers
-              </Link>
-
-              <Link
-                href="/About"
-                className="block px-3 py-2 text-black hover:text-[#775d3b] font-medium text-sm transition-colors duration-200"
+                href="/about"
+                className="block py-2 text-gray-700 hover:text-gray-900 font-medium text-base"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 About Us
               </Link>
 
-              {/* Mobile CTA Button */}
+              <Link
+                href="/contact"
+                className="block py-2 text-gray-700 hover:text-gray-900 font-medium text-base"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact Us
+              </Link>
+
+              {/* Mobile CTA */}
               <div className="pt-4">
                 <Link
-                  href="/contact"
-                  className="block w-full text-center bg-[#5c5558] hover:bg-[#775d3b] text-white px-8 py-3 rounded-lg font-medium text-sm transition-colors duration-200"
+                  href="/book-appointment"
+                  className="block w-full text-center bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-full font-bold text-base"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Book an appointment
+                  Book an Appointment
                 </Link>
               </div>
             </div>
           </div>
         )}
-      </div>
-
-      {/* Overlay to close dropdown when clicking outside */}
-      {isServicesOpen && (
-        <div
-          className="fixed inset-0 z-40"
-          onClick={() => setIsServicesOpen(false)}
-        />
-      )}
-    </nav>
+      </nav>
+    </div>
   );
 };
 

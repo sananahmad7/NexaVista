@@ -96,16 +96,16 @@ const Services: React.FC = () => {
         </div>
 
         {/* Services Grid */}
-        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 ">
           {services.map((service) => (
             <div
               key={service.id}
-              className="relative max-w-3xl mx-1 h-[60vh] lg:h-[70vh] cursor-pointer  mb-15 transition-all duration-300 ease-in-out "
+              className="relative max-w-3xl mx-1 h-[65vh] lg:h-[70vh] xl:h-[72vh] 2xl:h-[72vh] 3xl:h-[72vh]  cursor-pointer  mb-15 transition-all duration-300 ease-in-out "
             >
               {/* Main Service Card */}
               <div
                 className={`
-                relative h-full ${service.bgColor} ${service.textColor} p-8 
+                relative h-full  ${service.bgColor} ${service.textColor} p-8 
                 flex flex-col justify-between overflow-hidden
                 transition-transform duration-300 ease-in-out rounded-3xl shadow shadow-gray-400
                   ${

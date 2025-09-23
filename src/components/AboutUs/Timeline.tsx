@@ -53,7 +53,7 @@ const Timeline = () => {
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.9 }
     );
 
     const timelineItems = document.querySelectorAll(".timeline-item");
@@ -78,7 +78,7 @@ const Timeline = () => {
           <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-[#6C6259] hidden md:block"></div>
 
           {/* Timeline Events */}
-          <div className="space-y-12 md:space-y-20">
+          <div className="space-y-19 md:space-y-28">
             {timelineEvents.map((event, index) => (
               <div
                 key={index}
