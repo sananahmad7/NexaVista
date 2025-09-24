@@ -7,7 +7,7 @@ import Experience from "@/components/HomePage/Experience";
 import TestimonialSection from "@/components/HomePage/Testimonials";
 const Home = () => {
   return (
-    <div className="mt-5">
+    <div className="">
       <Hero />
       <Services />
       <Stat />

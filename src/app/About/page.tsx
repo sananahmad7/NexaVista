@@ -3,7 +3,7 @@ import Timeline from "@/components/AboutUs/Timeline";
 import BulletPoints from "@/components/AboutUs/BulletPoints";
 export default function AboutPage() {
   return (
-    <main className="bg-white">
+    <main className="bg-white ">
       {/* Full Screen Hero Section */}
       <section className="relative w-full h-[80vh] lg:h-[88vh] xl:h-[80vh] 2xl:h-[75vh] overflow-hidden">
         <div className="absolute inset-0 z-0">

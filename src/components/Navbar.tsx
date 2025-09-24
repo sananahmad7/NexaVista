@@ -27,7 +27,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="w-full mt-2 relative">
+    <div className="w-full mb-4 mt-2 relative">
       {/* Localized Background - only behind navbar */}
       <div className="absolute inset-0 -z-10  overflow-hidden max-w-6xl mx-auto ">
         <div
@@ -40,7 +40,7 @@ const Navbar = () => {
         {/* Floating background elements for depth - contained within navbar area */}
         <div className="absolute inset-0 overflow-hidden rounded-full">
           <div
-            className="absolute top-1/4 left-1/3 w-32 h-30 bg-white-100/20 rounded-full blur-2xl animate-pulse"
+            className="absolute top-1/4 left-1/3 w-32 h-30 bg-white-100/20 rounded-full blur-3xl animate-pulse"
             style={{ animationDuration: "4s" }}
           />
           <div
@@ -72,7 +72,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center space-x-8">
             <Link
               href="/"
-              className="text-gray-700 hover:text-gray-900 font-medium text-base transition-colors duration-200"
+              className="text-gray-700 hover:text-gray-900 font-poppins text-base transition-colors duration-200"
             >
               Home
             </Link>
@@ -85,8 +85,8 @@ const Navbar = () => {
               onMouseLeave={() => setIsServicesOpen(false)}
             >
               <Link
-                href="/services"
-                className="flex items-center space-x-1 text-gray-700 hover:text-gray-900 font-medium text-base transition-colors duration-200"
+                href="/Services"
+                className="flex items-center space-x-1 text-gray-700 hover:text-gray-900 font-poppins text-base transition-colors duration-200"
               >
                 <span>Services</span>
                 <ChevronDown
@@ -99,25 +99,25 @@ const Navbar = () => {
               {isServicesOpen && (
                 <div className="absolute top-4 left-1/2 transform -translate-x-1/2 mt-2 w-56 bg-white backdrop-blur-md rounded-2xl shadow-lg border border-white/40 py-2 z-40">
                   <Link
-                    href="/services/web-development"
+                    href="/Services/web-development"
                     className="block px-6 py-3 text-gray-700 hover:text-gray-900 hover:bg-white/40 text-sm font-medium rounded-lg mx-2 transition-all"
                   >
                     Web Development
                   </Link>
                   <Link
-                    href="/services/mobile-development"
+                    href="/Services/mobile-development"
                     className="block px-6 py-3 text-gray-700 hover:text-gray-900 hover:bg-white/40 text-sm font-medium rounded-lg mx-2 transition-all"
                   >
                     Mobile Development
                   </Link>
                   <Link
-                    href="/services/graphic-designing"
+                    href="/Services/graphic-designing"
                     className="block px-6 py-3 text-gray-700 hover:text-gray-900 hover:bg-white/40 text-sm font-medium rounded-lg mx-2 transition-all"
                   >
                     Graphic Designing
                   </Link>
                   <Link
-                    href="/services/digital-marketing"
+                    href="/Services/digital-marketing"
                     className="block px-6 py-3 text-gray-700 hover:text-gray-900 hover:bg-white/40 text-sm font-medium rounded-lg mx-2 transition-all"
                   >
                     Digital Marketing
@@ -181,14 +181,14 @@ const Navbar = () => {
               {/* Mobile Services */}
               <div className="space-y-2">
                 <Link
-                  href="/services"
+                  href="/Services"
                   className="block py-2 text-gray-700 hover:text-gray-900 font-medium text-base"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Services
                 </Link>
                 <Link
-                  href="/services/web-development"
+                  href="/Services/web-development"
                   className="block py-2 pl-4 text-gray-600 hover:text-gray-900 text-base"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
