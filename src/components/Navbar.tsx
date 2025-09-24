@@ -27,9 +27,35 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="w-full px-6 py-3">
+    <div className="w-full mt-2 relative">
+      {/* Localized Background - only behind navbar */}
+      <div className="absolute inset-0 -z-10  overflow-hidden max-w-6xl mx-auto ">
+        <div
+          className="absolute inset-0 rounded-full"
+          style={{
+            background:
+              "linear-gradient(135deg, #87CEEB 0%, #B0E0E6 50%, #E0F6FF 100%)",
+          }}
+        />
+        {/* Floating background elements for depth - contained within navbar area */}
+        <div className="absolute inset-0 overflow-hidden rounded-full">
+          <div
+            className="absolute top-1/4 left-1/3 w-32 h-30 bg-white-100/20 rounded-full blur-2xl animate-pulse"
+            style={{ animationDuration: "4s" }}
+          />
+          <div
+            className="absolute bottom-1/4 right-1/3 w-40 h-40 bg-sky-200/30 rounded-full blur-2xl animate-pulse"
+            style={{ animationDuration: "6s", animationDelay: "1s" }}
+          />
+          <div
+            className="absolute top-1/2 left-1/5 w-28 h-28 bg-blue-100/25 rounded-full blur-2xl animate-pulse"
+            style={{ animationDuration: "5s", animationDelay: "2s" }}
+          />
+        </div>
+      </div>
+
       {/* ✅ Glassmorphism effect navbar */}
-      <nav className="max-w-6xl z-0 mx-auto bg-white/20 backdrop-blur-xl border border-white/30 shadow-md rounded-full">
+      <nav className="max-w-6xl mx-auto bg-white/30 backdrop-blur-md shadow-md rounded-full relative z-10">
         <div className="flex items-center justify-between px-8 py-2">
           {/* Logo */}
           <div className="flex items-center space-x-3">
@@ -142,8 +168,8 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden border-t border-white/30 bg-white/20 backdrop-blur-xl rounded-b-3xl mt-2 shadow-lg">
-            <div className="px-6 pt-4 pb-6 space-y-3">
+          <div className="lg:hidden border-t px-0 border border-red-700 bg-white/20 backdrop-blur-xl rounded-b-3xl mt-2 shadow-lg">
+            <div className="px-5 py-0 space-y-3">
               <Link
                 href="/"
                 className="block py-2 text-gray-700 hover:text-gray-900 font-medium text-base"

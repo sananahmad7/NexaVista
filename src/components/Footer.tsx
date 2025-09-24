@@ -154,50 +154,35 @@ const Footer = () => {
           {/* More Resources Section */}
           <div className="lg:col-span-1">
             <h3 className="text-white font-bold text-lg mb-6 relative">
-              More Resources
-              <div className="absolute bottom-0 left-0 w-35 h-0.5 bg-[#A68353]"></div>
+              Additional Information
+              <div className="absolute bottom-0 left-0 w-48 h-0.5 bg-[#A68353]"></div>
             </h3>
 
             <ul className="space-y-4">
               <li>
-                <Link
-                  href="/blog"
-                  className="text-gray-300 hover:text-[#A68353] transition-colors duration-200 text-sm"
-                >
-                  Read Our Blog
-                </Link>
+                <span className="text-gray-300 hover:text-[#A68353] transition-colors duration-200 text-sm">
+                  Office No 1, Floor No 3, Plaza 74,
+                </span>
               </li>
               <li>
-                <Link
-                  href="/portfolio"
-                  className="text-gray-300 hover:text-[#A68353] transition-colors duration-200 text-sm"
-                >
-                  View Portfolio
-                </Link>
+                <span className="text-gray-300 hover:text-[#A68353] transition-colors duration-200 text-sm">
+                  Spring North Commercial,
+                </span>
               </li>
               <li>
-                <Link
-                  href="/about"
-                  className="text-gray-300 hover:text-[#A68353] transition-colors duration-200 text-sm"
-                >
-                  Our Company
-                </Link>
+                <span className="text-gray-300 hover:text-[#A68353] transition-colors duration-200 text-sm">
+                  Bahria Town Phase 7,
+                </span>
               </li>
               <li>
-                <Link
-                  href="/careers"
-                  className="text-gray-300 hover:text-[#A68353] transition-colors duration-200 text-sm"
-                >
-                  Careers
-                </Link>
+                <span className="text-gray-300 hover:text-[#A68353] transition-colors duration-200 text-sm">
+                  +92 (336) 8323237
+                </span>
               </li>
               <li>
-                <Link
-                  href="/support"
-                  className="text-gray-300 hover:text-[#A68353] transition-colors duration-200 text-sm"
-                >
-                  Support Center
-                </Link>
+                <span className="text-gray-300 hover:text-[#A68353] transition-colors duration-200 text-sm">
+                  sales@nexavistatech.com{" "}
+                </span>
               </li>
             </ul>
           </div>
@@ -213,14 +198,14 @@ const Footer = () => {
               <span>©2024 CRAFT. Privacy</span>
               <span className="hidden md:inline">|</span>
               <Link
-                href="/terms"
+                href="/Term"
                 className="hover:text-[#A68353] transition-colors duration-200"
               >
-                Terms
+                Term
               </Link>
               <span className="hidden md:inline">|</span>
               <Link
-                href="/privacy"
+                href="/PrivacyPolicy"
                 className="hover:text-[#A68353] transition-colors duration-200"
               >
                 Privacy & Inclusion
