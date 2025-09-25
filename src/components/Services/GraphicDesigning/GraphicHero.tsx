@@ -3,87 +3,87 @@ import React, { useState } from "react";
 import { ArrowRight } from "lucide-react";
 
 // Type definition for slides
-type MobileSlide = {
+type GraphicSlide = {
   category: string;
   title: string;
 };
 
-const MobileHero: React.FC = () => {
+const GraphicHero = () => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
 
-  const mobileSlides: MobileSlide[] = [
+  const graphicSlides: GraphicSlide[] = [
     {
-      category: "MOBILE DEV",
-      title: "Native iOS & Android Apps with Swift, Kotlin, and Java",
+      category: "DESIGN",
+      title: "Creative Branding & Visual Identity Solutions",
     },
     {
-      category: "MOBILE DEV",
-      title: "Cross-Platform Solutions with React Native & Flutter",
+      category: "DESIGN",
+      title: "UI/UX Designs That Enhance User Experiences",
     },
     {
-      category: "MOBILE DEV",
-      title: "Secure & Scalable Mobile Backends with Cloud Integration",
+      category: "DESIGN",
+      title: "Marketing Collaterals, Logos & Illustrations",
     },
   ];
 
   const nextSlide = (): void => {
-    setCurrentSlide((prev) => (prev + 1) % mobileSlides.length);
+    setCurrentSlide((prev) => (prev + 1) % graphicSlides.length);
   };
 
   return (
     <div className="bg-gray-50">
       <div className="flex items-start gap-2 lg:gap-3">
         {/* Left Section */}
-        <div className="flex-1 relative overflow-hidden text-white p-8 sm:p-12 lg:p-16 bg-[#1A475A]/90 backdrop-blur-md">
+        <div className="flex-1 relative overflow-hidden text-white p-8 sm:p-12 lg:p-16 bg-[#1B232E]">
           {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#1A475A]/90 via-[#1A475A]/70 to-[#12323F]/60 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#1B232E]/95 via-[#1B232E]/80 to-[#10151C]/70 pointer-events-none"></div>
 
           {/* Decorative blurred circles */}
-          <div className="absolute bottom-[-80] right-[-80] w-98 h-98 bg-cyan-400/20 rounded-full "></div>
+          <div className="absolute bottom-[-80] right-[-80] w-98 h-98 bg-purple-400/20 rounded-full "></div>
 
           {/* Content */}
-          <div className="relative z-10">
+          <div className="relative z-0">
             <div className="inline-block bg-white/10 backdrop-blur-md px-6 py-2 rounded-full text-sm font-medium mb-8 border border-white/20 shadow-sm">
-              ADVISORY
+              DESIGN
             </div>
 
             <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold leading-tight mb-8 max-w-4xl">
-              Mobile Application Development Solutions
+              Creative Design Solutions That Elevate Your Brand
             </h1>
 
-            <div className="text-gray-300 leading-relaxed mb-8 max-w-3xl">
+            <div className="text-gray-300 leading-relaxed mb-8 max-w-3xl py-3">
               <p className="mb-4 font-bold text-lg sm:text-xl">
-                Cutting-Edge Mobile Solutions Tailored for Modern Businesses
+                Where Creativity Meets Strategy
               </p>
               <p className="text-md">
-                In today’s fast-paced world, mobile applications are essential
-                for engaging customers and driving growth. At NexaVista
-                Technologies, we build custom mobile solutions that combine
-                functionality, performance, and sleek design. From native apps
-                to cross-platform frameworks, we help you launch mobile
-                experiences that stand out.
+                Visual identity is a powerful tool in today’s market. At
+                NexaVista Technologies, we understand that great design is more
+                than just aesthetics—it’s about communicating your brand’s
+                message in a way that resonates with your audience. Our graphic
+                designing services are tailored to bring your vision to life,
+                ensuring your brand stands out and leaves a lasting impression.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Right Section - Blog Carousel */}
+        {/* Right Section - Carousel */}
         <div className="hidden lg:flex w-96 flex-col">
           {/* Top Fixed Carousel Box */}
-          <div className="h-[400px] bg-[#1A475A]/90 backdrop-blur-md text-white relative border-3 border-red-800 flex flex-col">
+          <div className="h-[400px] bg-[#3A3256]/90 backdrop-blur-md text-white relative flex flex-col">
             <div className="flex flex-col relative z-10">
               <div className="flex-1 p-8 flex flex-col">
                 <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-8 w-fit border border-white/20">
-                  {mobileSlides[currentSlide].category}
+                  {graphicSlides[currentSlide].category}
                 </div>
 
                 <h2 className="text-2xl font-bold leading-tight mb-6">
-                  {mobileSlides[currentSlide].title}
+                  {graphicSlides[currentSlide].title}
                 </h2>
 
                 {/* Slide Indicators */}
                 <div className="flex space-x-2 mb-8">
-                  {mobileSlides.map((_, index) => (
+                  {graphicSlides.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentSlide(index)}
@@ -107,11 +107,11 @@ const MobileHero: React.FC = () => {
             </div>
           </div>
 
-          {/* Bottom Text (separate box, won't overlap) */}
+          {/* Bottom Text */}
           <div className="bg-white mt-4">
-            <div className="border-l-4 border-[#1A475A] pl-4">
-              <h3 className="text-lg sm:text-xl font-bold text-[#1A475A] leading-tight">
-                17+ Years of Building Impactful Mobile Experiences Worldwide.
+            <div className="border-l-4 border-[#1B232E] pl-4">
+              <h3 className="text-lg sm:text-xl font-bold text-[#1B232E] leading-tight">
+                12+ Years of Designing Memorable Brand Experiences Worldwide.
               </h3>
             </div>
           </div>
@@ -121,4 +121,4 @@ const MobileHero: React.FC = () => {
   );
 };
 
-export default MobileHero;
+export default GraphicHero;

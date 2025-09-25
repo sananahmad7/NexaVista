@@ -1,8 +1,16 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState, useEffect, useRef } from "react";
-import { ChevronDown, X, Menu } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import {
+  ChevronDown,
+  X,
+  Menu,
+  FileText,
+  Palette,
+  Smartphone,
+  TrendingUp,
+} from "lucide-react";
 
 const Navbar = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -31,7 +39,7 @@ const Navbar = () => {
       {/* Localized Background - only behind navbar */}
       <div className="absolute inset-0 -z-10  overflow-hidden max-w-6xl mx-auto ">
         <div
-          className="absolute inset-0 rounded-full"
+          className="absolute inset-0 rounded-full hidden lg:block"
           style={{
             background:
               "linear-gradient(135deg, #87CEEB 0%, #B0E0E6 50%, #E0F6FF 100%)",
@@ -97,31 +105,97 @@ const Navbar = () => {
               </Link>
 
               {isServicesOpen && (
-                <div className="absolute top-4 left-1/2 transform -translate-x-1/2 mt-2 w-56 bg-white backdrop-blur-md rounded-2xl shadow-lg border border-white/40 py-2 z-40">
-                  <Link
-                    href="/Services/web-development"
-                    className="block px-6 py-3 text-gray-700 hover:text-gray-900 hover:bg-white/40 text-sm font-medium rounded-lg mx-2 transition-all"
-                  >
-                    Web Development
-                  </Link>
-                  <Link
-                    href="/Services/mobile-development"
-                    className="block px-6 py-3 text-gray-700 hover:text-gray-900 hover:bg-white/40 text-sm font-medium rounded-lg mx-2 transition-all"
-                  >
-                    Mobile Development
-                  </Link>
-                  <Link
-                    href="/Services/graphic-designing"
-                    className="block px-6 py-3 text-gray-700 hover:text-gray-900 hover:bg-white/40 text-sm font-medium rounded-lg mx-2 transition-all"
-                  >
-                    Graphic Designing
-                  </Link>
-                  <Link
-                    href="/Services/digital-marketing"
-                    className="block px-6 py-3 text-gray-700 hover:text-gray-900 hover:bg-white/40 text-sm font-medium rounded-lg mx-2 transition-all"
-                  >
-                    Digital Marketing
-                  </Link>
+                <div className="absolute top-3 bg-gray-100 left-1/2 transform -translate-x-1/2 mt-2 w-[680px] rounded-2xl shadow-xl border border-white/20 py-4 px-3 z-40">
+                  <div className="grid grid-cols-2 gap-4">
+                    {/* Web Development */}
+                    <Link
+                      style={{
+                        background:
+                          "linear-gradient(135deg, #87CEEB 0%, #B0E0E6 50%, #E0F6FF 100%)",
+                      }}
+                      href="/Services/web-development"
+                      className="group flex items-start space-x-3 p-3 rounded-xl shadow-md hover:bg-white/20 transition-all duration-200"
+                    >
+                      <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                        <FileText className="w-5 h-5 text-gray-700" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-gray-900 text-md mb-1">
+                          Web Development
+                        </h3>
+                        <p className="text-gray-600 text-sm leading-relaxed">
+                          Modern, responsive websites built with cutting-edge
+                          technologies
+                        </p>
+                      </div>
+                    </Link>
+
+                    {/* Mobile Development */}
+                    <Link
+                      style={{
+                        background:
+                          "linear-gradient(135deg, #87CEEB 0%, #B0E0E6 50%, #E0F6FF 100%)",
+                      }}
+                      href="/Services/mobile-development"
+                      className="group flex items-start space-x-3 p-3 rounded-xl shadow-md hover:bg-white/20 transition-all duration-200"
+                    >
+                      <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                        <Smartphone className="w-5 h-5 text-gray-700" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-gray-900 text-md mb-1">
+                          Mobile Development
+                        </h3>
+                        <p className="text-gray-600 text-sm leading-relaxed">
+                          Native and cross-platform apps for iOS and Android
+                        </p>
+                      </div>
+                    </Link>
+
+                    {/* Graphic Design */}
+                    <Link
+                      style={{
+                        background:
+                          "linear-gradient(135deg, #87CEEB 0%, #B0E0E6 50%, #E0F6FF 100%)",
+                      }}
+                      href="/Services/graphic-designing"
+                      className="group flex items-start space-x-3 p-3 rounded-xl shadow-md hover:bg-white/20 transition-all duration-200"
+                    >
+                      <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                        <Palette className="w-5 h-5 text-gray-700" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-gray-900 text-md mb-1">
+                          Graphic Design
+                        </h3>
+                        <p className="text-gray-600 text-sm leading-relaxed">
+                          Creative visuals that make your brand stand out
+                        </p>
+                      </div>
+                    </Link>
+
+                    {/* Digital Marketing */}
+                    <Link
+                      style={{
+                        background:
+                          "linear-gradient(135deg, #87CEEB 0%, #B0E0E6 50%, #E0F6FF 100%)",
+                      }}
+                      href="/Services/digital-marketing"
+                      className="group flex items-start space-x-3 p-3 rounded-xl shadow-md hover:bg-white/20 transition-all duration-200"
+                    >
+                      <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center">
+                        <TrendingUp className="w-5 h-5 text-gray-700" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-gray-900 text-md mb-1">
+                          Digital Marketing
+                        </h3>
+                        <p className="text-gray-600 text-sm leading-relaxed">
+                          Strategic campaigns that grow your online presence
+                        </p>
+                      </div>
+                    </Link>
+                  </div>
                 </div>
               )}
             </div>
@@ -168,8 +242,8 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden border-t px-0 border border-red-700 bg-white/20 backdrop-blur-xl rounded-b-3xl mt-2 shadow-lg">
-            <div className="px-5 py-0 space-y-3">
+          <div className="lg:hidden border-t border-white/20 bg-white/90 backdrop-blur-lg rounded-b-3xl mt-2">
+            <div className="px-5 py-4 space-y-3">
               <Link
                 href="/"
                 className="block py-2 text-gray-700 hover:text-gray-900 font-medium text-base"
