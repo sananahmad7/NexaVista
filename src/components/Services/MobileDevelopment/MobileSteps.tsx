@@ -42,31 +42,31 @@ const MobileSteps: React.FC = () => {
 
   return (
     <div
-      className="min-h-screen py-16 px-4 sm:px-6 lg:px-8 mb-20"
+      className="min-h-screen py-16 px-4 sm:px-6 lg:px-8 mb-20 font-outfit"
       style={{ backgroundColor: "#f8f9fa" }}
     >
-      <div className="max-w-8xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+      <div className="max-w-8xl mx-auto font-outfit">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start font-outfit">
           {/* Left Section - Title */}
-          <div className="lg:sticky lg:top-16">
+          <div className="lg:sticky lg:top-16 font-outfit">
             <h1
-              className="text-xl sm:text-2xl lg:text-5xl font-bold leading-tight mb-8"
+              className="text-xl sm:text-2xl lg:text-5xl leading-tight mb-8 font-outfit"
               style={{ color: "#1A475A" }}
             >
               The Roadmap to
               <span style={{ color: "#A68353" }}> Mobile App Development</span>
             </h1>
 
-            <p className="text-lg text-gray-600 max-w-xl leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-xl leading-relaxed font-outfit">
               From idea to app store, we streamline your mobile development
               journey with cutting-edge tools and best practices.
             </p>
           </div>
 
           {/* Right Section - Steps */}
-          <div className="space-y-8">
+          <div className="space-y-8 font-outfit">
             {steps.map((step, index) => (
-              <div key={step.number} className="relative">
+              <div key={step.number} className="relative font-outfit">
                 {index < steps.length - 1 && (
                   <div
                     className="absolute left-6 top-12 w-0.5 h-16 opacity-30"
@@ -74,25 +74,25 @@ const MobileSteps: React.FC = () => {
                   />
                 )}
 
-                <div className="flex items-start space-x-6">
+                <div className="flex items-start space-x-6 font-outfit">
                   {/* Number */}
                   <div
-                    className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-white font-semibold text-lg shadow-lg"
+                    className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-white text-lg shadow-lg font-outfit"
                     style={{ backgroundColor: "#1A475A" }}
                   >
                     {step.number}
                   </div>
 
                   {/* Content */}
-                  <div className="flex-1 min-w-0">
+                  <div className="flex-1 min-w-0 font-outfit">
                     <h3
-                      className="text-xl sm:text-2xl font-bold mb-3"
+                      className="text-xl sm:text-2xl mb-3 font-outfit"
                       style={{ color: "#1A475A" }}
                     >
                       {step.title}
                     </h3>
                     <p
-                      className="text-base sm:text-lg leading-relaxed"
+                      className="text-base sm:text-lg leading-relaxed font-outfit"
                       style={{ color: "#252223" }}
                     >
                       {step.description}

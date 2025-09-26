@@ -65,10 +65,10 @@ const Timeline = () => {
     <section className="py-20 px-6 lg:px-12 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#3F3A34] mb-4">
+          <h2 className="text-4xl md:text-5xl font-outfit text-[#3F3A34] mb-4">
             Our <span className="text-[#6C6259]">Timeline</span>
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto font-outfit">
             A decade of growth, innovation, and excellence
           </p>
         </div>
@@ -94,7 +94,7 @@ const Timeline = () => {
                 {/* Year */}
                 <div className="md:w-1/2 flex justify-center md:justify-end">
                   <div
-                    className={`text-6xl md:text-7xl font-bold text-[#A68353] ${
+                    className={`text-6xl md:text-7xl font-outfit text-[#A68353] ${
                       event.side === "left"
                         ? "md:text-left md:pl-12"
                         : "md:text-right md:pr-12"
@@ -116,10 +116,10 @@ const Timeline = () => {
                       event.side === "left" ? "md:mr-12" : "md:ml-12"
                     }`}
                   >
-                    <h3 className="text-2xl font-bold mb-4 text-[#3F3A34]">
+                    <h3 className="text-2xl font-outfit font-bold mb-4 text-[#3F3A34]">
                       {event.title}
                     </h3>
-                    <p className="text-gray-700 leading-relaxed">
+                    <p className="text-gray-700 leading-relaxed font-outfit">
                       {event.description}
                     </p>
                   </div>

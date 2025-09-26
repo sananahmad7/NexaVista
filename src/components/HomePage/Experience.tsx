@@ -11,10 +11,10 @@ const ExperienceSection: React.FC = () => {
           <div className="space-y-8 ">
             {/* Years of Experience */}
             <div className="flex items-center gap-6 mb-5">
-              <div className="text-4xl lg:text-8xl font-bold text-[#3F3A34] leading-none">
+              <div className="text-4xl lg:text-8xl font-outfit text-[#3F3A34] leading-none">
                 15
               </div>
-              <div className="text-lg lg:text-xl text-gray-800 font-medium">
+              <div className="text-lg lg:text-xl text-gray-800 font-outfit">
                 Years of
                 <br />
                 experience
@@ -60,12 +60,12 @@ const ExperienceSection: React.FC = () => {
                     />
                   </svg>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-sm font-semibold text-[#775d3b]">
+                    <span className="text-sm font-outfit text-[#775d3b]">
                       (73%)
                     </span>
                   </div>
                 </div>
-                <p className="text-sm font-medium text-[#3F3A34]">
+                <p className="text-sm font-outfit text-[#3F3A34]">
                   Business Solution
                 </p>
               </div>
@@ -94,12 +94,12 @@ const ExperienceSection: React.FC = () => {
                     />
                   </svg>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-sm font-semibold text-[#775d3b]">
+                    <span className="text-sm font-outfit text-[#775d3b]">
                       (65%)
                     </span>
                   </div>
                 </div>
-                <p className="text-sm font-medium text-[#3F3A34]">
+                <p className="text-sm font-outfit text-[#3F3A34]">
                   24/7 Support
                 </p>
               </div>
@@ -134,12 +134,12 @@ const ExperienceSection: React.FC = () => {
                     />
                   </svg>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-base font-semibold text-[#a68353]">
+                    <span className="text-base font-outfit text-[#a68353]">
                       (73%)
                     </span>
                   </div>
                 </div>
-                <p className="text-base font-medium text-black">
+                <p className="text-base font-outfit text-black">
                   Business Solution
                 </p>
               </div>
@@ -168,22 +168,22 @@ const ExperienceSection: React.FC = () => {
                     />
                   </svg>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-base font-semibold text-[#a68353]">
+                    <span className="text-base font-outfit text-[#a68353]">
                       (65%)
                     </span>
                   </div>
                 </div>
-                <p className="text-base font-medium text-black">24/7 Support</p>
+                <p className="text-base font-outfit text-black">24/7 Support</p>
               </div>
             </div>
 
             {/* Main Heading */}
             <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-black leading-tight text-balance">
+              <h2 className="text-3xl lg:text-4xl xl:text-5xl font-outfit text-black leading-tight text-balance">
                 We execute our ideas from the start to finish.
               </h2>
 
-              <p className="text-gray-800 text-base lg:text-lg leading-relaxed">
+              <p className="text-gray-800 text-base font-outfit lg:text-lg leading-relaxed">
                 At our agency, we transform ideas into fully realized digital
                 solutions. From initial strategy and design to development and
                 launch, our team delivers software that is scalable, reliable,
@@ -209,7 +209,7 @@ const ExperienceSection: React.FC = () => {
                     />
                   </svg>
                 </div>
-                <span className="text-gray-800 font-medium">
+                <span className="text-gray-800 font-outfit">
                   Custom shortcodes
                 </span>
               </div>
@@ -228,7 +228,7 @@ const ExperienceSection: React.FC = () => {
                     />
                   </svg>
                 </div>
-                <span className="text-gray-800 font-medium">Data security</span>
+                <span className="text-gray-800 font-outfit">Data security</span>
               </div>
 
               <div className="flex items-center gap-3">
@@ -245,7 +245,7 @@ const ExperienceSection: React.FC = () => {
                     />
                   </svg>
                 </div>
-                <span className="text-gray-800 font-medium">
+                <span className="text-gray-800 font-outfit">
                   Data Analytics
                 </span>
               </div>
@@ -264,7 +264,7 @@ const ExperienceSection: React.FC = () => {
                     />
                   </svg>
                 </div>
-                <span className="text-gray-800 font-medium">
+                <span className="text-gray-800 font-outfit">
                   Our Technology Solution
                 </span>
               </div>
@@ -283,7 +283,7 @@ const ExperienceSection: React.FC = () => {
                     />
                   </svg>
                 </div>
-                <span className="text-gray-800 font-medium">
+                <span className="text-gray-800 font-outfit">
                   IT Consultancy
                 </span>
               </div>
@@ -302,7 +302,7 @@ const ExperienceSection: React.FC = () => {
                     />
                   </svg>
                 </div>
-                <span className="text-gray-800 font-medium">
+                <span className="text-gray-800 font-outfit">
                   Design and Development
                 </span>
               </div>

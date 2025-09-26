@@ -21,7 +21,7 @@ export default function Client() {
         <div className="text-center mb-6">
           <div className="inline-block">
             <h2
-              className="text-sm font-semibold tracking-[0.2em] uppercase mb-3 relative"
+              className="text-sm font-outfit tracking-[0.2em] uppercase mb-3 relative"
               style={{ color: "#6C6259" }}
             >
               CLIENTS WE HAVE WORKED WITH
@@ -49,7 +49,7 @@ export default function Client() {
                     {client.logo}
                   </div>
                   <span
-                    className="text-xl sm:text-2xl font-bold tracking-wide transition-all duration-300 group-hover:tracking-wider"
+                    className="text-xl sm:text-2xl font-outfit tracking-wide transition-all duration-300 group-hover:tracking-wider"
                     style={{ color: "#6C6259" }}
                   >
                     {client.name}

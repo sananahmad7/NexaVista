@@ -39,9 +39,9 @@ const WhyChooseNexaVista = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-6 leading-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-outfit text-black mb-6 leading-tight">
             Why Choose NexaVista Technologies
-            <span className="block" style={{ color: "#A68353" }}>
+            <span className="block font-outfit" style={{ color: "#A68353" }}>
               for Graphic Designing?
             </span>
           </h2>
@@ -64,13 +64,13 @@ const WhyChooseNexaVista = () => {
                   >
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-black group-hover:text-gray-800 transition-colors duration-300">
+                  <h3 className="text-2xl font-bold font-outfit text-black group-hover:text-gray-800 transition-colors duration-300">
                     {feature.title}
                   </h3>
                 </div>
 
                 {/* Description */}
-                <p className="text-gray-600 leading-relaxed text-base group-hover:text-gray-700 transition-colors duration-300">
+                <p className="text-gray-600 leading-relaxed text-base font-outfit group-hover:text-gray-700 transition-colors duration-300">
                   {feature.description}
                 </p>
 

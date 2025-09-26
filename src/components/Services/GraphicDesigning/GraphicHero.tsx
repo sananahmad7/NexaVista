@@ -31,10 +31,10 @@ const GraphicHero = () => {
   };
 
   return (
-    <div className="bg-gray-50">
+    <div className="bg-gray-50 font-outfit">
       <div className="flex items-start gap-2 lg:gap-3">
         {/* Left Section */}
-        <div className="flex-1 relative overflow-hidden text-white p-8 sm:p-12 lg:p-16 bg-[#1B232E]">
+        <div className="flex-1 relative overflow-hidden text-white p-8 sm:p-12 lg:p-16 bg-[#1B232E] font-outfit">
           {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-[#1B232E]/95 via-[#1B232E]/80 to-[#10151C]/70 pointer-events-none"></div>
 
@@ -42,20 +42,20 @@ const GraphicHero = () => {
           <div className="absolute bottom-[-80] right-[-80] w-98 h-98 bg-purple-400/20 rounded-full "></div>
 
           {/* Content */}
-          <div className="relative z-0">
-            <div className="inline-block bg-white/10 backdrop-blur-md px-6 py-2 rounded-full text-sm font-medium mb-8 border border-white/20 shadow-sm">
+          <div className="relative z-0 font-outfit">
+            <div className="inline-block bg-white/10 backdrop-blur-md px-6 py-2 rounded-full text-sm font-medium mb-8 border border-white/20 shadow-sm font-outfit">
               DESIGN
             </div>
 
-            <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold leading-tight mb-8 max-w-4xl">
+            <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold leading-tight mb-8 max-w-4xl font-outfit">
               Creative Design Solutions That Elevate Your Brand
             </h1>
 
-            <div className="text-gray-300 leading-relaxed mb-8 max-w-3xl py-3">
-              <p className="mb-4 font-bold text-lg sm:text-xl">
+            <div className="text-gray-300 leading-relaxed mb-8 max-w-3xl py-3 font-outfit">
+              <p className="mb-4 font-bold text-lg sm:text-xl font-outfit">
                 Where Creativity Meets Strategy
               </p>
-              <p className="text-md">
+              <p className="text-md font-outfit">
                 Visual identity is a powerful tool in today’s market. At
                 NexaVista Technologies, we understand that great design is more
                 than just aesthetics—it’s about communicating your brand’s
@@ -68,16 +68,16 @@ const GraphicHero = () => {
         </div>
 
         {/* Right Section - Carousel */}
-        <div className="hidden lg:flex w-96 flex-col">
+        <div className="hidden lg:flex w-96 flex-col font-outfit">
           {/* Top Fixed Carousel Box */}
-          <div className="h-[400px] bg-[#3A3256]/90 backdrop-blur-md text-white relative flex flex-col">
+          <div className="h-[400px] bg-[#3A3256]/90 backdrop-blur-md text-white relative flex flex-col font-outfit">
             <div className="flex flex-col relative z-10">
-              <div className="flex-1 p-8 flex flex-col">
-                <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-8 w-fit border border-white/20">
+              <div className="flex-1 p-8 flex flex-col font-outfit">
+                <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-8 w-fit border border-white/20 font-outfit">
                   {graphicSlides[currentSlide].category}
                 </div>
 
-                <h2 className="text-2xl font-bold leading-tight mb-6">
+                <h2 className="text-2xl font-bold leading-tight mb-6 font-outfit">
                   {graphicSlides[currentSlide].title}
                 </h2>
 
@@ -110,7 +110,7 @@ const GraphicHero = () => {
           {/* Bottom Text */}
           <div className="bg-white mt-4">
             <div className="border-l-4 border-[#1B232E] pl-4">
-              <h3 className="text-lg sm:text-xl font-bold text-[#1B232E] leading-tight">
+              <h3 className="text-lg sm:text-xl font-bold text-[#1B232E] leading-tight font-outfit">
                 12+ Years of Designing Memorable Brand Experiences Worldwide.
               </h3>
             </div>

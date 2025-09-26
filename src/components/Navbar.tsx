@@ -80,7 +80,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center space-x-8">
             <Link
               href="/"
-              className="text-gray-700 hover:text-gray-900 font-poppins text-base transition-colors duration-200"
+              className="text-gray-700 hover:text-gray-900 font-outfit text-base transition-colors duration-200"
             >
               Home
             </Link>
@@ -94,7 +94,7 @@ const Navbar = () => {
             >
               <Link
                 href="/Services"
-                className="flex items-center space-x-1 text-gray-700 hover:text-gray-900 font-poppins text-base transition-colors duration-200"
+                className="flex items-center space-x-1 text-gray-700 hover:text-gray-900 font-outfit text-base transition-colors duration-200"
               >
                 <span>Services</span>
                 <ChevronDown
@@ -120,10 +120,10 @@ const Navbar = () => {
                         <FileText className="w-5 h-5 text-gray-700" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-semibold text-gray-900 text-md mb-1">
+                        <h3 className="font-outfit text-gray-900 text-md mb-1">
                           Web Development
                         </h3>
-                        <p className="text-gray-600 text-sm leading-relaxed">
+                        <p className="text-gray-600 text-sm leading-relaxed font-outfit">
                           Modern, responsive websites built with cutting-edge
                           technologies
                         </p>
@@ -143,10 +143,10 @@ const Navbar = () => {
                         <Smartphone className="w-5 h-5 text-gray-700" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-semibold text-gray-900 text-md mb-1">
+                        <h3 className="font-outfit text-gray-900 text-md mb-1">
                           Mobile Development
                         </h3>
-                        <p className="text-gray-600 text-sm leading-relaxed">
+                        <p className="text-gray-600 text-sm leading-relaxed font-outfit">
                           Native and cross-platform apps for iOS and Android
                         </p>
                       </div>
@@ -165,10 +165,10 @@ const Navbar = () => {
                         <Palette className="w-5 h-5 text-gray-700" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-semibold text-gray-900 text-md mb-1">
+                        <h3 className="font-outfit text-gray-900 text-md mb-1">
                           Graphic Design
                         </h3>
-                        <p className="text-gray-600 text-sm leading-relaxed">
+                        <p className="text-gray-600 font-outfit text-sm leading-relaxed">
                           Creative visuals that make your brand stand out
                         </p>
                       </div>
@@ -187,10 +187,10 @@ const Navbar = () => {
                         <TrendingUp className="w-5 h-5 text-gray-700" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-semibold text-gray-900 text-md mb-1">
+                        <h3 className="font-outfit text-gray-900 text-md mb-1">
                           Digital Marketing
                         </h3>
-                        <p className="text-gray-600 text-sm leading-relaxed">
+                        <p className="text-gray-600 font-outfit text-sm leading-relaxed">
                           Strategic campaigns that grow your online presence
                         </p>
                       </div>
@@ -202,14 +202,14 @@ const Navbar = () => {
 
             <Link
               href="/About"
-              className="text-gray-700 hover:text-gray-900 font-medium text-base transition-colors duration-200"
+              className="text-gray-700 hover:text-gray-900 font-outfit text-base transition-colors duration-200"
             >
               About Us
             </Link>
 
             <Link
               href="/Contact"
-              className="text-gray-700 hover:text-gray-900 font-medium text-base transition-colors duration-200"
+              className="text-gray-700 hover:text-gray-900 font-outfit text-base transition-colors duration-200"
             >
               Contact Us
             </Link>
@@ -219,7 +219,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center">
             <Link
               href="/book-appointment"
-              className="bg-black hover:bg-gray-800 text-white px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-200 hover:shadow-lg hover:scale-105"
+              className="bg-black hover:bg-gray-800 text-white px-6 py-2.5 rounded-full font-outfit text-sm transition-all duration-200 hover:shadow-lg hover:scale-105"
             >
               Book an Appointment
             </Link>
@@ -246,7 +246,7 @@ const Navbar = () => {
             <div className="px-5 py-4 space-y-3">
               <Link
                 href="/"
-                className="block py-2 text-gray-700 hover:text-gray-900 font-medium text-base"
+                className="block py-2 text-gray-700 hover:text-gray-900 font-outfit text-base"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Home
@@ -256,35 +256,35 @@ const Navbar = () => {
               <div className="space-y-2">
                 <Link
                   href="/Services"
-                  className="block py-2 text-gray-700 hover:text-gray-900 font-medium text-base"
+                  className="block py-2 text-gray-700 hover:text-gray-900 font-outfit text-base"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Services
                 </Link>
                 <Link
                   href="/Services/web-development"
-                  className="block py-2 pl-4 text-gray-600 hover:text-gray-900 text-base"
+                  className="block py-2 pl-4 text-gray-600 hover:text-gray-900 text-base font-outfit"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Web Development
                 </Link>
                 <Link
                   href="/services/mobile-development"
-                  className="block py-2 pl-4 text-gray-600 hover:text-gray-900 text-base"
+                  className="block py-2 pl-4 text-gray-600 hover:text-gray-900 text-base font-outfit"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Mobile Development
                 </Link>
                 <Link
                   href="/services/graphic-designing"
-                  className="block py-2 pl-4 text-gray-600 hover:text-gray-900 text-base"
+                  className="block py-2 pl-4 text-gray-600 hover:text-gray-900 text-base font-outfit"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Graphic Designing
                 </Link>
                 <Link
                   href="/services/digital-marketing"
-                  className="block py-2 pl-4 text-gray-600 hover:text-gray-900 text-base"
+                  className="block py-2 pl-4 text-gray-600 hover:text-gray-900 text-base font-outfit"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Digital Marketing
@@ -293,7 +293,7 @@ const Navbar = () => {
 
               <Link
                 href="/About"
-                className="block py-2 text-gray-700 hover:text-gray-900 font-medium text-base"
+                className="block py-2 text-gray-700 hover:text-gray-900 font-outfit text-base"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 About Us
@@ -301,7 +301,7 @@ const Navbar = () => {
 
               <Link
                 href="/Contact"
-                className="block py-2 text-gray-700 hover:text-gray-900 font-medium text-base"
+                className="block py-2 text-gray-700 hover:text-gray-900 font-outfit text-base"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contact Us
@@ -311,7 +311,7 @@ const Navbar = () => {
               <div className="pt-4">
                 <Link
                   href="/book-appointment"
-                  className="block w-full text-center bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-full font-bold text-base"
+                  className="block w-full text-center bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-full font-outfit text-base"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Book an Appointment

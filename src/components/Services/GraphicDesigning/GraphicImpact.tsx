@@ -14,18 +14,18 @@ const GraphicImpact = () => {
         {/* Content wrapper */}
         <div className="relative z-10">
           {/* Badge */}
-          <div className="inline-block px-4 py-2 text-xs font-bold mb-6 text-gray-600 uppercase tracking-wide">
+          <div className="inline-block px-4 py-2 text-xs font-bold font-outfit mb-6 text-gray-600 uppercase tracking-wide">
             OUR IMPACT
           </div>
 
           {/* Main Heading */}
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight mb-8 max-w-3xl text-gray-900">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-outfit leading-tight mb-8 max-w-3xl text-gray-900">
             Creative Design Solutions That Elevate Your Brand
           </h2>
 
           {/* CTA Button */}
-          <button className="bg-[#3B3256] text-white px-6 py-3 rounded-full font-semibold text-sm hover:bg-[#1B232E] transition-all duration-300 hover:shadow-lg hover:scale-105 flex items-center space-x-2 group mb-12">
-            <span>Start Your Design</span>
+          <button className="bg-[#3B3256] text-white px-6 py-3 rounded-full font-semibold font-outfit text-sm hover:bg-[#1B232E] transition-all duration-300 hover:shadow-lg hover:scale-105 flex items-center space-x-2 group mb-12">
+            <span className="font-outfit">Start Your Design</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>
 
@@ -33,30 +33,30 @@ const GraphicImpact = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-4">
             {/* Years of Experience */}
             <div className="text-left">
-              <div className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 text-[#3B3256]">
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-bold font-outfit mb-2 text-[#3B3256]">
                 5+
               </div>
-              <p className="text-gray-700 text-base font-medium leading-relaxed">
+              <p className="text-gray-700 text-base font-medium font-outfit leading-relaxed">
                 years of crafting impactful visual identities
               </p>
             </div>
 
             {/* Projects Delivered */}
             <div className="text-left">
-              <div className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 text-[#3B3256]">
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-bold font-outfit mb-2 text-[#3B3256]">
                 80+
               </div>
-              <p className="text-gray-700 text-base font-medium leading-relaxed">
+              <p className="text-gray-700 text-base font-medium font-outfit leading-relaxed">
                 branding & design projects delivered successfully
               </p>
             </div>
 
             {/* Client Satisfaction */}
             <div className="text-left">
-              <div className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 text-[#3B3256]">
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-bold font-outfit mb-2 text-[#3B3256]">
                 96%
               </div>
-              <p className="text-gray-700 text-base font-medium leading-relaxed">
+              <p className="text-gray-700 text-base font-medium font-outfit leading-relaxed">
                 client satisfaction with our creative solutions
               </p>
             </div>

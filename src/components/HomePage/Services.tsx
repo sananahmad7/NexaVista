@@ -86,10 +86,10 @@ const Services: React.FC = () => {
       <div className="container  mx-auto  px-2">
         {/* Section Header */}
         <div className="text-center mb-16 ">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-gray-900 mb-4">
             Our Services
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto font-outfit">
             Comprehensive digital solutions to transform your business and drive
             growth
           </p>
@@ -124,10 +124,10 @@ const Services: React.FC = () => {
 
                 {/* Content */}
                 <div className="space-y-3">
-                  <h3 className="text-2xl lg:text-3xl font-bold">
+                  <h3 className="text-xl lg:text-2xl font-outfit">
                     {service.title}
                   </h3>
-                  <p className="text-sm lg:text-base opacity-90">
+                  <p className="text-sm lg:text-base font-outfit opacity-90">
                     {service.description}
                   </p>
                 </div>

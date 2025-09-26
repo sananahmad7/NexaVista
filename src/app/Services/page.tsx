@@ -15,6 +15,7 @@ import {
 import Image from "next/image";
 import Services from "@/components/HomePage/Services";
 import ServicesHero from "@/components/Services/ServicesHero";
+
 const ServicesPage = () => {
   const [activeService, setActiveService] = useState(0);
 
@@ -107,7 +108,7 @@ const ServicesPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white font-outfit">
       {/* Hero Section */}
       <ServicesHero />
 
@@ -115,13 +116,13 @@ const ServicesPage = () => {
       <section className="py-20 lg:py-32 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <p className="text-[#A68353] font-semibold text-lg mb-4 tracking-wide">
+            <p className="text-[#A68353] font-semibold text-lg mb-4 tracking-wide font-outfit">
               OUR EXPERTISE
             </p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-[#252223] mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold text-[#252223] mb-6 font-outfit">
               Services That Drive Success
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-outfit">
               From concept to completion, we provide comprehensive digital
               solutions tailored to your business needs.
             </p>
@@ -133,7 +134,7 @@ const ServicesPage = () => {
               return (
                 <div
                   key={service.id}
-                  className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 cursor-pointer"
+                  className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 cursor-pointer font-outfit"
                   onClick={() => setActiveService(index)}
                 >
                   <div className="flex items-start gap-6">
@@ -141,23 +142,26 @@ const ServicesPage = () => {
                       <IconComponent className="w-8 h-8 text-white" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-[#252223] mb-4 group-hover:text-[#A68353] transition-colors">
+                      <h3 className="text-2xl font-bold text-[#252223] mb-4 group-hover:text-[#A68353] transition-colors font-outfit">
                         {service.title}
                       </h3>
-                      <p className="text-gray-600 mb-6 leading-relaxed">
+                      <p className="text-gray-600 mb-6 leading-relaxed font-outfit">
                         {service.description}
                       </p>
                       <div className="grid grid-cols-2 gap-3 mb-6">
                         {service.features.map((feature, idx) => (
-                          <div key={idx} className="flex items-center gap-2">
+                          <div
+                            key={idx}
+                            className="flex items-center gap-2 font-outfit"
+                          >
                             <Check className="w-4 h-4 text-[#A68353]" />
-                            <span className="text-sm font-medium text-gray-700">
+                            <span className="text-sm font-medium text-gray-700 font-outfit">
                               {feature}
                             </span>
                           </div>
                         ))}
                       </div>
-                      <button className="text-[#A68353] font-semibold group-hover:text-[#252223] transition-colors">
+                      <button className="text-[#A68353] font-semibold group-hover:text-[#252223] transition-colors font-outfit">
                         Learn More →
                       </button>
                     </div>
@@ -170,15 +174,15 @@ const ServicesPage = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-[#252223]">
+      <section className="py-20 bg-[#252223] font-outfit">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl lg:text-6xl font-bold text-[#A68353] mb-2">
+              <div key={index} className="text-center font-outfit">
+                <div className="text-4xl lg:text-6xl font-bold text-[#A68353] mb-2 font-outfit">
                   {stat.number}
                 </div>
-                <div className="text-gray-300 font-medium text-lg">
+                <div className="text-gray-300 font-medium text-lg font-outfit">
                   {stat.label}
                 </div>
               </div>
@@ -188,16 +192,16 @@ const ServicesPage = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 lg:py-32 px-6 bg-gray-50">
+      <section className="py-20 lg:py-32 px-6 bg-gray-50 font-outfit">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <p className="text-[#A68353] font-semibold text-lg mb-4 tracking-wide">
+            <p className="text-[#A68353] font-semibold text-lg mb-4 tracking-wide font-outfit">
               OUR PROCESS
             </p>
-            <h2 className="text-4xl lg:text-5xl font-bold text-[#252223] mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold text-[#252223] mb-6 font-outfit">
               How We Work
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-outfit">
               Our proven methodology ensures successful project delivery from
               start to finish.
             </p>
@@ -205,15 +209,15 @@ const ServicesPage = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
-              <div key={index} className="relative">
-                <div className="bg-white rounded-xl p-8 shadow-lg h-full">
-                  <div className="text-6xl font-bold text-[#A68353]/20 mb-4">
+              <div key={index} className="relative font-outfit">
+                <div className="bg-white rounded-xl p-8 shadow-lg h-full font-outfit">
+                  <div className="text-6xl font-bold text-[#A68353]/20 mb-4 font-outfit">
                     {step.step}
                   </div>
-                  <h3 className="text-xl font-bold text-[#252223] mb-4">
+                  <h3 className="text-xl font-bold text-[#252223] mb-4 font-outfit">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed font-outfit">
                     {step.description}
                   </p>
                 </div>
@@ -226,23 +230,21 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
-
       {/* CTA Section */}
-      <section className="py-20 bg-[#A68353]">
-        <div className="max-w-4xl mx-auto text-center px-6">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+      <section className="py-20 bg-[#A68353] font-outfit">
+        <div className="max-w-4xl mx-auto text-center px-6 font-outfit">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6 font-outfit">
             Let's Build Something Amazing Together
           </h2>
-          <p className="text-xl text-white/90 mb-8">
+          <p className="text-xl text-white/90 mb-8 font-outfit">
             Ready to take your business to the next level? Contact us today for
             a free consultation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-[#A68353] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center font-outfit">
+            <button className="bg-white text-[#A68353] px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 font-outfit">
               Get Free Consultation
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#A68353] transition-all duration-300">
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#A68353] transition-all duration-300 font-outfit">
               View Portfolio
             </button>
           </div>

@@ -62,17 +62,17 @@ const GraphicDesignServices = () => {
 
   return (
     <div
-      className="p-8 sm:p-12 lg:p-16 mt-5 "
+      className="p-8 sm:p-12 lg:p-16 mt-5 font-outfit"
       style={{ backgroundColor: "#1B232E" }}
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex justify-between items-start mb-12">
           <div>
-            <p className="text-gray-400 text-sm mb-3 tracking-wide">
+            <p className="text-gray-400 text-sm mb-3 tracking-wide font-outfit">
               Our Benefits
             </p>
-            <h2 className="text-white text-3xl sm:text-4xl font-bold max-w-2xl leading-tight">
+            <h2 className="text-white text-3xl sm:text-4xl font-bold font-outfit max-w-2xl leading-tight">
               Expertise and Commitment Combined!
             </h2>
           </div>
@@ -81,14 +81,14 @@ const GraphicDesignServices = () => {
           <div className="flex space-x-2 ">
             <button
               onClick={prevSlide}
-              className="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center text-gray-400 hover:text-white hover:border-gray-400 transition-all duration-300"
+              className="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center text-gray-400 hover:text-white hover:border-gray-400 transition-all duration-300 font-outfit"
               disabled={currentSlide === 0}
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={nextSlide}
-              className="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center text-gray-400 hover:text-white hover:border-gray-400 transition-all duration-300"
+              className="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center text-gray-400 hover:text-white hover:border-gray-400 transition-all duration-300 font-outfit"
               disabled={currentSlide >= services.length - 4}
             >
               <ChevronRight className="w-5 h-5" />
@@ -97,13 +97,13 @@ const GraphicDesignServices = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6  ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 font-outfit">
           {visibleServices.map((service, index) => {
             const IconComponent = service.icon;
             return (
               <div
                 key={currentSlide + index}
-                className="group relative bg-[#3A3256]/50  rounded-xl py-4 px-4 h-70 sm:h-100 md:h-85 lg:h-110 2xl:h-90 overflow-hidden cursor-pointer transition-all duration-500 hover:bg-gray-700/70"
+                className="group relative bg-[#3A3256]/50 rounded-xl py-4 px-4 h-70 sm:h-100 md:h-85 lg:h-110 2xl:h-90 overflow-hidden cursor-pointer transition-all duration-500 hover:bg-gray-700/70 font-outfit"
               >
                 {/* Icon */}
                 <div className="mb-6 transition-all duration-300 group-hover:-translate-y-2 ">
@@ -117,20 +117,17 @@ const GraphicDesignServices = () => {
 
                 {/* Title - Always visible */}
                 <div className="transition-all duration-300 group-hover:-translate-y-8">
-                  <h3 className="text-white text-xl font-bold leading-tight mb-4">
+                  <h3 className="text-white text-xl font-bold font-outfit leading-tight mb-4 ">
                     {service.title}
                   </h3>
                 </div>
 
                 {/* Description - Hidden by default, slides up on hover */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-out">
-                  <p className="text-white text-sm leading-relaxed">
+                  <p className="text-white text-sm leading-relaxed font-outfit">
                     {service.description}
                   </p>
                 </div>
-
-                {/* Overlay gradient for better text readability on hover */}
-                {/* <div className="absolute inset-0 bg-gradient-to-t from-gray-800/90 via-gray-800/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div> */}
               </div>
             );
           })}

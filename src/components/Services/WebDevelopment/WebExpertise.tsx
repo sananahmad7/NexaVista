@@ -41,14 +41,14 @@ function WebExpertise() {
   ];
 
   return (
-    <section className="py-16 px-4 max-w-7xl mx-auto">
+    <section className="py-16 px-4 max-w-7xl mx-auto font-outfit">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-black mb-4 text-balance">
+        <h2 className="text-4xl font-bold font-outfit text-black mb-4 text-balance">
           When Is the Time for{" "}
           <span style={{ color: "#082024" }}>Precision</span> and{" "}
           <span style={{ color: "#A68353" }}>Innovation</span>?
         </h2>
-        <p className="text-gray-600 text-lg max-w-3xl mx-auto text-pretty">
+        <p className="text-gray-600 text-lg max-w-3xl mx-auto text-pretty font-outfit">
           Our expertise spans the full spectrum of modern web development,
           delivering solutions that are secure, scalable, and tailored to your
           business needs.
@@ -60,7 +60,7 @@ function WebExpertise() {
         {expertiseAreas.map((area, index) => (
           <div
             key={index}
-            className="rounded-lg border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-50"
+            className="rounded-lg border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-50 font-outfit"
           >
             <div className="p-8">
               <div
@@ -69,10 +69,10 @@ function WebExpertise() {
               >
                 {area.icon}
               </div>
-              <h3 className="text-xl font-semibold text-[#092125] mb-4 text-balance">
+              <h3 className="text-xl font-semibold font-outfit text-[#092125] mb-4 text-balance">
                 {area.title}
               </h3>
-              <p className="text-gray-700 leading-relaxed text-pretty">
+              <p className="text-gray-700 leading-relaxed text-pretty font-outfit">
                 {area.description}
               </p>
             </div>

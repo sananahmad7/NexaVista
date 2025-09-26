@@ -42,7 +42,7 @@ const WebSteps: React.FC = () => {
 
   return (
     <div
-      className="min-h-screen py-16 px-4 sm:px-6 lg:px-8  mb-20"
+      className="min-h-screen py-16 px-4 sm:px-6 lg:px-8 mb-20 font-outfit"
       style={{ backgroundColor: "#f8f9fa" }}
     >
       <div className="max-w-8xl mx-auto">
@@ -50,14 +50,14 @@ const WebSteps: React.FC = () => {
           {/* Left Section - Title */}
           <div className="lg:sticky lg:top-16">
             <h1
-              className="text-xl sm:text-2xl lg:text-5xl font-bold leading-tight mb-8"
+              className="text-xl sm:text-2xl lg:text-5xl font-bold font-outfit leading-tight mb-8"
               style={{ color: "#0B252A" }}
             >
               The Roadmap to
               <span style={{ color: "#A68353" }}> Full Stack Development</span>
             </h1>
 
-            <p className="text-lg text-gray-600 max-w-xl leading-relaxed">
+            <p className="text-lg text-gray-600 max-w-xl leading-relaxed font-outfit">
               From concept to deployment, we guide your project through every
               stage of modern web development with precision and expertise.
             </p>
@@ -66,7 +66,7 @@ const WebSteps: React.FC = () => {
           {/* Right Section - Steps */}
           <div className="space-y-8">
             {steps.map((step, index) => (
-              <div key={step.number} className="relative">
+              <div key={step.number} className="relative font-outfit">
                 {/* Connecting Line */}
                 {index < steps.length - 1 && (
                   <div
@@ -79,7 +79,7 @@ const WebSteps: React.FC = () => {
                 <div className="flex items-start space-x-6">
                   {/* Step Number Circle */}
                   <div
-                    className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-white font-semibold text-lg shadow-lg"
+                    className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-white font-semibold text-lg shadow-lg font-outfit"
                     style={{ backgroundColor: "#0C262A" }}
                   >
                     {step.number}
@@ -89,7 +89,7 @@ const WebSteps: React.FC = () => {
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center space-x-3 mb-3">
                       <h3
-                        className="text-xl sm:text-2xl font-bold"
+                        className="text-xl sm:text-2xl font-bold font-outfit"
                         style={{ color: "#0B252A" }}
                       >
                         {step.title}
@@ -97,7 +97,7 @@ const WebSteps: React.FC = () => {
                     </div>
 
                     <p
-                      className="text-base sm:text-lg leading-relaxed"
+                      className="text-base sm:text-lg leading-relaxed font-outfit"
                       style={{ color: "#252223" }}
                     >
                       {step.description}

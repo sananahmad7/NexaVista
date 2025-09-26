@@ -10,7 +10,7 @@ export default function CreativeSolutions() {
           <div className="space-y-8">
             {/* Main Heading */}
             <div className="space-y-6">
-              <h1 className="text-5xl lg:text-6xl font-bold leading-tight ">
+              <h1 className="text-5xl lg:text-6xl font-outfit leading-tight ">
                 Crafting Creative{" "}
                 <span className="underline decoration-4 underline-offset-8 text-[#A68353]">
                   Solutions For
@@ -24,7 +24,7 @@ export default function CreativeSolutions() {
             <div className="bg-[#A68353] text-black p-6 rounded-3xl relative max-w-sm">
               <div className="flex justify-between items-start">
                 <div>
-                  <h3 className="text-2xl font-bold mb-3">24/7 Support</h3>
+                  <h3 className="text-2xl font-outfit mb-3">24/7 Support</h3>
                   <p className="text-white text-base leading-relaxed">
                     We provide 24/7 service
                     <br />
@@ -73,10 +73,10 @@ export default function CreativeSolutions() {
                   <DollarSign className="w-6 h-6 text-black" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2 text-[#A68353]">
+                  <h3 className="text-xl font-outfit mb-2 text-[#A68353]">
                     Excellence
                   </h3>
-                  <p className="text-white leading-relaxed">
+                  <p className="text-white leading-relaxed font-outfit">
                     Our mission is to empower brands by crafting innovative and
                     impactful creative solutions. needs strategic campaigns
                     success.
@@ -90,10 +90,10 @@ export default function CreativeSolutions() {
                   <Star className="w-6 h-6 text-black" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2 text-[#A68353]">
+                  <h3 className="text-xl font-outfit mb-2 text-[#A68353]">
                     Innovation
                   </h3>
-                  <p className="text-white leading-relaxed">
+                  <p className="text-white leading-relaxed font-outfit">
                     Our mission is to empower brands by crafting innovative and
                     impactful creative solutions needs strategic campaigns
                     success.
@@ -107,10 +107,10 @@ export default function CreativeSolutions() {
                   <Shield className="w-6 h-6 text-black" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2 text-[#A68353]">
+                  <h3 className="text-xl font-outfit mb-2 text-[#A68353]">
                     What Sets Us Apart
                   </h3>
-                  <p className="text-white leading-relaxed">
+                  <p className="text-white leading-relaxed font-outfit">
                     Our mission is to empower brands by crafting innovative and
                     impactful creative solutions needs strategic campaigns
                     success.

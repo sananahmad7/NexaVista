@@ -93,11 +93,11 @@ const TestimonialSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-block">
-            <span className="text-[#A68353] text-sm font-medium uppercase tracking-wider mb-2 block">
+            <span className="text-[#A68353] text-sm font-outfit uppercase tracking-wider mb-2 block">
               Testimonial
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white">
-              Client <span className="text-[#A68353]">Feedback</span>
+            <h2 className="text-4xl md:text-5xl font-outfit text-white">
+              Client <span className="text-[#A68353] ">Feedback</span>
             </h2>
           </div>
         </div>
@@ -117,13 +117,13 @@ const TestimonialSection = () => {
               >
                 <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-gray-700/50 h-full relative">
                   {/* Quote Icon */}
-                  <div className="absolute top-6 right-8">
+                  <div className="absolute top-6 right-8 lg:right-3">
                     <Quote className="w-8 h-8 text-[#A68353] opacity-30" />
                   </div>
 
                   {/* Content */}
-                  <div className="mb-6">
-                    <p className="text-white text-lg leading-relaxed">
+                  <div className="mb-6 ">
+                    <p className="text-white text-lg leading-relaxed font-outfit ">
                       &quot;{testimonial.content}&quot;
                     </p>
                   </div>
@@ -135,7 +135,7 @@ const TestimonialSection = () => {
 
                   {/* Author Info */}
                   <div className="flex items-center">
-                    <div className="w-14 h-14 rounded-full bg-gray-600 overflow-hidden mr-4 ring-2 ring-[#A68353] ring-opacity-30">
+                    <div className="w-14 h-14 rounded-full font-outfit bg-gray-600 overflow-hidden mr-4 ring-2 ring-[#A68353] ring-opacity-30">
                       <img
                         src={testimonial.avatar}
                         alt={testimonial.name}
@@ -143,13 +143,13 @@ const TestimonialSection = () => {
                       />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-white text-lg">
+                      <h4 className="font-outfit text-white text-lg">
                         {testimonial.name}
                       </h4>
-                      <p className="text-[#A68353] text-sm font-medium">
+                      <p className="text-[#A68353] text-sm font-outfit">
                         {testimonial.position}
                       </p>
-                      <p className="text-gray-300 text-sm">
+                      <p className="text-gray-300 text-sm font-outfit">
                         {testimonial.company}
                       </p>
                     </div>

@@ -18,10 +18,10 @@ export default function AboutPage() {
         </div>
         <div className="relative z-10 flex items-center justify-center h-full text-center px-6">
           <div className="max-w-4xl">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-7xl font-outfit font-bold text-white mb-6">
               About <span className="text-[#A68353]">Our Journey</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-200 max-w-2xl font-outfit mx-auto leading-relaxed">
               A decade of innovation, growth, and excellence in software
               development
             </p>
@@ -42,13 +42,13 @@ export default function AboutPage() {
       <section className="py-20 px-6 lg:px-12 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#3F3A34] mb-4">
+            <h2 className="text-4xl md:text-5xl font-outfit text-[#3F3A34] mb-4">
               Our <span className="text-[#A68353]">Story</span>
             </h2>
           </div>
 
           <div className="text-center max-w-4xl mx-auto">
-            <p className="text-gray-700 text-lg leading-relaxed">
+            <p className="text-gray-700 text-lg leading-relaxed font-outfit">
               NexaVista Technologies began with a simple idea: to create a
               digital agency that combines technical expertise with a genuine
               passion for helping businesses succeed. From our humble
@@ -67,10 +67,10 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md:text-5xl font-outfit text-white mb-6">
                 Our <span className="text-[#A68353]">Mission</span>
               </h2>
-              <p className="text-gray-200 text-lg leading-relaxed">
+              <p className="text-gray-200 font-outfit text-lg leading-relaxed">
                 At NexaVista Technologies, our mission is simple: to help our
                 clients succeed in the digital world. We aim to deliver tailored
                 solutions that not only meet but exceed our clients&apos;
@@ -97,10 +97,10 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
             <div className="lg:w-1/2">
-              <h2 className="text-4xl md:text-5xl font-bold text-[#3F3A34] mb-6">
+              <h2 className="text-4xl md:text-5xl font-outfit text-[#3F3A34] mb-6">
                 Our <span className="text-[#A68353]">Vision</span>
               </h2>
-              <p className="text-gray-700 text-lg leading-relaxed">
+              <p className="text-gray-700 text-lg leading-relaxed font-outfit">
                 In today&apos;s mobile-first world, having an app that connects
                 with your audience is crucial. We specialize in developing
                 mobile applications that are intuitive, responsive, and
@@ -123,14 +123,14 @@ export default function AboutPage() {
       {/* Call to Action Section */}
       <section className="py-20 px-6 lg:px-12 bg-[#252223]">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-outfit text-white mb-6">
             Ready to Start Your Journey?
           </h2>
-          <p className="text-gray-200 text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-gray-200 text-lg mb-8 max-w-2xl mx-auto font-outfit">
             Let&apos;s build something amazing together. Our experienced team is
             ready to bring your vision to life.
           </p>
-          <button className="bg-[#a68353] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#6C6259] transition-colors duration-300">
+          <button className="bg-[#a68353] text-white px-8 py-4 rounded-lg text-lg font-outfit hover:bg-[#6C6259] transition-colors duration-300">
             Get Started Today
           </button>
         </div>

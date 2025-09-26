@@ -36,13 +36,13 @@ const DigitalWhyChooseUs = () => {
   ];
 
   return (
-    <div className="bg-[#E8ECF3] py-16 px-6 sm:px-8 lg:px-16">
+    <div className="bg-[#E8ECF3] py-16 px-6 sm:px-8 lg:px-16 font-outfit">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-6 leading-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-outfit text-black mb-6 leading-tight">
             Why Choose NexaVista Technologies
-            <span className="block" style={{ color: "#2C3E50" }}>
+            <span className="block font-outfit" style={{ color: "#2C3E50" }}>
               for Digital Marketing?
             </span>
           </h2>
@@ -55,7 +55,7 @@ const DigitalWhyChooseUs = () => {
             return (
               <div
                 key={index}
-                className="group relative bg-gray-50 rounded-2xl p-8 hover:bg-white transition-all duration-500 hover:shadow-xl border border-gray-100 hover:border-gray-200"
+                className="group relative bg-gray-50 rounded-2xl p-8 hover:bg-white transition-all duration-500 hover:shadow-xl border border-gray-100 hover:border-gray-200 font-outfit"
               >
                 {/* Icon */}
                 <div className="flex items-center mb-6">
@@ -65,13 +65,13 @@ const DigitalWhyChooseUs = () => {
                   >
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-black group-hover:text-gray-800 transition-colors duration-300">
+                  <h3 className="text-2xl font-bold font-outfit text-black group-hover:text-gray-800 transition-colors duration-300">
                     {feature.title}
                   </h3>
                 </div>
 
                 {/* Description */}
-                <p className="text-gray-600 leading-relaxed text-base group-hover:text-gray-700 transition-colors duration-300">
+                <p className="text-gray-600 leading-relaxed text-base font-outfit group-hover:text-gray-700 transition-colors duration-300">
                   {feature.description}
                 </p>
 

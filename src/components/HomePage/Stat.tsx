@@ -12,14 +12,14 @@ const Stat = () => {
             <div className="space-y-4">
               {/* First line */}
               <div className="flex flex-wrap items-center gap-3">
-                <h1 className="text-4xl font-bold">Creative</h1>
-                <h1 className="text-4xl font-bold">
+                <h1 className="text-4xl font-outfit">Creative</h1>
+                <h1 className="text-4xl font-outfit">
                   <span className="text-[#a68353] relative">
                     Solutions
                     <div className="absolute -bottom-1 left-0 right-0 h-1 bg-[#a68353]"></div>
                   </span>
                 </h1>
-                <h1 className="text-4xl font-bold">For The</h1>
+                <h1 className="text-4xl font-outfit">For The</h1>
               </div>
 
               {/* Second line with team photos */}
@@ -55,12 +55,12 @@ const Stat = () => {
                   </div>
                 </div>
 
-                <h1 className="text-4xl font-bold">Modern World</h1>
+                <h1 className="text-4xl font-outfit">Modern World</h1>
               </div>
             </div>
 
             {/* Description */}
-            <p className="text-gray-400 text-base leading-relaxed">
+            <p className="text-gray-400 text-base font-outfit leading-relaxed">
               We specialize in delivering cutting-edge solutions tailored to
               your needs. Whether you&apos;re looking you succeed.
             </p>
@@ -83,20 +83,20 @@ const Stat = () => {
           <div className="bg-[#a68353] text-black p-8 rounded-b-2xl">
             <div className="grid grid-cols-3 gap-6 text-center">
               <div>
-                <div className="text-3xl font-bold">12+</div>
-                <div className="text-xs font-semibold uppercase tracking-wider mt-2">
+                <div className="text-3xl font-outfit">12+</div>
+                <div className="text-xs font-outfit uppercase tracking-wider mt-2">
                   YEAR EXPERIENCE
                 </div>
               </div>
               <div>
-                <div className="text-3xl font-bold">25k</div>
-                <div className="text-xs font-semibold uppercase tracking-wider mt-2">
+                <div className="text-3xl font-outfit">25k</div>
+                <div className="text-xs font-outfit uppercase tracking-wider mt-2">
                   HAPPY CUSTOMER
                 </div>
               </div>
               <div>
-                <div className="text-3xl font-bold">8k</div>
-                <div className="text-xs font-semibold uppercase tracking-wider mt-2">
+                <div className="text-3xl font-outfit">8k</div>
+                <div className="text-xs font-outfit uppercase tracking-wider mt-2">
                   PROJECTS COMPLETED
                 </div>
               </div>
@@ -113,14 +113,14 @@ const Stat = () => {
               <div className="space-y-4">
                 {/* First line */}
                 <div className="flex flex-wrap items-center gap-3">
-                  <h1 className="text-5xl xl:text-6xl font-bold">Creative</h1>
-                  <h1 className="text-5xl xl:text-6xl font-bold">
+                  <h1 className="text-5xl xl:text-6xl font-outfit">Creative</h1>
+                  <h1 className="text-5xl xl:text-6xl font-outfit">
                     <span className="text-[#a68353] relative">
                       Solutions
                       <div className="absolute -bottom-1 left-0 right-0 h-1 bg-[#a68353]"></div>
                     </span>
                   </h1>
-                  <h1 className="text-5xl xl:text-6xl font-bold">For The</h1>
+                  <h1 className="text-5xl xl:text-6xl font-outfit">For The</h1>
                 </div>
 
                 {/* Second line with team photos */}
@@ -156,14 +156,14 @@ const Stat = () => {
                     </div>
                   </div>
 
-                  <h1 className="text-5xl xl:text-6xl font-bold">
+                  <h1 className="text-5xl xl:text-6xl font-outfit">
                     Modern World
                   </h1>
                 </div>
               </div>
 
               {/* Description */}
-              <p className="text-gray-400 text-lg max-w-xl leading-relaxed">
+              <p className="text-gray-400 text-lg max-w-xl leading-relaxed font-outfit">
                 We specialize in delivering cutting-edge solutions tailored to
                 your needs. Whether you&apos;re looking you succeed.
               </p>
@@ -196,7 +196,7 @@ const Stat = () => {
                         d="M 64,64 m -50,0 a 50,50 0 1,1 100,0 a 50,50 0 1,1 -100,0"
                         fill="none"
                       />
-                      <text className="fill-gray-500 text-[10px] uppercase tracking-[0.3em]">
+                      <text className="fill-gray-500 text-[10px] uppercase tracking-[0.3em] font-outfit">
                         <textPath href="#circle-text" startOffset="0%">
                           EXPLORE MORE • EXPLORE MORE •
                         </textPath>
@@ -243,22 +243,22 @@ const Stat = () => {
               <div className="bg-[#a68353] text-black p-8 rounded-r-2xl shadow-2xl w-[280px] flex flex-col justify-center">
                 <div className="space-y-8">
                   <div>
-                    <div className="text-4xl font-bold">12+</div>
-                    <div className="text-xs font-semibold uppercase tracking-wider mt-2">
+                    <div className="text-4xl font-outfit">12+</div>
+                    <div className="text-xs font-outfit uppercase tracking-wider mt-2">
                       YEAR EXPERIENCE
                     </div>
                     <div className="h-px bg-black/20 mt-4"></div>
                   </div>
                   <div>
-                    <div className="text-4xl font-bold">25k</div>
-                    <div className="text-xs font-semibold uppercase tracking-wider mt-2">
+                    <div className="text-4xl font-outfit">25k</div>
+                    <div className="text-xs font-outfit uppercase tracking-wider mt-2">
                       HAPPY CUSTOMER
                     </div>
                     <div className="h-px bg-black/20 mt-4"></div>
                   </div>
                   <div>
-                    <div className="text-4xl font-bold">8k</div>
-                    <div className="text-xs font-semibold uppercase tracking-wider mt-2">
+                    <div className="text-4xl font-outfit">8k</div>
+                    <div className="text-xs font-outfit uppercase tracking-wider mt-2">
                       PROJECTS COMPLETED
                     </div>
                   </div>
