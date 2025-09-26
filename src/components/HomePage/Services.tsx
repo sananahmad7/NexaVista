@@ -74,7 +74,7 @@ const services: Service[] = [
     ],
     bgColor: "bg-[#137390]",
     textColor: "text-white",
-    icon: <Image src="/GD.JPG" alt="graphic design" height={400} width={400} />,
+    icon: <Image src="/GD.jpg" alt="graphic design" height={400} width={400} />,
   },
 ];
 
