@@ -88,7 +88,7 @@ const TestimonialSection = () => {
   };
 
   return (
-    <section className="bg-[#252223] py-20 mt-5">
+    <section className="bg-[#252223] py-20 mt-5 mb-15">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">

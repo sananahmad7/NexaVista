@@ -14,7 +14,6 @@ const Home = () => {
       <Clients />
       <Experience />
       <TestimonialSection />
-      <div className="h-200"></div>
     </div>
   );
 };

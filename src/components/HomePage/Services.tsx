@@ -82,8 +82,8 @@ const Services: React.FC = () => {
   const [hoveredService, setHoveredService] = useState<string | null>(null);
 
   return (
-    <section className=" py-16 lg:py-24 bg-white">
-      <div className="container  mx-auto  px-2">
+    <section className=" py-16 lg:py-22 bg-white ">
+      <div className="container  mx-auto  px-2 ">
         {/* Section Header */}
         <div className="text-center mb-16 ">
           <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-gray-900 mb-4">
@@ -96,11 +96,11 @@ const Services: React.FC = () => {
         </div>
 
         {/* Services Grid */}
-        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 ">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4  mb-4">
           {services.map((service) => (
             <div
               key={service.id}
-              className="relative max-w-3xl mx-1 h-[65vh] lg:h-[70vh] xl:h-[72vh] 2xl:h-[72vh] 3xl:h-[72vh]  cursor-pointer  mb-15 transition-all duration-300 ease-in-out "
+              className=" relative max-w-3xl mx-1 h-[65vh] lg:h-[70vh] xl:h-[72vh] 2xl:h-[72vh] 3xl:h-[72vh]  cursor-pointer  mb-15 transition-all duration-300 ease-in-out "
             >
               {/* Main Service Card */}
               <div
@@ -131,12 +131,10 @@ const Services: React.FC = () => {
                     {service.description}
                   </p>
                 </div>
-              </div>
-
-              {/* Features Panel - Slides up from bottom */}
-              <div
-                className={`
-                    absolute bottom-0 left-0 right-0 shadow shadow-gray-500 rounded-3xl  
+                {/* Features Panel - Slides up from bottom */}
+                <div
+                  className={`
+                    absolute  bottom-0 left-0 right-0 shadow shadow-gray-500 rounded-3xl  
                     ${service.bgColor} ${service.textColor}
                     transition-all duration-300 ease-in-out
                     ${
@@ -145,28 +143,29 @@ const Services: React.FC = () => {
                         : "translate-y-full opacity-0"
                     }
                   `}
-              >
-                <div className="p-6">
-                  <h4 className="text-lg font-semibold mb-4 opacity-90">
-                    Services Include:
-                  </h4>
+                >
+                  <div className="p-6">
+                    <h4 className="text-lg font-semibold mb-4 opacity-90">
+                      Services Include:
+                    </h4>
 
-                  {/* Flex row with wrapping */}
-                  <div className="flex flex-wrap gap-2">
-                    {service.features.map((feature, index) => (
-                      <span
-                        key={feature}
-                        className="inline-block px-2 py-1 rounded-full border border-current text-xs opacity-80 hover:opacity-100 transition-opacity duration-200"
-                        style={{
-                          transitionDelay:
-                            hoveredService === service.id
-                              ? `${index * 70}ms`
-                              : "0ms",
-                        }}
-                      >
-                        {feature}
-                      </span>
-                    ))}
+                    {/* Flex row with wrapping */}
+                    <div className="flex flex-wrap gap-2">
+                      {service.features.map((feature, index) => (
+                        <span
+                          key={feature}
+                          className="inline-block px-2 py-1 rounded-full border border-current text-xs opacity-80 hover:opacity-100 transition-opacity duration-200"
+                          style={{
+                            transitionDelay:
+                              hoveredService === service.id
+                                ? `${index * 70}ms`
+                                : "0ms",
+                          }}
+                        >
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
