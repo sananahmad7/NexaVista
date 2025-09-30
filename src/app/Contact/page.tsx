@@ -47,12 +47,12 @@ const ContactUs: React.FC = () => {
   return (
     <div className="min-h-screen my-10 bg-white">
       {/* Header Section */}
-      <div className="py-19 text-center">
+      <div className="py-24 text-center bg-[#27374D]">
         <div className="max-w-7xl mx-auto px-6">
-          <h1 className="text-5xl md:text-6xl 2xl:text-7xlfont-outfit font-bold mb-6 text-[#27374D]">
-            Get In <span className="text-[#526D84]">Touch</span>
+          <h1 className="text-5xl md:text-6xl 2xl:text-7xl font-outfit font-bold mb-6 text-[#DDE6ED]">
+            Get In <span className="text-[#9DB2B9]">Touch</span>
           </h1>
-          <p className="text-sm lg:text-lg text-[#526D84] max-w-2xl mx-auto leading-relaxed font-outfit">
+          <p className="text-sm lg:text-lg text-[#DDE6ED]/80 max-w-2xl mx-auto leading-relaxed font-outfit">
             We’re here to help you turn your digital ideas into reality. Whether
             you’re looking for a new website, a mobile app, or a marketing
             strategy, we’d love to hear from you.
@@ -75,39 +75,69 @@ const ContactUs: React.FC = () => {
 
             {/* Contact Cards */}
             <div className="space-y-6">
-              {[
-                { icon: Mail, title: "Email Us", text: "hello@company.com" },
-                { icon: Phone, title: "Call Us", text: "+1 (555) 123-4567" },
-                {
-                  icon: MapPin,
-                  title: "Visit Us",
-                  text: "123 Business Street\nCity, State 12345",
-                },
-                {
-                  icon: Clock,
-                  title: "Office Hours",
-                  text: "Mon - Fri: 9:00 AM - 6:00 PM\nSat: 10:00 AM - 4:00 PM",
-                },
-              ].map((item, idx) => (
-                <div
-                  key={idx}
-                  className="bg-[#3A4A5C] border border-[#526D84] p-6 rounded-md hover:border-[#9DB2B9] transition-colors shadow-sm"
-                >
-                  <div className="flex items-center space-x-4">
-                    <div className="bg-[#9DB2B9] p-3 rounded-md">
-                      <item.icon className="w-6 h-6 text-[#27374D]" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-outfit text-[#DDE6ED]">
-                        {item.title}
-                      </h3>
-                      <p className="text-[#9DB2B9] whitespace-pre-line font-outfit">
-                        {item.text}
-                      </p>
-                    </div>
+              <div className="bg-[#3A4A5C] border border-[#526D84] p-6 rounded-md hover:border-[#9DB2B9] transition-colors shadow-sm">
+                <div className="flex items-center space-x-4">
+                  <div className="bg-[#9DB2B9] p-3 rounded-md">
+                    <Mail className="w-6 h-6 text-[#27374D]" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-outfit text-[#DDE6ED]">
+                      Email Us
+                    </h3>
+                    <p className="text-[#9DB2B9] whitespace-pre-line font-outfit">
+                      hello@company.com
+                    </p>
                   </div>
                 </div>
-              ))}
+              </div>
+
+              <div className="bg-[#3A4A5C] border border-[#526D84] p-6 rounded-md hover:border-[#9DB2B9] transition-colors shadow-sm">
+                <div className="flex items-center space-x-4">
+                  <div className="bg-[#9DB2B9] p-3 rounded-md">
+                    <Phone className="w-6 h-6 text-[#27374D]" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-outfit text-[#DDE6ED]">
+                      Call Us
+                    </h3>
+                    <p className="text-[#9DB2B9] font-outfit">
+                      +1 (555) 123-4567
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-[#3A4A5C] border border-[#526D84] p-6 rounded-md hover:border-[#9DB2B9] transition-colors shadow-sm">
+                <div className="flex items-center space-x-4">
+                  <div className="bg-[#9DB2B9] p-3 rounded-md">
+                    <MapPin className="w-6 h-6 text-[#27374D]" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-outfit text-[#DDE6ED]">
+                      Visit Us
+                    </h3>
+                    <p className="text-[#9DB2B9] whitespace-pre-line font-outfit">
+                      123 Business Street{"\n"}City, State 12345
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-[#3A4A5C] border border-[#526D84] p-6 rounded-md hover:border-[#9DB2B9] transition-colors shadow-sm">
+                <div className="flex items-center space-x-4">
+                  <div className="bg-[#9DB2B9] p-3 rounded-md">
+                    <Clock className="w-6 h-6 text-[#27374D]" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-outfit text-[#DDE6ED]">
+                      Office Hours
+                    </h3>
+                    <p className="text-[#9DB2B9] whitespace-pre-line font-outfit">
+                      Mon - Fri: 9:00 AM - 6:00 PM{"\n"}Sat: 10:00 AM - 4:00 PM
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -117,60 +147,106 @@ const ContactUs: React.FC = () => {
               Send Us a Message
             </h3>
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
-                {["firstName", "lastName"].map((field) => (
-                  <div key={field} className="bg-[#27374d] p-4 rounded-md">
-                    <label
-                      htmlFor={field}
-                      className="block text-sm font-outfit mb-2 text-[#DDE6ED]"
-                    >
-                      {field === "firstName" ? "First Name *" : "Last Name *"}
-                    </label>
-                    <input
-                      type="text"
-                      id={field}
-                      name={field}
-                      required
-                      value={(formData as any)[field]}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-[#1F2A38] border border-[#526D84] text-[#DDE6ED] placeholder-[#9DB2B9] focus:border-[#DDE6ED] focus:ring-2 focus:ring-[#DDE6ED]/30 outline-none"
-                      placeholder={field === "firstName" ? "John" : "Doe"}
-                    />
-                  </div>
-                ))}
+              {/* First Name */}
+              <div className="bg-[#27374d] p-4 rounded-md">
+                <label
+                  htmlFor="firstName"
+                  className="block text-sm font-outfit mb-2 text-[#DDE6ED]"
+                >
+                  First Name *
+                </label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  required
+                  value={formData.firstName}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 bg-[#1F2A38] border border-[#526D84] text-[#DDE6ED] placeholder-[#9DB2B9] focus:border-[#DDE6ED] focus:ring-2 focus:ring-[#DDE6ED]/30 outline-none"
+                  placeholder="John"
+                />
               </div>
 
-              {[
-                { id: "email", label: "Email Address *", type: "email" },
-                { id: "phone", label: "Phone Number", type: "tel" },
-                { id: "subject", label: "Subject *", type: "text" },
-              ].map((input) => (
-                <div key={input.id} className="bg-[#27374d] p-4 rounded-md">
-                  <label
-                    htmlFor={input.id}
-                    className="block text-sm font-outfit mb-2 text-[#DDE6ED]"
-                  >
-                    {input.label}
-                  </label>
-                  <input
-                    type={input.type}
-                    id={input.id}
-                    name={input.id}
-                    required={input.id !== "phone"}
-                    value={(formData as any)[input.id]}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-[#1F2A38] border border-[#526D84] text-[#DDE6ED] placeholder-[#9DB2B9] focus:border-[#DDE6ED] focus:ring-2 focus:ring-[#DDE6ED]/30 outline-none"
-                    placeholder={
-                      input.id === "email"
-                        ? "john@example.com"
-                        : input.id === "phone"
-                        ? "+1 (555) 123-4567"
-                        : "How can we help you?"
-                    }
-                  />
-                </div>
-              ))}
+              {/* Last Name */}
+              <div className="bg-[#27374d] p-4 rounded-md">
+                <label
+                  htmlFor="lastName"
+                  className="block text-sm font-outfit mb-2 text-[#DDE6ED]"
+                >
+                  Last Name *
+                </label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  required
+                  value={formData.lastName}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 bg-[#1F2A38] border border-[#526D84] text-[#DDE6ED] placeholder-[#9DB2B9] focus:border-[#DDE6ED] focus:ring-2 focus:ring-[#DDE6ED]/30 outline-none"
+                  placeholder="Doe"
+                />
+              </div>
 
+              {/* Email */}
+              <div className="bg-[#27374d] p-4 rounded-md">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-outfit mb-2 text-[#DDE6ED]"
+                >
+                  Email Address *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 bg-[#1F2A38] border border-[#526D84] text-[#DDE6ED] placeholder-[#9DB2B9] focus:border-[#DDE6ED] focus:ring-2 focus:ring-[#DDE6ED]/30 outline-none"
+                  placeholder="john@example.com"
+                />
+              </div>
+
+              {/* Phone */}
+              <div className="bg-[#27374d] p-4 rounded-md">
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-outfit mb-2 text-[#DDE6ED]"
+                >
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 bg-[#1F2A38] border border-[#526D84] text-[#DDE6ED] placeholder-[#9DB2B9] focus:border-[#DDE6ED] focus:ring-2 focus:ring-[#DDE6ED]/30 outline-none"
+                  placeholder="+1 (555) 123-4567"
+                />
+              </div>
+
+              {/* Subject */}
+              <div className="bg-[#27374d] p-4 rounded-md">
+                <label
+                  htmlFor="subject"
+                  className="block text-sm font-outfit mb-2 text-[#DDE6ED]"
+                >
+                  Subject *
+                </label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  required
+                  value={formData.subject}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 bg-[#1F2A38] border border-[#526D84] text-[#DDE6ED] placeholder-[#9DB2B9] focus:border-[#DDE6ED] focus:ring-2 focus:ring-[#DDE6ED]/30 outline-none"
+                  placeholder="How can we help you?"
+                />
+              </div>
+
+              {/* Message */}
               <div className="bg-[#27374d] p-4 rounded-md">
                 <label
                   htmlFor="message"

@@ -38,6 +38,7 @@ const timelineEvents = [
     side: "right",
   },
 ];
+
 const Timeline = () => {
   const [visibleEvents, setVisibleEvents] = useState<number[]>([]);
 
@@ -53,7 +54,7 @@ const Timeline = () => {
           }
         });
       },
-      { threshold: 0 }
+      { threshold: 0.1 }
     );
 
     const timelineItems = document.querySelectorAll(".timeline-item");
@@ -61,71 +62,80 @@ const Timeline = () => {
 
     return () => observer.disconnect();
   }, []);
+
   return (
     <section className="py-20 px-6 lg:px-12 bg-white">
       <div className="max-w-6xl mx-auto">
+        {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-outfit text-[#3F3A34] mb-4">
+          <h2 className="text-4xl md:text-5xl font-outfit text-[#27374D] mb-4">
             Our <span className="text-[#6C6259]">Timeline</span>
           </h2>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto font-outfit">
+          <p className="text-[#3F3A34] text-lg max-w-2xl mx-auto font-outfit">
             A decade of growth, innovation, and excellence
           </p>
         </div>
 
         <div className="relative">
           {/* Vertical Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-[#6C6259] hidden md:block"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-[#27374D] hidden md:block"></div>
 
           {/* Timeline Events */}
-          <div className="space-y-19 md:space-y-28">
-            {timelineEvents.map((event, index) => (
-              <div
-                key={index}
-                data-index={index}
-                className={`timeline-item flex flex-col md:flex-row items-center gap-8 ${
-                  event.side === "left" ? "md:flex-row-reverse" : ""
-                } ${
-                  visibleEvents.includes(index)
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-8"
-                } transition-all duration-700 ease-out`}
-              >
-                {/* Year */}
-                <div className="md:w-1/2 flex justify-center md:justify-end">
-                  <div
-                    className={`text-6xl md:text-7xl font-outfit text-[#A68353] ${
-                      event.side === "left"
-                        ? "md:text-left md:pl-12"
-                        : "md:text-right md:pr-12"
-                    }`}
-                  >
-                    {event.year}
+          <div className="space-y-20 md:space-y-38">
+            {timelineEvents.map((event, index) => {
+              const isVisible = visibleEvents.includes(index);
+              const baseAnimation =
+                event.side === "left"
+                  ? "translate-x-[-50px]"
+                  : "translate-x-[50px]";
+              const slideIn = "translate-x-0 opacity-100";
+
+              return (
+                <div
+                  key={index}
+                  data-index={index}
+                  className={`timeline-item flex flex-col md:flex-row items-center gap-8 ${
+                    event.side === "left" ? "md:flex-row-reverse" : ""
+                  } transition-all duration-700 ease-out ${
+                    isVisible ? slideIn : `${baseAnimation} opacity-0`
+                  }`}
+                >
+                  {/* Year */}
+                  <div className="md:w-1/2 flex justify-center md:justify-end">
+                    <div
+                      className={`text-6xl md:text-7xl font-outfit text-[#27374D] ${
+                        event.side === "left"
+                          ? "md:text-left md:pl-12"
+                          : "md:text-right md:pr-12"
+                      }`}
+                    >
+                      {event.year}
+                    </div>
+                  </div>
+
+                  {/* Timeline Dot */}
+                  <div className="relative z-10 hidden md:block">
+                    <div className="w-4 h-4 bg-[#27374D] rounded-full border-4 border-[#DDE6ED]"></div>
+                  </div>
+
+                  {/* Content Card */}
+                  <div className="md:w-1/2 flex justify-center md:justify-start">
+                    <div
+                      className={`bg-white border border-gray-200 text-[#3F3A34] p-8 rounded-lg max-w-md shadow-sm hover:shadow-md transition-shadow duration-300 ${
+                        event.side === "left" ? "md:mr-12" : "md:ml-12"
+                      }`}
+                    >
+                      <h3 className="text-2xl font-outfit font-bold mb-4 text-[#27374D]">
+                        {event.title}
+                      </h3>
+                      <p className="text-[#3F3A34]/80 leading-relaxed font-outfit">
+                        {event.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
-
-                {/* Timeline Dot */}
-                <div className="relative z-10 hidden md:block">
-                  <div className="w-4 h-4 bg-[#6C6259] rounded-full border-4 border-white"></div>
-                </div>
-
-                {/* Content Card */}
-                <div className="md:w-1/2 flex justify-center md:justify-start">
-                  <div
-                    className={`bg-white border-2 border-gray-100 text-[#3F3A34] p-8 rounded-lg max-w-md shadow-sm hover:shadow-md transition-shadow duration-300 ${
-                      event.side === "left" ? "md:mr-12" : "md:ml-12"
-                    }`}
-                  >
-                    <h3 className="text-2xl font-outfit font-bold mb-4 text-[#3F3A34]">
-                      {event.title}
-                    </h3>
-                    <p className="text-gray-700 leading-relaxed font-outfit">
-                      {event.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
