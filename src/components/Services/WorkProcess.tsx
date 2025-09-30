@@ -28,13 +28,13 @@ const WorkProcess = () => {
     },
   ];
   return (
-    <section className="py-20 lg:py-32 px-6 bg-gray-50 font-outfit">
+    <section className="py-20 lg:py-32 px-6  font-outfit">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-[#A68353] font-semibold text-lg mb-4 tracking-wide font-outfit">
+          <p className="text-[#27374D] font-semibold text-lg mb-4 tracking-wide font-outfit">
             OUR PROCESS
           </p>
-          <h2 className="text-4xl lg:text-5xl font-bold text-[#252223] mb-6 font-outfit">
+          <h2 className="text-4xl lg:text-5xl font-bold text-[#27374D] mb-6 font-outfit">
             How We Work
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto font-outfit">
@@ -47,7 +47,7 @@ const WorkProcess = () => {
           {processSteps.map((step, index) => (
             <div key={index} className="relative font-outfit">
               <div className="bg-white rounded-xl p-8 shadow-lg h-full font-outfit">
-                <div className="text-6xl font-bold text-[#A68353]/20 mb-4 font-outfit">
+                <div className="text-6xl font-bold text-[#98B2BF] mb-4 font-outfit">
                   {step.step}
                 </div>
                 <h3 className="text-xl font-bold text-[#252223] mb-4 font-outfit">
@@ -58,7 +58,7 @@ const WorkProcess = () => {
                 </p>
               </div>
               {index < processSteps.length - 1 && (
-                <div className="hidden xl:block absolute top-1/2 -right-4 w-8 h-0.5 bg-[#A68353]/30"></div>
+                <div className="hidden xl:block absolute top-1/2 -right-4 w-8 h-0.5 bg-[#27374D]/30"></div>
               )}
             </div>
           ))}

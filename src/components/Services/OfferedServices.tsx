@@ -108,17 +108,17 @@ const ServicesOffered = () => {
   };
 
   return (
-    <div className="bg-white">
+    <div className="">
       {/* Header Section */}
-      <section className="min-h-[30vh] flex items-center justify-center px-6 py-18 ">
+      <section className="min-h-[40vh] flex items-center justify-center px-6 py-18 bg-[#DDE6ED] ">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-[#A68353] font-semibold text-sm mb-4 tracking-widest font-outfit uppercase">
+          <p className="text-[#27374D] font-semibold text-sm mb-4 tracking-widest font-outfit uppercase">
             OUR EXPERTISE
           </p>
-          <h1 className="text-4xl lg:text-5xl font-bold text-black mb-6 font-outfit leading-tight">
-            Services That Drive Success
+          <h1 className="text-4xl lg:text-5xl font-bold mb-6 font-outfit leading-tight text-[#27374D]">
+            Services That Drive <span className="text-[#9DB2B9]">Success</span>
           </h1>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto font-outfit">
+          <p className="text-xl text-[#27374D]/80 max-w-3xl mx-auto font-outfit">
             From concept to completion, we provide comprehensive digital
             solutions tailored to your business needs.
           </p>
@@ -131,12 +131,29 @@ const ServicesOffered = () => {
         const isImageRight = service.imagePosition === "right";
         const isEven = index % 2 === 0;
 
+        // Define colors per section type
+        const bgColor = isEven
+          ? "bg-[#27374D]" // dark
+          : "bg-[#DDE6ED]"; // light
+
+        const headingColor = isEven ? "text-[#DDE6ED]" : "text-[#27374D]";
+        const taglineColor = isEven ? "text-[#9DB2B9]" : "text-[#1F2A38]";
+        const descColor = isEven ? "text-[#DDE6ED]/80" : "text-[#27374D]/80";
+        const featureTextColor = isEven ? "text-[#DDE6ED]" : "text-[#27374D]";
+        const iconColor = isEven ? "text-[#9DB2B9]" : "text-[#27374D]";
+        const borderColor = isEven ? "border-[#9DB2B9]" : "border-[#27374D]";
+        const checkColor = isEven ? "text-[#9DB2B9]" : "text-[#27374D]";
+        const ctaBg = isEven ? "bg-[#9DB2B9]" : "bg-[#27374D]";
+        const ctaText = isEven ? "text-[#27374D]" : "text-[#DDE6ED]";
+        const ctaBorder = isEven ? "border-[#9DB2B9]" : "border-[#27374D]";
+        const ctaHover = isEven
+          ? "hover:bg-[#DDE6ED] hover:border-[#DDE6ED]"
+          : "hover:bg-[#9DB2B9] hover:border-[#9DB2B9] hover:text-[#27374D]";
+
         return (
           <section
             key={service.id}
-            className={`service-section min-h-screen flex items-center px-6 py-12 lg:py-0 ${
-              isEven ? "bg-white" : "bg-[#252223]"
-            }`}
+            className={`service-section min-h-screen flex items-center px-6 py-12 lg:py-0 ${bgColor}`}
           >
             <div className="max-w-7xl mx-auto w-full">
               <div
@@ -150,37 +167,31 @@ const ServicesOffered = () => {
                     isImageRight ? "lg:order-1" : "lg:order-2"
                   }`}
                 >
-                  <div className="inline-flex items-center gap-3 border-l-4 border-[#A68353] pl-4">
-                    <IconComponent
-                      className={`w-6 h-6 ${
-                        isEven ? "text-[#252223]" : "text-white"
-                      }`}
-                    />
+                  <div
+                    className={`inline-flex items-center gap-3 border-l-4 ${borderColor} pl-4`}
+                  >
+                    <IconComponent className={`w-6 h-6 ${iconColor}`} />
                     <span
-                      className={`font-semibold text-sm uppercase tracking-widest font-outfit ${
-                        isEven ? "text-[#252223]" : "text-white"
-                      }`}
+                      className={`font-semibold text-sm uppercase tracking-widest font-outfit ${headingColor}`}
                     >
                       {service.id.replace("-", " ")}
                     </span>
                   </div>
 
                   <h2
-                    className={`text-4xl lg:text-5xl xl:text-6xl font-bold font-outfit leading-tight ${
-                      isEven ? "text-[#252223]" : "text-white"
-                    }`}
+                    className={`text-4xl lg:text-5xl xl:text-6xl font-bold font-outfit leading-tight ${headingColor}`}
                   >
                     {service.title}
                   </h2>
 
-                  <p className="text-2xl text-[#A68353] font-medium font-outfit">
+                  <p
+                    className={`text-2xl font-medium font-outfit ${taglineColor}`}
+                  >
                     {service.tagline}
                   </p>
 
                   <p
-                    className={`text-lg lg:text-xl leading-relaxed font-outfit ${
-                      isEven ? "text-gray-700" : "text-gray-300"
-                    }`}
+                    className={`text-lg lg:text-xl leading-relaxed font-outfit ${descColor}`}
                   >
                     {service.description}
                   </p>
@@ -189,20 +200,12 @@ const ServicesOffered = () => {
                     {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center gap-3">
                         <div
-                          className={`flex-shrink-0 w-5 h-5 border-2 flex items-center justify-center ${
-                            isEven ? "border-[#252223]" : "border-white"
-                          }`}
+                          className={`flex-shrink-0 w-5 h-5 border-2 flex items-center justify-center ${borderColor}`}
                         >
-                          <Check
-                            className={`w-3 h-3 ${
-                              isEven ? "text-[#252223]" : "text-white"
-                            }`}
-                          />
+                          <Check className={`w-3 h-3 ${checkColor}`} />
                         </div>
                         <span
-                          className={`text-base font-medium font-outfit ${
-                            isEven ? "text-[#252223]" : "text-white"
-                          }`}
+                          className={`text-base font-medium font-outfit ${featureTextColor}`}
                         >
                           {feature}
                         </span>
@@ -212,11 +215,7 @@ const ServicesOffered = () => {
 
                   <button
                     onClick={() => handleLearnMoreClick(service.route)}
-                    className={`group inline-flex items-center gap-3 px-8 py-4 font-semibold text-base font-outfit transition-all duration-300 mt-6 border-2 rounded-2xl ${
-                      isEven
-                        ? "bg-[#252223] text-white border-[#252223] hover:bg-transparent hover:text-[#252223]"
-                        : "bg-white text-[#252223] border-white hover:bg-transparent hover:text-white"
-                    }`}
+                    className={`group inline-flex items-center gap-3 px-8 py-4 font-semibold text-base font-outfit transition-all duration-300 mt-6 border-2 rounded-2xl ${ctaBg} ${ctaText} ${ctaBorder} ${ctaHover}`}
                   >
                     Learn More
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -230,13 +229,13 @@ const ServicesOffered = () => {
                   }`}
                 >
                   <div className="relative overflow-hidden">
-                    <div className={`aspect-[4/3] `}>
+                    <div className={`aspect-[4/3]`}>
                       <Image
                         src={service.image}
                         alt={service.title}
                         width={600}
                         height={500}
-                        className="object-cover rounded-2xl "
+                        className="object-cover rounded-2xl"
                       />
                     </div>
                   </div>

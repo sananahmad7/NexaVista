@@ -15,20 +15,20 @@ export default function Client() {
   const duplicatedClients = [...clients, ...clients];
 
   return (
-    <section className="py-10 bg-gradient-to-b from-gray-50 to-white overflow-hidden relative">
+    <section className="py-10  overflow-hidden relative">
       <div className="container mx-auto px-4 relative z-10">
         {/* Heading */}
         <div className="text-center mb-6">
           <div className="inline-block">
             <h2
               className="text-sm font-outfit tracking-[0.2em] uppercase mb-3 relative"
-              style={{ color: "#6C6259" }}
+              style={{ color: "#27374D" }}
             >
               CLIENTS WE HAVE WORKED WITH
             </h2>
             <div
               className="w-16 h-0.5 mx-auto"
-              style={{ backgroundColor: "#6C6259" }}
+              style={{ backgroundColor: "#526D82" }}
             ></div>
           </div>
         </div>
@@ -43,14 +43,14 @@ export default function Client() {
               >
                 <div className="flex items-center space-x-5 p-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg group">
                   <div
-                    className="w-14 h-14 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg border-2 border-opacity-20 border-white transition-all duration-300 group-hover:shadow-xl group-hover:scale-110"
-                    style={{ backgroundColor: "#3F3A34" }}
+                    className="w-14 h-14 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg border-2 border-opacity-20 border-[#DDE6ED] transition-all duration-300 group-hover:shadow-xl group-hover:scale-110"
+                    style={{ backgroundColor: "#27374D" }}
                   >
                     {client.logo}
                   </div>
                   <span
                     className="text-xl sm:text-2xl font-outfit tracking-wide transition-all duration-300 group-hover:tracking-wider"
-                    style={{ color: "#6C6259" }}
+                    style={{ color: "#27374D" }}
                   >
                     {client.name}
                   </span>

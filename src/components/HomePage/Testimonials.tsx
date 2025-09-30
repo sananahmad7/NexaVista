@@ -71,33 +71,42 @@ const TestimonialSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 4000); // Move every 4 seconds
-
+    }, 7000);
     return () => clearInterval(interval);
-  }, [testimonials.length]);
+  }, []);
 
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
         key={i}
         className={`w-5 h-5 ${
-          i < rating ? "text-[#A68353] fill-[#A68353]" : "text-gray-300"
+          i < rating ? "text-[#DDE6ED] fill-[#DDE6ED]" : "text-gray-500"
         }`}
       />
     ));
   };
 
   return (
-    <section className="bg-[#252223] py-20 mt-5 mb-15">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="relative bg-[#27374D] py-20 mt-10 mb-15 overflow-hidden">
+      {/* Background Patterns */}
+      <div className="absolute inset-0 pointer-events-none ">
+        {/* Subtle gradient circles */}
+        <div className="absolute top-0 left-0 w-72 h-72 bg-[#526D84] opacity-20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#9DB2B9] opacity-10 rounded-full blur-3xl"></div>
+
+        {/* Grid lines pattern */}
+        <div className="absolute inset-0 opacity-90 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-block">
-            <span className="text-[#A68353] text-sm font-outfit uppercase tracking-wider mb-2 block">
+            <span className="text-[#9DB2B9] text-sm font-outfit uppercase tracking-wider mb-2 block">
               Testimonial
             </span>
             <h2 className="text-4xl md:text-5xl font-outfit text-white">
-              Client <span className="text-[#A68353] ">Feedback</span>
+              Client <span className="text-[#DDE6ED]">Feedback</span>
             </h2>
           </div>
         </div>
@@ -110,20 +119,20 @@ const TestimonialSection = () => {
               transform: `translateX(-${currentIndex * 50}%)`,
             }}
           >
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial) => (
               <div
                 key={testimonial.id}
                 className="w-full md:w-1/2 flex-shrink-0 px-4"
               >
-                <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-gray-700/50 h-full relative">
+                <div className="bg-[#526D84]/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-[#9DB2B9]/30 h-full relative">
                   {/* Quote Icon */}
                   <div className="absolute top-6 right-8 lg:right-3">
-                    <Quote className="w-8 h-8 text-[#A68353] opacity-30" />
+                    <Quote className="w-8 h-8 text-[#DDE6ED] opacity-30" />
                   </div>
 
                   {/* Content */}
-                  <div className="mb-6 ">
-                    <p className="text-white text-lg leading-relaxed font-outfit ">
+                  <div className="mb-6">
+                    <p className="text-white text-lg leading-relaxed font-outfit">
                       &quot;{testimonial.content}&quot;
                     </p>
                   </div>
@@ -135,7 +144,7 @@ const TestimonialSection = () => {
 
                   {/* Author Info */}
                   <div className="flex items-center">
-                    <div className="w-14 h-14 rounded-full font-outfit bg-gray-600 overflow-hidden mr-4 ring-2 ring-[#A68353] ring-opacity-30">
+                    <div className="w-14 h-14 rounded-full bg-gray-600 overflow-hidden mr-4 ring-2 ring-[#9DB2B9] ring-opacity-40">
                       <img
                         src={testimonial.avatar}
                         alt={testimonial.name}
@@ -146,10 +155,10 @@ const TestimonialSection = () => {
                       <h4 className="font-outfit text-white text-lg">
                         {testimonial.name}
                       </h4>
-                      <p className="text-[#A68353] text-sm font-outfit">
+                      <p className="text-[#DDE6ED] text-sm font-outfit">
                         {testimonial.position}
                       </p>
-                      <p className="text-gray-300 text-sm font-outfit">
+                      <p className="text-[#9DB2B9] text-sm font-outfit">
                         {testimonial.company}
                       </p>
                     </div>
@@ -168,8 +177,8 @@ const TestimonialSection = () => {
               onClick={() => setCurrentIndex(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentIndex
-                  ? "bg-[#A68353] w-8"
-                  : "bg-gray-300 hover:bg-gray-400"
+                  ? "bg-[#DDE6ED] w-8"
+                  : "bg-gray-500 hover:bg-gray-400"
               }`}
             />
           ))}

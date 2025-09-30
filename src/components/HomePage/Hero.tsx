@@ -123,15 +123,15 @@ const Hero = () => {
       {/* Content Container */}
       <div className="relative z-0 flex flex-col justify-center min-h-[85vh] px-6 md:px-12 lg:px-20 max-w-7xl mx-auto ">
         {/* Main Headline */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white mb-6 leading-tight">
-          We Build Digital
+        <h1 className="text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl text-white mb-6 leading-tight">
+          We Build Websites, Apps, and
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#9DB2BF] to-[#DDE6ED]">
-            Experiences That Matter
+            Strategies Designed to Boost your Reach and Revenue
           </span>
         </h1>
 
         {/* Subheadline */}
-        <p className="text-lg md:text-xl lg:text-2xl text-[#DDE6ED]/90 max-w-3xl mb-8 leading-relaxed">
+        <p className="text-md md:text-xl lg:text-xl text-[#DDE6ED]/90 max-w-3xl mb-8 leading-relaxed">
           NexaVista Technologies transforms complex ideas into intuitive digital
           solutions that drive growth and create lasting impact.
         </p>

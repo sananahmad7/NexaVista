@@ -43,7 +43,7 @@ const Navbar = () => {
             <Image
               src="/Main.png"
               alt="CRAFT Logo"
-              width={69}
+              width={52}
               height={52}
               className="object-contain"
             />
