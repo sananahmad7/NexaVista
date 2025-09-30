@@ -9,7 +9,7 @@ const Hero = () => {
         alt="Hero background"
         fill
         priority
-        className="object-cover opacity-30" // tweak opacity here if you want
+        className="object-cover opacity-70" // tweak opacity here if you want
       />
 
       {/* Content overlaying the image */}

@@ -25,10 +25,6 @@ const ServicesHero = () => {
           enhance user experiences, and position your business for success in
           the digital landscape.
         </p>
-        <button className="bg-[#A68353] hover:bg-[#8f6d42] text-white px-8 py-4 rounded-lg font-outfit font-semibold text-lg transition-all duration-300 group">
-          Explore Our Services
-          <ArrowRight className="inline-block ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-        </button>
       </div>
     </section>
   );

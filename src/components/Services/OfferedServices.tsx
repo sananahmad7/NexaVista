@@ -212,7 +212,7 @@ const ServicesOffered = () => {
 
                   <button
                     onClick={() => handleLearnMoreClick(service.route)}
-                    className={`group inline-flex items-center gap-3 px-8 py-4 font-semibold text-base font-outfit transition-all duration-300 mt-6 border-2 ${
+                    className={`group inline-flex items-center gap-3 px-8 py-4 font-semibold text-base font-outfit transition-all duration-300 mt-6 border-2 rounded-2xl ${
                       isEven
                         ? "bg-[#252223] text-white border-[#252223] hover:bg-transparent hover:text-[#252223]"
                         : "bg-white text-[#252223] border-white hover:bg-transparent hover:text-white"
@@ -230,27 +230,16 @@ const ServicesOffered = () => {
                   }`}
                 >
                   <div className="relative overflow-hidden">
-                    <div
-                      className={`aspect-[4/3] ${
-                        isEven ? "bg-gray-100" : "bg-[#1a1819]"
-                      }`}
-                    >
+                    <div className={`aspect-[4/3] `}>
                       <Image
                         src={service.image}
                         alt={service.title}
                         width={600}
                         height={500}
-                        className="object-cover"
+                        className="object-cover rounded-2xl "
                       />
                     </div>
                   </div>
-
-                  {/* Minimal accent line */}
-                  <div
-                    className={`absolute w-20 h-1 bg-[#A68353] ${
-                      isImageRight ? "bottom-0 right-0" : "bottom-0 left-0"
-                    }`}
-                  ></div>
                 </div>
               </div>
             </div>
