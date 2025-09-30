@@ -86,10 +86,10 @@ const Services: React.FC = () => {
       <div className="container  mx-auto  px-2 ">
         {/* Section Header */}
         <div className="text-center mb-16 ">
-          <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-[#27374D]    mb-4">
             Our Services
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto font-outfit">
+          <p className="text-xl text-[#526D82] max-w-3xl mx-auto font-outfit">
             Comprehensive digital solutions to transform your business and drive
             growth
           </p>

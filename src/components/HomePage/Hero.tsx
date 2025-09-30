@@ -1,64 +1,203 @@
+"use client";
+import React from "react";
 import Image from "next/image";
+type Icons = {
+  [key: string]: React.ReactElement;
+};
+const icons: Icons = {
+  React: (
+    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none">
+      {" "}
+      <circle cx="12" cy="12" r="2" fill="currentColor" />{" "}
+      <ellipse
+        cx="12"
+        cy="12"
+        rx="8"
+        ry="3"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        fill="none"
+      />{" "}
+      <ellipse
+        cx="12"
+        cy="12"
+        rx="8"
+        ry="3"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        fill="none"
+        transform="rotate(60 12 12)"
+      />{" "}
+      <ellipse
+        cx="12"
+        cy="12"
+        rx="8"
+        ry="3"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        fill="none"
+        transform="rotate(120 12 12)"
+      />{" "}
+    </svg>
+  ),
+  "Next.js": (
+    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+      {" "}
+      <path d="M11.5725 0c-.1763 0-.3098.0013-.3584.0067-.0516.0053-.2159.021-.3636.0328-3.4088.3073-6.6017 2.1463-8.624 4.9728C1.1004 6.584.3802 8.3666.1082 10.255c-.0962.659-.108.8537-.108 1.7474s.012 1.0884.108 1.7476c.652 4.506 3.8591 8.2919 8.2087 9.6945.7789.2511 1.6.4223 2.5337.5255.3636.04 1.9354.04 2.299 0 1.6117-.1783 2.9772-.577 4.3237-1.2643.2065-.1056.2464-.1337.2183-.1573-.0188-.0139-.8987-1.1938-1.9543-2.62l-1.919-2.592-2.4047-3.5583c-1.3231-1.9564-2.4117-3.556-2.4211-3.556-.0094-.0026-.0187 1.5787-.0235 3.509-.0067 3.3802-.0093 3.5162-.0516 3.596-.061.115-.108.1618-.2064.2134-.075.0374-.1408.0445-.495.0445h-.406l-.1078-.068a.4383.4383 0 01-.1572-.1712l-.0493-.1056.0053-4.703.0067-4.7054.0726-.0915c.0376-.0493.1174-.1125.1736-.143.0962-.047.1338-.0517.5396-.0517.4787 0 .5584.0187.6827.1547.0353.0377 1.3373 1.9987 2.895 4.3608a10760.433 10760.433 0 004.7344 7.1706l1.9002 2.8782.0971-.0633c.8763-.5536 1.8094-1.3708 2.5412-2.2238 1.2207-1.4216 2.0478-3.0444 2.4735-4.8524.0961-.659.108-.8537.108-1.7476 0-.8938-.012-1.0884-.108-1.7476-.652-4.506-3.859-8.2919-8.2087-9.6945-.7672-.2487-1.5836-.42-2.4985-.5232-.169-.0176-1.0835-.0366-1.6123-.037zm4.0685 7.217c.3473 0 .4082.0053.4857.047.1127.0562.204.1642.237.2767.0186.061.0234 1.3653.0186 4.3044l-.0067 4.2175-1.2789-1.9458-1.2862-1.9458v-2.3542c0-1.2945.0093-2.4007.0234-2.4594.0375-.1268.1272-.2286.2476-.2819.0961-.0428.1416-.0444.5669-.0444z" />{" "}
+    </svg>
+  ),
+  "Node.js": (
+    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+      {" "}
+      <path d="M11.998,24c-0.321,0-0.641-0.084-0.922-0.247l-2.936-1.737c-0.438-0.245-0.224-0.332-0.08-0.383 c0.585-0.203,0.703-0.25,1.328-0.604c0.065-0.037,0.151-0.023,0.218,0.017l2.256,1.339c0.082,0.045,0.197,0.045,0.272,0l8.795-5.076 c0.082-0.047,0.134-0.141,0.134-0.238V6.921c0-0.099-0.053-0.192-0.137-0.242l-8.791-5.072c-0.081-0.047-0.189-0.047-0.271,0 L3.075,6.68C2.99,6.729,2.936,6.825,2.936,6.921v10.15c0,0.097,0.054,0.189,0.139,0.235l2.409,1.392 c1.307,0.654,2.108-0.116,2.108-0.89V7.787c0-0.142,0.114-0.253,0.256-0.253h1.115c0.139,0,0.255,0.112,0.255,0.253v10.021 c0,1.745-0.95,2.745-2.604,2.745c-0.508,0-0.909,0-2.026-0.551L2.28,18.675c-0.57-0.329-0.922-0.945-0.922-1.604V6.921 c0-0.659,0.353-1.275,0.922-1.603l8.795-5.082c0.557-0.315,1.296-0.315,1.848,0l8.794,5.082c0.57,0.329,0.924,0.944,0.924,1.603 v10.15c0,0.659-0.354,1.273-0.924,1.604l-8.794,5.078C12.643,23.916,12.324,24,11.998,24z M19.099,13.993 c0-1.9-1.284-2.406-3.987-2.763c-2.731-0.361-3.009-0.548-3.009-1.187c0-0.528,0.235-1.233,2.258-1.233 c1.807,0,2.473,0.389,2.747,1.607c0.024,0.115,0.129,0.199,0.247,0.199h1.141c0.071,0,0.138-0.031,0.186-0.081 c0.048-0.054,0.074-0.123,0.067-0.196c-0.177-2.098-1.571-3.076-4.388-3.076c-2.508,0-4.004,1.058-4.004,2.833 c0,1.925,1.488,2.457,3.895,2.695c2.88,0.282,3.103,0.703,3.103,1.269c0,0.983-0.789,1.402-2.642,1.402 c-2.327,0-2.839-0.584-3.011-1.742c-0.02-0.124-0.126-0.215-0.253-0.215h-1.137c-0.141,0-0.254,0.112-0.254,0.253 c0,1.482,0.806,3.248,4.655,3.248C17.501,17.007,19.099,15.91,19.099,13.993z" />{" "}
+    </svg>
+  ),
+  "AI/ML": (
+    <svg
+      className="w-5 h-5"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+    >
+      {" "}
+      <circle cx="12" cy="12" r="3" />{" "}
+      <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83" />{" "}
+    </svg>
+  ),
+  Cloud: (
+    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+      {" "}
+      <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z" />{" "}
+    </svg>
+  ),
+  TypeScript: (
+    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+      {" "}
+      <path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z" />{" "}
+    </svg>
+  ),
+  Python: (
+    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+      {" "}
+      <path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z" />{" "}
+    </svg>
+  ),
+  AWS: (
+    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+      {" "}
+      <path d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.063.056.127.056.183 0 .08-.048.16-.152.24l-.503.335c-.072.048-.144.071-.208.071-.08 0-.16-.039-.239-.112a2.39 2.39 0 0 1-.287-.375 6.67 6.67 0 0 1-.248-.471c-.622.734-1.405 1.101-2.347 1.101-.67 0-1.205-.191-1.596-.574-.391-.384-.59-.894-.59-1.533 0-.678.239-1.23.726-1.644.487-.415 1.133-.623 1.955-.623.272 0 .551.024.846.064.296.04.6.104.918.176v-.583c0-.607-.127-1.03-.375-1.277-.255-.248-.686-.367-1.3-.367-.28 0-.568.031-.863.103-.295.072-.583.16-.862.272a2.287 2.287 0 0 1-.28.104.488.488 0 0 1-.127.023c-.112 0-.168-.08-.168-.247v-.391c0-.128.016-.224.056-.28a.597.597 0 0 1 .224-.167c.279-.144.614-.263 1.005-.36C4.196 4.015 4.62 3.958 5.06 3.958c.95 0 1.644.215 2.091.647.439.43.662 1.085.662 1.963v2.586zm-3.24 1.214c.263 0 .534-.048.822-.144.287-.096.543-.271.758-.51.128-.152.224-.32.279-.512.056-.191.088-.423.088-.694v-.335a6.66 6.66 0 0 0-.735-.136 6.02 6.02 0 0 0-.75-.048c-.535 0-.926.104-1.19.32-.263.215-.39.518-.39.917 0 .375.095.655.295.846.191.2.47.296.823.296zm6.41.862c-.144 0-.24-.024-.304-.08-.064-.048-.12-.16-.168-.311L7.586 5.55a1.398 1.398 0 0 1-.072-.32c0-.128.064-.2.191-.2h.783c.151 0 .255.025.312.081.064.048.112.16.16.312l1.342 5.284 1.245-5.284c.04-.16.088-.264.151-.312a.549.549 0 0 1 .32-.08h.638c.152 0 .256.024.32.08.063.048.12.16.151.312l1.261 5.348 1.381-5.348c.048-.16.104-.264.16-.312a.52.52 0 0 1 .311-.08h.743c.127 0 .2.063.2.2 0 .04-.009.08-.017.128a1.137 1.137 0 0 1-.056.2l-1.923 6.17c-.048.16-.104.263-.168.311a.51.51 0 0 1-.303.08h-.687c-.151 0-.255-.024-.32-.08-.063-.056-.119-.16-.15-.32l-1.238-5.148-1.23 5.14c-.04.16-.087.264-.15.32-.065.056-.177.08-.32.08zm10.256.215c-.415 0-.83-.048-1.229-.143-.399-.096-.71-.2-.918-.32-.128-.071-.215-.151-.247-.223a.563.563 0 0 1-.048-.224v-.407c0-.167.064-.247.183-.247.048 0 .096.008.144.024.048.016.12.048.2.08.271.12.566.215.878.279.319.064.63.096.95.096.502 0 .894-.088 1.165-.264a.86.86 0 0 0 .415-.758.777.777 0 0 0-.215-.559c-.144-.151-.415-.287-.807-.415l-1.157-.36c-.583-.183-1.014-.454-1.277-.813a1.902 1.902 0 0 1-.4-1.158c0-.335.073-.63.216-.886.144-.255.335-.479.575-.654.24-.184.51-.32.83-.415.32-.096.655-.136 1.006-.136.175 0 .359.008.535.032.183.024.35.056.518.088.16.04.312.08.455.127.144.048.256.096.336.144a.69.69 0 0 1 .176.135.289.289 0 0 1 .072.2v.375c0 .168-.064.256-.184.256-.063 0-.167-.024-.303-.08-.455-.183-.966-.279-1.525-.279-.455 0-.815.072-1.062.224-.247.151-.375.383-.375.71 0 .224.08.416.24.567.159.152.454.304.877.447l1.133.351c.574.183.99.438 1.237.767.247.328.367.702.367 1.117 0 .343-.072.655-.207.926-.144.272-.336.511-.575.702-.24.2-.535.343-.886.447-.36.111-.742.167-1.142.167z" />{" "}
+    </svg>
+  ),
+};
 
 const Hero = () => {
   return (
-    <div className="relative w-full h-[70vh] bg-[#252223]">
-      {/* Background Image */}
+    <div className="relative w-full h-[75vh] overflow-hidden font-outfit">
+      {/* Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#27374D] via-[#27374D] to-[#27374D]">
+        {/* Subtle Pattern Overlay */}
+        <div className="absolute inset-0 opacity-10">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23DDE6ED' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            }}
+          />
+        </div>
+      </div>
       <Image
-        src="/HERO2.jpg"
+        src="/new.jpg"
         alt="Hero background"
         fill
         priority
-        className="object-cover opacity-70" // tweak opacity here if you want
+        className="object-cover opacity-90" // tweak opacity here if you want
       />
+      {/* Animated Gradient Orbs */}
+      <div className="absolute inset-0 overflow-hidden ">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#DDE6ED] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#9DB2BF] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-[#526D82] rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-4000"></div>
+      </div>
 
-      {/* Content overlaying the image */}
-      <div className="relative  flex flex-col justify-center h-full space-y-10 p-9 md:p-10 text-white">
-        {/* Main headline */}
-        <h1 className="text-2xl md:text-3xl lg:text-4xl 3xl:text-6xl font-outfit max-w-7xl leading-tight">
-          We Build Websites, Apps, and Strategies That Boost Your Revenue
+      {/* Content Container */}
+      <div className="relative z-0 flex flex-col justify-center min-h-[85vh] px-6 md:px-12 lg:px-20 max-w-7xl mx-auto ">
+        {/* Main Headline */}
+        <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white mb-6 leading-tight">
+          We Build Digital
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#9DB2BF] to-[#DDE6ED]">
+            Experiences That Matter
+          </span>
         </h1>
 
-        <p className="text-base md:text-lg lg:text-xl max-w-3xl text-gray-200 font-outfit font-normal">
-          NexaVista Technologies is your partner in turning complex ideas into
-          intuitive digital solutions that truly resonate with your audience.
+        {/* Subheadline */}
+        <p className="text-lg md:text-xl lg:text-2xl text-[#DDE6ED]/90 max-w-3xl mb-8 leading-relaxed">
+          NexaVista Technologies transforms complex ideas into intuitive digital
+          solutions that drive growth and create lasting impact.
         </p>
 
-        {/* Call to action button */}
-        <button className="px-5 py-2 w-fit bg-white text-black font-outfit rounded-md hover:bg-gray-200 transition-colors duration-300">
-          Discover the Possibilites
-        </button>
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 mb-16">
+          <button className="group relative px-8 py-4 bg-white text-[#27374D] font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-white/20">
+            <span className="relative z-10">Start Your Project</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#9DB2BF] to-[#526D82] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+            <span className="absolute inset-0 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              Start Your Project
+            </span>
+          </button>
+          <button className="px-8 py-4 bg-transparent text-white font-semibold rounded-lg border-2 border-white/30 hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-sm">
+            View Our Work
+          </button>
+        </div>
 
-        <div className="flex flex-col lg:flex-row justify-between gap-8 md:gap-16 w-full max-w-6xl">
-          {/* Frameworks */}
-          <div>
-            <h3 className="text-gray-400 text-xs md:text-sm uppercase tracking-widest mb-3 font-outfit">
-              Core Frameworks
-            </h3>
-            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm md:text-base text-gray-100 font-outfit">
-              <span className="font-medium">React</span>
-              <span className="font-medium">Next.js</span>
-              <span className="font-medium">Node.js</span>
-              <span className="font-medium">TailwindCSS</span>
-              <span className="font-medium">Express</span>
-            </div>
-          </div>
-
-          {/* Technologies */}
-          <div>
-            <h3 className="text-gray-400 text-xs md:text-sm uppercase tracking-widest mb-3 font-outfit">
-              Key Technologies
-            </h3>
-            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm md:text-base text-gray-100 font-outfit">
-              <span className="font-medium">AI Agents</span>
-              <span className="font-medium">Full-Stack Apps</span>
-              <span className="font-medium">API Development</span>
-              <span className="font-medium">Cloud Platforms</span>
-              <span className="font-medium">Databases</span>
-            </div>
-          </div>
+        {/* Tech Stack Pills */}
+        <div className="mb-15 flex flex-wrap gap-3">
+          {[
+            "React",
+            "Next.js",
+            "Node.js",
+            "AI/ML",
+            "Cloud",
+            "TypeScript",
+            "Python",
+            "AWS",
+          ].map((tech) => (
+            <span
+              key={tech}
+              className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm text-white border border-white/20 hover:bg-white/15 hover:border-white/30 transition-all duration-300 cursor-default flex items-center gap-2"
+            >
+              <span className="text-white/90">{icons[tech]}</span>
+              <span className="font-medium">{tech}</span>
+            </span>
+          ))}
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes blob {
+          0% {
+            transform: translate(0px, 0px) scale(1);
+          }
+          33% {
+            transform: translate(30px, -50px) scale(1.1);
+          }
+          66% {
+            transform: translate(-20px, 20px) scale(0.9);
+          }
+          100% {
+            transform: translate(0px, 0px) scale(1);
+          }
+        }
+        .animate-blob {
+          animation: blob 7s infinite;
+        }
+        .animation-delay-2000 {
+          animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+          animation-delay: 4s;
+        }
+      `}</style>
     </div>
   );
 };
