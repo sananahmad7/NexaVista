@@ -43,7 +43,7 @@ const WebSteps: React.FC = () => {
   return (
     <div
       className="min-h-screen py-16 px-4 sm:px-6 lg:px-8 mb-20 font-outfit"
-      style={{ backgroundColor: "#f8f9fa" }}
+      style={{ backgroundColor: "#DDE6ED" }} // very light background
     >
       <div className="max-w-8xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
@@ -51,13 +51,16 @@ const WebSteps: React.FC = () => {
           <div className="lg:sticky lg:top-16">
             <h1
               className="text-xl sm:text-2xl lg:text-5xl font-bold font-outfit leading-tight mb-8"
-              style={{ color: "#0B252A" }}
+              style={{ color: "#1B3236" }} // main theme color
             >
               The Roadmap to
-              <span style={{ color: "#A68353" }}> Full Stack Development</span>
+              <span className="text-[#27374D]"> Full Stack Development</span>
             </h1>
 
-            <p className="text-lg text-gray-600 max-w-xl leading-relaxed font-outfit">
+            <p
+              className="text-lg max-w-xl leading-relaxed font-outfit"
+              style={{ color: "#526D82" }} // secondary paragraph color
+            >
               From concept to deployment, we guide your project through every
               stage of modern web development with precision and expertise.
             </p>
@@ -70,8 +73,8 @@ const WebSteps: React.FC = () => {
                 {/* Connecting Line */}
                 {index < steps.length - 1 && (
                   <div
-                    className="absolute left-6 top-12 w-0.5 h-16 opacity-30"
-                    style={{ backgroundColor: "#A68353" }}
+                    className="absolute left-6 top-12 w-0.5 h-16"
+                    style={{ backgroundColor: "#9DB2BF", opacity: 0.5 }}
                   />
                 )}
 
@@ -80,7 +83,7 @@ const WebSteps: React.FC = () => {
                   {/* Step Number Circle */}
                   <div
                     className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-white font-semibold text-lg shadow-lg font-outfit"
-                    style={{ backgroundColor: "#0C262A" }}
+                    style={{ backgroundColor: "#27374D" }}
                   >
                     {step.number}
                   </div>
@@ -90,7 +93,7 @@ const WebSteps: React.FC = () => {
                     <div className="flex items-center space-x-3 mb-3">
                       <h3
                         className="text-xl sm:text-2xl font-bold font-outfit"
-                        style={{ color: "#0B252A" }}
+                        style={{ color: "#1B3236" }}
                       >
                         {step.title}
                       </h3>
@@ -98,7 +101,7 @@ const WebSteps: React.FC = () => {
 
                     <p
                       className="text-base sm:text-lg leading-relaxed font-outfit"
-                      style={{ color: "#252223" }}
+                      style={{ color: "#27374D" }}
                     >
                       {step.description}
                     </p>

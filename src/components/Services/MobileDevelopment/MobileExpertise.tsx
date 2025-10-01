@@ -27,7 +27,7 @@ function MobileExpertise() {
         "We fine-tune apps to ensure smooth, efficient performance with minimal resource consumption across iPhone, iPad, and other iOS devices.",
     },
     {
-      icon: <Layers className="w-8 h-8" />, // new icon for cross-platform
+      icon: <Layers className="w-8 h-8" />,
       title: "Cross-Platform Development",
       description:
         "Using React Native and Flutter, we deliver powerful apps that run seamlessly on both iOS and Android. This ensures faster development, reduced costs, and consistent user experiences across platforms.",
@@ -37,12 +37,18 @@ function MobileExpertise() {
   return (
     <section className="py-16 px-4 max-w-7xl mx-auto font-outfit">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-black mb-4 text-balance font-outfit">
+        <h2
+          className="text-4xl font-bold mb-4 text-balance font-outfit"
+          style={{ color: "#214D5F" }}
+        >
           Mobile Development with{" "}
-          <span style={{ color: "#082024" }}>Excellence</span> and{" "}
-          <span style={{ color: "#A68353" }}>Innovation</span>
+          <span style={{ color: "#27374D" }}>Excellence</span> and{" "}
+          <span style={{ color: "#9DB2BF" }}>Innovation</span>
         </h2>
-        <p className="text-gray-600 text-lg max-w-3xl mx-auto text-pretty font-outfit">
+        <p
+          className="text-lg max-w-3xl mx-auto text-pretty font-outfit"
+          style={{ color: "#526D82" }}
+        >
           We specialize in building iOS applications that combine elegant
           design, seamless integration, and top-notch performance to elevate
           your mobile presence.
@@ -54,19 +60,31 @@ function MobileExpertise() {
         {expertiseAreas.map((area, index) => (
           <div
             key={index}
-            className="rounded-lg border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-50 font-outfit"
+            className="rounded-xl shadow-lg hover:shadow-2xl transition-shadow border border-[#9DB2BF] duration-300 font-outfit"
+            style={{ backgroundColor: "#FFFFFF" }}
           >
             <div className="p-8">
+              {/* Icon Wrapper */}
               <div
-                className="mb-6 p-3 rounded-full bg-white w-fit"
-                style={{ color: "#082024" }}
+                className="mb-6 p-3 rounded-full w-fit"
+                style={{ backgroundColor: "#DDE6ED", color: "#186377" }}
               >
                 {area.icon}
               </div>
-              <h3 className="text-xl font-semibold text-[#204C5E] mb-4 text-balance font-outfit">
+
+              {/* Card Title */}
+              <h3
+                className="text-xl font-semibold mb-4 text-balance font-outfit"
+                style={{ color: "#27374D" }}
+              >
                 {area.title}
               </h3>
-              <p className="text-gray-700 leading-relaxed text-pretty font-outfit">
+
+              {/* Card Description */}
+              <p
+                className="leading-relaxed text-pretty font-outfit"
+                style={{ color: "#526D82" }}
+              >
                 {area.description}
               </p>
             </div>

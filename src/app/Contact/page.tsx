@@ -47,8 +47,48 @@ const ContactUs: React.FC = () => {
   return (
     <div className="min-h-screen my-10 bg-white">
       {/* Header Section */}
-      <div className="py-24 text-center bg-[#27374D]">
-        <div className="max-w-7xl mx-auto px-6">
+      <div className="relative py-24 text-center bg-[#27374D] overflow-hidden">
+        {/* Pattern Layer */}
+        <div className="absolute inset-0 opacity-65">
+          <svg
+            className="w-full h-full"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid slice"
+          >
+            <defs>
+              <pattern
+                id="grid-pattern"
+                width="40"
+                height="40"
+                patternUnits="userSpaceOnUse"
+              >
+                {/* vertical lines */}
+                <path
+                  d="M 40 0 L 0 0 0 40"
+                  fill="none"
+                  stroke="#9DB2BF"
+                  strokeWidth="0.5"
+                />
+                {/* horizontal lines */}
+                <path
+                  d="M 0 40 L 40 40 40 0"
+                  fill="none"
+                  stroke="#9DB2BF"
+                  strokeWidth="0.5"
+                />
+              </pattern>
+            </defs>
+            <rect
+              width="100%"
+              height="100%"
+              fill="url(#grid-pattern)"
+              opacity="0.15"
+            />
+          </svg>
+        </div>
+
+        {/* Content Layer */}
+        <div className="relative max-w-7xl mx-auto px-6">
           <h1 className="text-5xl md:text-6xl 2xl:text-7xl font-outfit font-bold mb-6 text-[#DDE6ED]">
             Get In <span className="text-[#9DB2B9]">Touch</span>
           </h1>

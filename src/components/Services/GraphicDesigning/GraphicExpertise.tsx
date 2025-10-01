@@ -63,17 +63,18 @@ const GraphicDesignServices = () => {
   return (
     <div
       className="p-8 sm:p-12 lg:p-16 mt-5 font-outfit"
-      style={{ backgroundColor: "#1B232E" }}
+      style={{ backgroundColor: "#1B232E" }} // Main theme color
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex justify-between items-start mb-12">
           <div>
-            <p className="text-gray-400 text-sm mb-3 tracking-wide font-outfit">
+            <p className="text-[#9DB2BF] text-sm mb-3 tracking-wide font-outfit">
               Our Benefits
             </p>
-            <h2 className="text-white text-3xl sm:text-4xl font-bold font-outfit max-w-2xl leading-tight">
-              Expertise and Commitment Combined!
+            <h2 className="text-[#DDE6ED] text-3xl sm:text-4xl font-bold font-outfit max-w-2xl leading-tight">
+              Expertise and{" "}
+              <span className="text-[#526D82]">Commitment Combined!</span>
             </h2>
           </div>
 
@@ -81,14 +82,14 @@ const GraphicDesignServices = () => {
           <div className="flex space-x-2 ">
             <button
               onClick={prevSlide}
-              className="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center text-gray-400 hover:text-white hover:border-gray-400 transition-all duration-300 font-outfit"
+              className="w-12 h-12 rounded-full border border-[#526D82] flex items-center justify-center text-[#9DB2BF] hover:text-[#DDE6ED] hover:border-[#9DB2BF] transition-all duration-300 font-outfit"
               disabled={currentSlide === 0}
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={nextSlide}
-              className="w-12 h-12 rounded-full border border-gray-600 flex items-center justify-center text-gray-400 hover:text-white hover:border-gray-400 transition-all duration-300 font-outfit"
+              className="w-12 h-12 rounded-full border border-[#526D82] flex items-center justify-center text-[#9DB2BF] hover:text-[#DDE6ED] hover:border-[#9DB2BF] transition-all duration-300 font-outfit"
               disabled={currentSlide >= services.length - 4}
             >
               <ChevronRight className="w-5 h-5" />
@@ -97,34 +98,32 @@ const GraphicDesignServices = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 font-outfit">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 font-outfit">
           {visibleServices.map((service, index) => {
             const IconComponent = service.icon;
             return (
               <div
                 key={currentSlide + index}
-                className="group relative bg-[#3A3256]/50 rounded-xl py-4 px-4 h-70 sm:h-100 md:h-85 lg:h-110 2xl:h-90 overflow-hidden cursor-pointer transition-all duration-500 hover:bg-gray-700/70 font-outfit"
+                className="group relative bg-[#27374D]/50 rounded-xl py-4 px-4 h-70 sm:h-100 md:h-85 lg:h-110 2xl:h-90 overflow-hidden cursor-pointer transition-all duration-500 hover:bg-[#526D82]/70 font-outfit"
               >
                 {/* Icon */}
-                <div className="mb-6 transition-all duration-300 group-hover:-translate-y-2 ">
-                  <div
-                    className="w-12 h-12 rounded-lg flex items-center justify-center"
-                    style={{ backgroundColor: "#A68353" }}
-                  >
-                    <IconComponent className="w-6 h-6 text-white" />
+                <div className="absolute bottom-6 left-6 right-6 transition-all duration-300 xs:group-hover:-translate-y-33 md:group-hover:-translate-y-37 lg:group-hover:-translate-y-55 font-outfit">
+                  <div className="mb-4">
+                    <div
+                      className="w-12 h-12 rounded-lg flex items-center justify-center"
+                      style={{ backgroundColor: "#A68353" }}
+                    >
+                      <IconComponent className="w-6 h-6 text-[#DDE6ED]" />
+                    </div>
                   </div>
-                </div>
-
-                {/* Title - Always visible */}
-                <div className="transition-all duration-300 group-hover:-translate-y-8">
-                  <h3 className="text-white text-xl font-bold font-outfit leading-tight mb-4 ">
+                  {/* Title - Always visible */}
+                  <h3 className="text-[#DDE6ED] text-xl font-bold font-outfit leading-tight mb-4">
                     {service.title}
                   </h3>
                 </div>
-
                 {/* Description - Hidden by default, slides up on hover */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-out">
-                  <p className="text-white text-sm leading-relaxed font-outfit">
+                <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-out font-outfit">
+                  <p className="text-[#DDE6ED]/90 text-sm leading-relaxed font-outfit">
                     {service.description}
                   </p>
                 </div>

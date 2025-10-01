@@ -43,7 +43,7 @@ const DigitalExpertise = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 font-outfit">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 font-outfit">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
@@ -52,7 +52,7 @@ const DigitalExpertise = () => {
                 className="group relative bg-[#3A3256]/50 rounded-xl py-4 px-4 h-70 sm:h-100 md:h-85 lg:h-110 2xl:h-90 overflow-hidden cursor-pointer transition-all duration-500 hover:bg-gray-700/70 font-outfit"
               >
                 {/* Icon and Title - Positioned at bottom, moves up on hover */}
-                <div className="absolute bottom-6 left-6 right-6 transition-all duration-300 group-hover:-translate-y-40 font-outfit">
+                <div className="absolute bottom-6 left-6 right-6 transition-all duration-300 xs:group-hover:-translate-y-37 md:group-hover:-translate-y-43 lg:group-hover:-translate-y-49 font-outfit border border-red-900">
                   {/* Icon */}
                   <div className="mb-4">
                     <div

@@ -97,11 +97,11 @@ const Hero = () => {
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#27374D] via-[#27374D] to-[#27374D]">
         {/* Subtle Pattern Overlay */}
-        <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 opacity-90">
           <div
             className="absolute inset-0"
             style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23DDE6ED' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23DDE6ED' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
             }}
           />
         </div>
@@ -111,9 +111,9 @@ const Hero = () => {
         alt="Hero background"
         fill
         priority
-        className="object-cover opacity-90" // tweak opacity here if you want
+        className="object-cover opacity-0" // tweak opacity here if you want
       />
-      {/* Animated Gradient Orbs */}
+
       <div className="absolute inset-0 overflow-hidden ">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#DDE6ED] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#9DB2BF] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
@@ -121,7 +121,7 @@ const Hero = () => {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-0 flex flex-col justify-center min-h-[85vh] px-6 md:px-12 lg:px-20 max-w-7xl mx-auto ">
+      <div className="relative z-0 flex flex-col justify-center min-h-[85vh] px-6 md:px-12 lg:px-20 max-w-8xl mx-auto ">
         {/* Main Headline */}
         <h1 className="text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl text-white mb-6 leading-tight">
           We Build Websites, Apps, and

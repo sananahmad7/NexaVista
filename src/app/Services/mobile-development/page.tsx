@@ -9,7 +9,6 @@ const MobileDevelopment = () => {
       <MobileSteps />
       <MobileExpertise />
       <MobileDevImpact />
-      <div className="h-200" />
     </div>
   );
 };

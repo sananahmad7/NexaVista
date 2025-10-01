@@ -41,14 +41,20 @@ function WebExpertise() {
   ];
 
   return (
-    <section className="py-16 px-4 max-w-7xl mx-auto font-outfit">
+    <section className="py-16 px-4 max-w-7xl mx-auto font-outfit ">
+      {/* Section Heading */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold font-outfit text-black mb-4 text-balance">
-          When Is the Time for{" "}
-          <span style={{ color: "#082024" }}>Precision</span> and{" "}
-          <span style={{ color: "#A68353" }}>Innovation</span>?
+        <h2
+          className="text-4xl font-bold font-outfit mb-4 text-balance"
+          style={{ color: "#1B3236" }}
+        >
+          When Is the Time for <span className="text-[#27374D]">Precision</span>{" "}
+          and <span className="text-[#526D82]">Innovation</span>?
         </h2>
-        <p className="text-gray-600 text-lg max-w-3xl mx-auto text-pretty font-outfit">
+        <p
+          className="text-lg max-w-3xl mx-auto text-pretty font-outfit"
+          style={{ color: "#526D82" }}
+        >
           Our expertise spans the full spectrum of modern web development,
           delivering solutions that are secure, scalable, and tailored to your
           business needs.
@@ -60,19 +66,30 @@ function WebExpertise() {
         {expertiseAreas.map((area, index) => (
           <div
             key={index}
-            className="rounded-lg border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-gray-50 font-outfit"
+            className="rounded-xl border border-[#9DB2BF] shadow-md hover:shadow-xl transition-shadow duration-300 bg-white font-outfit"
           >
             <div className="p-8">
+              {/* Icon Container */}
               <div
-                className="mb-6 p-3 rounded-full bg-white w-fit"
-                style={{ color: "#082024" }}
+                className="mb-6 p-3 rounded-full w-fit shadow-sm"
+                style={{ backgroundColor: "#DDE6ED", color: "#1B3236" }}
               >
                 {area.icon}
               </div>
-              <h3 className="text-xl font-semibold font-outfit text-[#092125] mb-4 text-balance">
+
+              {/* Card Title */}
+              <h3
+                className="text-xl font-semibold font-outfit mb-4 text-balance"
+                style={{ color: "#1B3236" }}
+              >
                 {area.title}
               </h3>
-              <p className="text-gray-700 leading-relaxed text-pretty font-outfit">
+
+              {/* Card Description */}
+              <p
+                className="leading-relaxed text-pretty font-outfit"
+                style={{ color: "#27374D" }}
+              >
                 {area.description}
               </p>
             </div>

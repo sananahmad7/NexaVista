@@ -42,58 +42,61 @@ const MobileSteps: React.FC = () => {
 
   return (
     <div
-      className="min-h-screen py-16 px-4 sm:px-6 lg:px-8 mb-20 font-outfit"
-      style={{ backgroundColor: "#f8f9fa" }}
+      className="min-h-screen py-16 px-4 sm:px-6 lg:px-8 mb-20 font-outfit mt-20"
+      style={{ backgroundColor: "#DDE6ED" }} // very light gray background
     >
-      <div className="max-w-8xl mx-auto font-outfit">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start font-outfit">
+      <div className="max-w-8xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left Section - Title */}
-          <div className="lg:sticky lg:top-16 font-outfit">
+          <div className="lg:sticky lg:top-16">
             <h1
-              className="text-xl sm:text-2xl lg:text-5xl leading-tight mb-8 font-outfit"
-              style={{ color: "#1A475A" }}
+              className="text-xl sm:text-2xl lg:text-5xl leading-tight mb-8 font-outfit font-bold"
+              style={{ color: "#186377" }} // main theme color
             >
               The Roadmap to
-              <span style={{ color: "#A68353" }}> Mobile App Development</span>
+              <span style={{ color: "#27374D" }}> Mobile App Development</span>
             </h1>
 
-            <p className="text-lg text-gray-600 max-w-xl leading-relaxed font-outfit">
+            <p
+              className="text-lg max-w-xl leading-relaxed font-outfit"
+              style={{ color: "#526D82" }} // steel blue for paragraph
+            >
               From idea to app store, we streamline your mobile development
               journey with cutting-edge tools and best practices.
             </p>
           </div>
 
           {/* Right Section - Steps */}
-          <div className="space-y-8 font-outfit">
+          <div className="space-y-8">
             {steps.map((step, index) => (
-              <div key={step.number} className="relative font-outfit">
+              <div key={step.number} className="relative">
                 {index < steps.length - 1 && (
                   <div
-                    className="absolute left-6 top-12 w-0.5 h-16 opacity-30"
-                    style={{ backgroundColor: "#A68353" }}
+                    className="absolute left-6 top-12 w-0.5 h-16"
+                    style={{ backgroundColor: "#9DB2BF", opacity: 0.6 }} // light blue-gray connecting line
                   />
                 )}
 
-                <div className="flex items-start space-x-6 font-outfit">
+                <div className="flex items-start space-x-6">
                   {/* Number */}
                   <div
-                    className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-white text-lg shadow-lg font-outfit"
-                    style={{ backgroundColor: "#1A475A" }}
+                    className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-white text-lg shadow-md font-semibold"
+                    style={{ backgroundColor: "#186377" }} // primary theme circle
                   >
                     {step.number}
                   </div>
 
                   {/* Content */}
-                  <div className="flex-1 min-w-0 font-outfit">
+                  <div className="flex-1 min-w-0">
                     <h3
-                      className="text-xl sm:text-2xl mb-3 font-outfit"
-                      style={{ color: "#1A475A" }}
+                      className="text-xl sm:text-2xl mb-3 font-bold"
+                      style={{ color: "#27374D" }} // dark navy for titles
                     >
                       {step.title}
                     </h3>
                     <p
-                      className="text-base sm:text-lg leading-relaxed font-outfit"
-                      style={{ color: "#252223" }}
+                      className="text-base sm:text-lg leading-relaxed"
+                      style={{ color: "#526D82" }} // steel blue text
                     >
                       {step.description}
                     </p>
