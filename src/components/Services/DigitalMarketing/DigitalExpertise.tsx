@@ -52,7 +52,7 @@ const DigitalExpertise = () => {
                 className="group relative bg-[#3A3256]/50 rounded-xl py-4 px-4 h-70 sm:h-100 md:h-85 lg:h-110 2xl:h-90 overflow-hidden cursor-pointer transition-all duration-500 hover:bg-gray-700/70 font-outfit"
               >
                 {/* Icon and Title - Positioned at bottom, moves up on hover */}
-                <div className="absolute bottom-6 left-6 right-6 transition-all duration-300 xs:group-hover:-translate-y-37 md:group-hover:-translate-y-43 lg:group-hover:-translate-y-49 font-outfit border border-red-900">
+                <div className="absolute bottom-6 left-6 right-6 transition-all duration-300 xs:group-hover:-translate-y-37 md:group-hover:-translate-y-43 lg:group-hover:-translate-y-49 font-outfit ">
                   {/* Icon */}
                   <div className="mb-4">
                     <div

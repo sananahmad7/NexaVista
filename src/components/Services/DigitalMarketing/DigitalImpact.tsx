@@ -19,8 +19,9 @@ const DigitalImpact = () => {
           </div>
 
           {/* Main Heading */}
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-outfit leading-tight mb-8 max-w-3xl text-gray-900">
-            Let’s craft a digital strategy that fuels your growth.{" "}
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold font-outfit leading-tight mb-8 max-w-5xl text-gray-900">
+            From SEO to social media campaigns, our strategies are data-driven
+            and tailored to maximize your online reach.{" "}
           </h2>
 
           {/* CTA Button */}
@@ -34,7 +35,7 @@ const DigitalImpact = () => {
             {/* Years of Experience */}
             <div className="text-left font-outfit">
               <div className="text-2xl sm:text-3xl lg:text-4xl font-bold font-outfit mb-2 text-[#2C3E50]">
-                7+
+                3
               </div>
               <p className="text-gray-700 text-base font-medium font-outfit leading-relaxed">
                 years of building powerful marketing strategies
@@ -44,7 +45,7 @@ const DigitalImpact = () => {
             {/* Campaigns Delivered */}
             <div className="text-left font-outfit">
               <div className="text-2xl sm:text-3xl lg:text-4xl font-bold font-outfit mb-2 text-[#2C3E50]">
-                120+
+                34+
               </div>
               <p className="text-gray-700 text-base font-medium font-outfit leading-relaxed">
                 digital campaigns executed successfully

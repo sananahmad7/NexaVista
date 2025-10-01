@@ -19,8 +19,10 @@ const GraphicImpact = () => {
           </div>
 
           {/* Main Heading */}
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-outfit leading-tight mb-8 max-w-3xl text-gray-900">
-            Creative Design Solutions That Elevate Your Brand
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold font-outfit leading-tight mb-8 max-w-5xl text-gray-900">
+            Visual storytelling is at the heart of our design process. We craft
+            visuals that are not just eye-catching but also strategically
+            aligned with your brand identity.{" "}
           </h2>
 
           {/* CTA Button */}

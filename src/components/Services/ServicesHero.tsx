@@ -24,7 +24,7 @@ const ServicesHero = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+      <div className="relative  text-center px-6 max-w-4xl mx-auto">
         <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight text-[#DDE6ED]">
           Transforming Ideas Into
           <span className="block text-[#9DB2B9]">Digital Solutions</span>

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Stat = () => {
   return (
-    <section className="bg-[#27374D] text-white py-16 px-9 lg:px-12">
+    <section className="bg-[#27374D]  text-white py-16 px-9 lg:px-12">
       <div className="max-w-8xl mx-auto">
         {/* Mobile Layout */}
         <div className="lg:hidden">
@@ -61,8 +61,12 @@ const Stat = () => {
 
             {/* Description */}
             <p className="text-[#DDE6ED] text-base font-outfit leading-relaxed">
-              We specialize in delivering cutting-edge solutions tailored to
-              your needs. Whether you&apos;re looking you succeed.
+              At NexaVista Technologies, we understand that your business is
+              unique, and so are your digital needs. That’s why we don’t believe
+              in one-size-fits-all solutions. We work closely with you to design
+              and develop digital experiences that are not only functional but
+              also memorable. Our approach is simple: listen, innovate, and
+              deliver excellence.
             </p>
           </div>
 
@@ -105,7 +109,7 @@ const Stat = () => {
         </div>
 
         {/* Desktop Layout */}
-        <div className="hidden lg:block">
+        <div className="hidden container mx-auto lg:block">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Left Content */}
             <div className="space-y-8">
@@ -119,10 +123,12 @@ const Stat = () => {
                       <div className="absolute -bottom-1 left-0 right-0 h-1 bg-[#9DB2BF]"></div>
                     </span>
                   </h1>
-                  <h1 className="text-5xl xl:text-6xl font-outfit">For The</h1>
+                  <h1 className="text-5xl xl:text-6xl font-outfit">
+                    For The Modern World
+                  </h1>
                 </div>
 
-                <div className="flex items-center gap-4">
+                {/* <div className="flex items-center gap-4">
                   <div className="flex -space-x-3">
                     <div className="w-16 h-16 rounded-full border-3 border-[#27374D] overflow-hidden">
                       <Image
@@ -156,17 +162,21 @@ const Stat = () => {
                   <h1 className="text-5xl xl:text-6xl font-outfit">
                     Modern World
                   </h1>
-                </div>
+                </div> */}
               </div>
 
               {/* Description */}
               <p className="text-[#DDE6ED] text-lg max-w-xl leading-relaxed font-outfit">
-                We specialize in delivering cutting-edge solutions tailored to
-                your needs. Whether you&apos;re looking you succeed.
+                At NexaVista Technologies, we understand that your business is
+                unique, and so are your digital needs. That’s why we don’t
+                believe in one-size-fits-all solutions. We work closely with you
+                to design and develop digital experiences that are not only
+                functional but also memorable. Our approach is simple: listen,
+                innovate, and deliver excellence.
               </p>
 
               {/* Circular Explore Badge */}
-              <div className="pt-8">
+              <div className="pt-4">
                 <div className="relative w-32 h-32">
                   <svg
                     className="absolute inset-0 w-full h-full animate-spin"

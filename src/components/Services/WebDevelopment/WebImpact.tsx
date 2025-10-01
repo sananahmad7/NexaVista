@@ -24,10 +24,11 @@ const WebDevImpact = () => {
 
           {/* Main Heading */}
           <h2
-            className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight mb-8 max-w-3xl"
+            className="text-xl sm:text-2xl lg:text-3xl font-bold leading-tight mb-8 max-w-5xl "
             style={{ color: "#1B3236" }}
           >
-            Leading your Web Development Journey to Success
+            We build websites that are more than just visually appealing—they
+            are robust, scalable, and designed with your business goals in mind.
           </h2>
 
           {/* CTA Button */}
@@ -47,7 +48,7 @@ const WebDevImpact = () => {
                 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2"
                 style={{ color: "#1B3236" }}
               >
-                17+
+                5+
               </div>
               <p
                 className="text-base font-medium leading-relaxed"
@@ -63,7 +64,7 @@ const WebDevImpact = () => {
                 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2"
                 style={{ color: "#1B3236" }}
               >
-                250+
+                117+
               </div>
               <p
                 className="text-base font-medium leading-relaxed"

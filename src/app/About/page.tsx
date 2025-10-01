@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Timeline from "@/components/AboutUs/Timeline";
 import BulletPoints from "@/components/AboutUs/BulletPoints";
-
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 export default function AboutPage() {
   return (
     <main className="bg-[#27374D]">
@@ -17,17 +18,32 @@ export default function AboutPage() {
           />
           <div className="absolute inset-0 bg-[#1F2A38]/70"></div>
         </div>
-        <div className="relative z-10 flex items-center justify-center h-full text-center px-6">
+        <div className="relative  flex items-center justify-center h-full text-center px-6">
           <div className="max-w-4xl">
             <h1 className="text-5xl md:text-7xl font-outfit font-bold text-[#DDE6ED] mb-6">
               About <span className="text-[#9DB2B9]">Our Journey</span>
             </h1>
-            <p className="text-xl md:text-2xl text-[#DDE6ED]/80 max-w-2xl font-outfit mx-auto leading-relaxed">
-              A decade of innovation, growth, and excellence in software
-              development
+            <p className="text-xl md:text-xl text-[#DDE6ED]/80 max-w-5xl font-outfit mx-auto leading-relaxed">
+              NexaVista Technologies was founded with a clear mission: to
+              empower businesses by providing innovative, high-quality digital
+              solutions. We are a team of passionate professionals, each
+              bringing unique expertise and a shared commitment to excellence.
+              Our core belief is that technology, when applied creatively and
+              strategically, can transform businesses and drive growth in
+              meaningful ways.
             </p>
+            <div className="relative flex justify-center mt-6 ">
+              <Link
+                href="/Services"
+                className=" flex items-center space-x-2 bg-[#9DB2B9]  text-[#27374D] px-8 py-4 rounded-full font-medium transition-colors hover:bg-[#DDE6ED]"
+              >
+                <span>Disciver the Possibilities</span>
+                <ArrowRight className="w-5 h-5 " />
+              </Link>
+            </div>
           </div>
         </div>
+
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 border-2 border-[#DDE6ED] rounded-full flex justify-center">

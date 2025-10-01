@@ -93,7 +93,7 @@ const icons: Icons = {
 
 const Hero = () => {
   return (
-    <div className="relative w-full h-[75vh] overflow-hidden font-outfit">
+    <div className="relative r min-h-[72vh]  font-outfit ">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#27374D] via-[#27374D] to-[#27374D]">
         {/* Subtle Pattern Overlay */}
@@ -121,7 +121,7 @@ const Hero = () => {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-0 flex flex-col justify-center min-h-[85vh] px-6 md:px-12 lg:px-20 max-w-8xl mx-auto ">
+      <div className="relative  container  z-0 flex flex-col justify-center  min-h-[80vh] px-6 md:px-12 lg:px-20 max-w-8xl mx-auto ">
         {/* Main Headline */}
         <h1 className="text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl text-white mb-6 leading-tight">
           We Build Websites, Apps, and
@@ -132,26 +132,23 @@ const Hero = () => {
 
         {/* Subheadline */}
         <p className="text-md md:text-xl lg:text-xl text-[#DDE6ED]/90 max-w-3xl mb-8 leading-relaxed">
-          NexaVista Technologies transforms complex ideas into intuitive digital
-          solutions that drive growth and create lasting impact.
+          NexaVista Technologies is your partner in turning complex ideas into
+          intuitive digital solutions that resonate with your audience.
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 mb-16">
           <button className="group relative px-8 py-4 bg-white text-[#27374D] font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-white/20">
-            <span className="relative z-10">Start Your Project</span>
+            <span className="relative z-10">Discover the Possibilities</span>
             <div className="absolute inset-0 bg-gradient-to-r from-[#9DB2BF] to-[#526D82] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
             <span className="absolute inset-0 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              Start Your Project
+              Discover the Possibilities
             </span>
-          </button>
-          <button className="px-8 py-4 bg-transparent text-white font-semibold rounded-lg border-2 border-white/30 hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-sm">
-            View Our Work
           </button>
         </div>
 
         {/* Tech Stack Pills */}
-        <div className="mb-15 flex flex-wrap gap-3">
+        <div className="  flex-wrap gap-3 hidden md:flex">
           {[
             "React",
             "Next.js",

@@ -69,9 +69,9 @@ const Timeline = () => {
         {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-outfit text-[#27374D] mb-4">
-            Our <span className="text-[#6C6259]">Timeline</span>
+            Our <span className="text-[#27374D]">Timeline</span>
           </h2>
-          <p className="text-[#3F3A34] text-lg max-w-2xl mx-auto font-outfit">
+          <p className="text-[#526D82] text-lg max-w-2xl mx-auto font-outfit">
             A decade of growth, innovation, and excellence
           </p>
         </div>
@@ -128,7 +128,7 @@ const Timeline = () => {
                       <h3 className="text-2xl font-outfit font-bold mb-4 text-[#27374D]">
                         {event.title}
                       </h3>
-                      <p className="text-[#3F3A34]/80 leading-relaxed font-outfit">
+                      <p className="text-[#526D82] leading-relaxed font-outfit">
                         {event.description}
                       </p>
                     </div>

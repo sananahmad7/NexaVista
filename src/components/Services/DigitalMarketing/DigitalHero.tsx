@@ -67,7 +67,7 @@ const DigitalMarketingHero: React.FC = () => {
         {/* Right Section - Blog Carousel */}
         <div className="hidden lg:flex w-96 flex-col font-outfit">
           {/* Top Fixed Carousel Box */}
-          <div className="h-[390px] bg-[#030027]/90 backdrop-blur-md text-white relative border-3 border-red-800 flex flex-col font-outfit">
+          <div className="h-[390px] bg-[#030027]/90 backdrop-blur-md text-white relative flex flex-col font-outfit">
             <div className="flex flex-col relative z-10 font-outfit">
               <div className="flex-1 p-8 flex flex-col font-outfit">
                 <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-8 w-fit border border-white/20 font-outfit">

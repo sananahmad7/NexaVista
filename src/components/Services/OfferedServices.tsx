@@ -22,7 +22,7 @@ const ServicesOffered = () => {
       icon: Code,
       tagline: "Build powerful web experiences",
       description:
-        "Custom web applications built with modern technologies for optimal performance and user experience.",
+        "Every business needs a powerful online presence, and our web development services are designed to give you just that. From custom websites to complex web applications, we create digital solutions that are not only visually stunning but also highly functional and user-friendly.",
       features: [
         "Responsive Design",
         "Performance Optimization",
@@ -39,7 +39,7 @@ const ServicesOffered = () => {
       icon: Smartphone,
       tagline: "Native apps that users love",
       description:
-        "Native and cross-platform mobile applications that deliver seamless experiences across all devices.",
+        "In today’s mobile-first world, having an app that connects with your audience is crucial. We specialize in developing mobile applications that are intuitive, responsive, and engaging, ensuring that your brand is always within reach.",
       features: [
         "iOS & Android",
         "Cross-Platform",
@@ -56,7 +56,7 @@ const ServicesOffered = () => {
       icon: TrendingUp,
       tagline: "Grow your digital presence",
       description:
-        "Strategic digital marketing solutions that drive growth, engagement, and measurable results.",
+        "Effective digital marketing is key to growing your online presence. Our team uses data-driven strategies to create targeted campaigns that reach the right audience at the right time, helping you maximize your ROI.",
       features: ["SEO & SEM", "Social Media", "Email Campaigns", "Analytics"],
       image: "/DM.jpg",
       imagePosition: "right",
@@ -68,7 +68,7 @@ const ServicesOffered = () => {
       icon: Palette,
       tagline: "Design that tells your story",
       description:
-        "Creative visual solutions that elevate your brand and communicate your message effectively.",
+        "Visual identity is a crucial aspect of your brand. Our graphic design services ensure that your brand stands out with creative and professional visuals that communicate your message effectively.",
       features: [
         "Brand Identity",
         "Print Design",

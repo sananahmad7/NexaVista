@@ -11,7 +11,7 @@ interface FormData {
   message: string;
 }
 
-const ContactUs: React.FC = () => {
+const ContactUs = () => {
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
@@ -92,10 +92,13 @@ const ContactUs: React.FC = () => {
           <h1 className="text-5xl md:text-6xl 2xl:text-7xl font-outfit font-bold mb-6 text-[#DDE6ED]">
             Get In <span className="text-[#9DB2B9]">Touch</span>
           </h1>
-          <p className="text-sm lg:text-lg text-[#DDE6ED]/80 max-w-2xl mx-auto leading-relaxed font-outfit">
+          <p className="text-sm lg:text-lg text-[#DDE6ED]/80 max-w-3xl mx-auto leading-relaxed font-outfit">
             We’re here to help you turn your digital ideas into reality. Whether
-            you’re looking for a new website, a mobile app, or a marketing
-            strategy, we’d love to hear from you.
+            you’re looking for a new website, a mobile app, a digital marketing
+            strategy, or just want to learn more about how we can support your
+            business, we’d love to hear from you. At NexaVista Technologies, we
+            value every inquiry and are committed to providing prompt and
+            insightful responses.
           </p>
         </div>
       </div>

@@ -29,10 +29,12 @@ const MobileDevImpact = () => {
 
           {/* Main Heading */}
           <h2
-            className="text-2xl sm:text-3xl lg:text-4xl leading-tight mb-8 max-w-3xl font-outfit"
+            className="text-xl sm:text-2xl lg:text-3xl leading-tight mb-8 max-w-5xl font-outfit font-bold"
             style={{ color: "#27354d" }}
           >
-            Empowering Your Mobile App Journey to Success
+            We create mobile applications that offer seamless user experiences,
+            keeping your brand at the fingertips of your audience, whether on
+            iOS or Android.
           </h2>
 
           {/* CTA Button */}
