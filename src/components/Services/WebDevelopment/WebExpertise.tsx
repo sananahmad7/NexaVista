@@ -1,5 +1,4 @@
 "use client";
-import { Code, Database, Zap, Globe, Cpu, Layers } from "lucide-react";
 import LordIcon from "@/components/LordIcon";
 
 function WebExpertise() {

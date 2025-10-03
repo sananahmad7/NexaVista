@@ -9,37 +9,83 @@ import {
   FileText,
   Share2,
 } from "lucide-react";
+import LordIcon from "@/components/LordIcon";
 
 const GraphicDesignServices = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const services = [
     {
-      icon: Edit,
+      icon: (
+        <LordIcon
+          src="https://cdn.lordicon.com/exymduqj.json"
+          trigger="hover"
+          stroke="bold"
+          state="hover-pinch"
+          colors="primary:#242424,secondary:#27374d"
+          style={{ width: "65px", height: "55px" }}
+        />
+      ),
       title: "Image and Video Editing",
       description:
         "In a world where visuals speak louder than words, high-quality images and videos are essential. We offer professional image and video editing services that enhance your visual content, making it more engaging and impactful. Whether it's for social media, marketing campaigns, or your website, we ensure your visuals are polished and perfectly aligned with your brand.",
     },
     {
-      icon: Palette,
+      icon: (
+        <LordIcon
+          src="https://cdn.lordicon.com/aiktsvuy.json"
+          trigger="hover"
+          stroke="bold"
+          state="hover-pinch"
+          colors="primary:#242424,secondary:#27374d"
+          style={{ width: "65px", height: "55px" }}
+        />
+      ),
       title: "Logo Designing",
       description:
         "Your logo is the face of your brand, and it needs to be memorable. Our logo design services focus on creating unique and versatile logos that capture the essence of your business. We work closely with you to ensure that your logo not only stands out but also embodies your brand's identity.",
     },
     {
-      icon: Image,
+      icon: (
+        <LordIcon
+          src="https://cdn.lordicon.com/xoramfrr.json"
+          trigger="hover"
+          stroke="bold"
+          state="hover-pinch"
+          colors="primary:#27374d,secondary:#242424"
+          style={{ width: "250px", height: "250px" }}
+        />
+      ),
       title: "Brand Guides",
       description:
         "Consistency is key to building a strong brand. We create comprehensive brand guides that outline your brand's visual identity, including color schemes, typography, and design elements. This ensures that all your marketing materials are consistent and cohesive, reinforcing your brand's message across all platforms.",
     },
     {
-      icon: FileText,
+      icon: (
+        <LordIcon
+          src="https://cdn.lordicon.com/yjavdqnq.json"
+          trigger="hover"
+          stroke="bold"
+          state="hover-pinch"
+          colors="primary:#242424,secondary:#27374d"
+          style={{ width: "250px", height: "250px" }}
+        />
+      ),
       title: "Flyer & Brochure Design",
       description:
         "Print media is still a powerful marketing tool, and our flyer and brochure designs are crafted to capture attention and communicate your message effectively. Whether you need a sleek brochure for a corporate event or an eye-catching flyer for a promotional campaign, we design with your goals in mind.",
     },
     {
-      icon: Share2,
+      icon: (
+        <LordIcon
+          src="https://cdn.lordicon.com/htdltcjw.json"
+          trigger="hover"
+          stroke="bold"
+          state="hover-pinch"
+          colors="primary:#242424,secondary:#27374d"
+          style={{ width: "65px", height: "55px" }}
+        />
+      ),
       title: "Social Media Post Creation",
       description:
         "Stand out in the crowded world of social media with custom-designed posts that reflect your brand's personality. We create visually engaging social media content that drives engagement and boosts your online presence. From Instagram stories to Facebook posts, our designs are tailored to fit each platform and resonate with your audience.",
@@ -100,7 +146,6 @@ const GraphicDesignServices = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 font-outfit">
           {visibleServices.map((service, index) => {
-            const IconComponent = service.icon;
             return (
               <div
                 key={currentSlide + index}
@@ -111,9 +156,9 @@ const GraphicDesignServices = () => {
                   <div className="mb-4">
                     <div
                       className="w-12 h-12 rounded-lg flex items-center justify-center"
-                      style={{ backgroundColor: "#A68353" }}
+                      style={{ backgroundColor: "#DDE6ED" }}
                     >
-                      <IconComponent className="w-6 h-6 text-[#DDE6ED]" />
+                      {service.icon}
                     </div>
                   </div>
                   {/* Title - Always visible */}

@@ -25,9 +25,9 @@ const services: Service[] = [
       "E-Commerce Solutions",
       "Cloud Deployment",
     ],
-    bgColor: "bg-[white]",
-    textColor: "text-black",
-    icon: <Image src="/Web.jpg" alt="web app" height={600} width={600} />,
+    bgColor: "bg-[#27374D]",
+    textColor: "text-white",
+    icon: <Image src="/Web.png" alt="web app" height={600} width={600} />,
   },
   {
     id: "mobile",
@@ -40,9 +40,9 @@ const services: Service[] = [
       "Mobile UI/UX Design",
       "Maintenance & Support",
     ],
-    bgColor: "bg-[#7b8aff]",
-    textColor: "text-gray-800",
-    icon: <Image src="/MA.jpg" alt="mobile app" height={600} width={600} />,
+    bgColor: "bg-[#27374D]",
+    textColor: "text-white",
+    icon: <Image src="/MAD.png" alt="mobile app" height={600} width={600} />,
   },
   {
     id: "marketing",
@@ -55,10 +55,10 @@ const services: Service[] = [
       "Email Marketing",
       "Analytics & Reporting",
     ],
-    bgColor: "bg-[#7eb032]",
+    bgColor: "bg-[#27374D]",
     textColor: "text-white",
     icon: (
-      <Image src="/DM2.jpg" alt="digital marketing" height={600} width={600} />
+      <Image src="/DMB.png" alt="digital marketing" height={600} width={600} />
     ),
   },
   {
@@ -72,9 +72,9 @@ const services: Service[] = [
       "Illustrations & Icons",
       "Print & Digital Assets",
     ],
-    bgColor: "bg-[#137390]",
+    bgColor: "bg-[#27374D]",
     textColor: "text-white",
-    icon: <Image src="/GD.jpg" alt="graphic design" height={400} width={400} />,
+    icon: <Image src="/GD.png" alt="graphic design" height={400} width={400} />,
   },
 ];
 
@@ -100,14 +100,14 @@ const Services: React.FC = () => {
           {services.map((service) => (
             <div
               key={service.id}
-              className=" relative max-w-3xl mx-1 h-[55vh] md:h-[59vh] lg:h-[60vh] xl:h-[62vh] 2xl:h-[62vh] 3xl:h-[63vh]  cursor-pointer  mb-15 transition-all duration-300 ease-in-out "
+              className=" relative max-w-3xl  mx-1 h-[55vh] md:h-[59vh] lg:h-[60vh] xl:h-[62vh] 2xl:h-[62vh] 3xl:h-[63vh]  cursor-pointer  mb-15 transition-all duration-300 ease-in-out "
             >
               {/* Main Service Card */}
               <div
                 className={`
                 relative h-full  ${service.bgColor} ${service.textColor} p-8 
                 flex flex-col justify-between overflow-hidden
-                transition-transform duration-300 ease-in-out rounded-3xl shadow shadow-gray-400
+                transition-transform duration-300 ease-in-out  rounded-3xl shadow shadow-gray-400
                   ${
                     hoveredService === service.id
                       ? "transform -translate-y-[-20]"
@@ -134,8 +134,8 @@ const Services: React.FC = () => {
                 {/* Features Panel - Slides up from bottom */}
                 <div
                   className={`
-                    absolute  bottom-0 left-0 right-0 shadow shadow-gray-500 rounded-3xl  
-                    ${service.bgColor} ${service.textColor}
+                    absolute  bottom-0 left-0 right-0 shadow-2xl shadow-gray-200  rounded-3xl 
+                     ${service.textColor} ${service.bgColor}
                     transition-all duration-300 ease-in-out
                     ${
                       hoveredService === service.id

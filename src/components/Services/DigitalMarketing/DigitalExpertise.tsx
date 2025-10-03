@@ -1,23 +1,51 @@
 "use client";
 import React from "react";
 import { Mail, Share2, Search } from "lucide-react";
+import LordIcon from "@/components/LordIcon";
 
 const DigitalExpertise = () => {
   const services = [
     {
-      icon: Mail,
+      icon: (
+        <LordIcon
+          src="https://cdn.lordicon.com/xovdoewm.json"
+          trigger="loop"
+          stroke="black"
+          state="hover-pinch"
+          colors="primary:#27374d,secondary:#242424"
+          style={{ width: "250px", height: "250px" }}
+        />
+      ),
       title: "Email Marketing",
       description:
         "Email remains one of the most powerful tools in your marketing arsenal. We create targeted email campaigns that resonate with your audience, whether you're nurturing leads, promoting a new product, or driving repeat business. From compelling subject lines to persuasive copy, we ensure your emails get opened, read, and acted upon.",
     },
     {
-      icon: Share2,
+      icon: (
+        <LordIcon
+          src="https://cdn.lordicon.com/eyjfodee.json"
+          trigger="loop"
+          stroke="black"
+          state="hover-pinch"
+          colors="primary:#27374d,secondary:#242424"
+          style={{ width: "250px", height: "250px" }}
+        />
+      ),
       title: "Social Media Marketing",
       description:
         "Social media is where your audience spends their time, and we help you meet them there. Our social media marketing services are designed to build your brand, foster engagement, and drive traffic. We create and manage content that aligns with your brand voice, from daily posts to full-fledged campaigns across platforms like Facebook, Instagram, LinkedIn, and more.",
     },
     {
-      icon: Search,
+      icon: (
+        <LordIcon
+          src="https://cdn.lordicon.com/smafogdu.json"
+          trigger="loop"
+          stroke="black"
+          state="hover-pinch"
+          colors="primary:#27374d,secondary:#242424"
+          style={{ width: "250px", height: "250px" }}
+        />
+      ),
       title: "SEO",
       description:
         "Visibility in search engines can make or break your online presence. Our SEO services are focused on getting your website to the top of search results, driving organic traffic and increasing conversions. We conduct thorough keyword research, optimize on-page content, and build high-quality backlinks to ensure your site ranks for the terms your audience is searching for.",
@@ -45,7 +73,6 @@ const DigitalExpertise = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 font-outfit">
           {services.map((service, index) => {
-            const IconComponent = service.icon;
             return (
               <div
                 key={index}
@@ -55,11 +82,8 @@ const DigitalExpertise = () => {
                 <div className="absolute bottom-6 left-6 right-6 transition-all duration-300 xs:group-hover:-translate-y-37 md:group-hover:-translate-y-43 lg:group-hover:-translate-y-49 font-outfit ">
                   {/* Icon */}
                   <div className="mb-4">
-                    <div
-                      className="w-12 h-12 rounded-lg flex items-center justify-center"
-                      style={{ backgroundColor: "#A68353" }}
-                    >
-                      <IconComponent className="w-6 h-6 text-white" />
+                    <div className="w-16 h-16 rounded-lg flex items-center justify-center bg-white">
+                      {service.icon}
                     </div>
                   </div>
 
