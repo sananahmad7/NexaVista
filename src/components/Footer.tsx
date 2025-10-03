@@ -40,12 +40,6 @@ const Footer = () => {
                 Custom Software Development. Digital Marketing Solutions.
                 Creative Design Services.
               </p>
-
-              <p className="text-gray-400 text-sm flex items-center font-outfit">
-                Made with{" "}
-                <Heart className="w-4 h-4 text-red-500 mx-1 fill-red-500" />{" "}
-                from the CRAFT team.
-              </p>
             </div>
           </div>
 
@@ -136,7 +130,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4 text-sm text-gray-400 font-outfit">
-              <span>©2024 CRAFT. Privacy</span>
+              <span>©2024 Nexa Vista. Privacy</span>
               <span className="hidden md:inline">|</span>
               <Link
                 href="/Term"

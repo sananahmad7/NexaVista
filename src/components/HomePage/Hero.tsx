@@ -111,7 +111,7 @@ const Hero = () => {
         alt="Hero background"
         fill
         priority
-        className="object-cover opacity-0" // tweak opacity here if you want
+        className="object-cover opacity-90" // tweak opacity here if you want
       />
 
       <div className="absolute inset-0 overflow-hidden ">

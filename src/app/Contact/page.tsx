@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 
 interface FormData {
   firstName: string;
@@ -11,7 +10,7 @@ interface FormData {
   message: string;
 }
 
-const ContactUs = () => {
+const ContactForm = () => {
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
@@ -45,278 +44,491 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="min-h-screen my-10 bg-white">
-      {/* Header Section */}
-      <div className="relative py-24 text-center bg-[#27374D] overflow-hidden">
-        {/* Pattern Layer */}
-        <div className="absolute inset-0 opacity-65">
-          <svg
-            className="w-full h-full"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice"
-          >
-            <defs>
-              <pattern
-                id="grid-pattern"
-                width="40"
-                height="40"
-                patternUnits="userSpaceOnUse"
-              >
-                {/* vertical lines */}
-                <path
-                  d="M 40 0 L 0 0 0 40"
-                  fill="none"
-                  stroke="#9DB2BF"
-                  strokeWidth="0.5"
-                />
-                {/* horizontal lines */}
-                <path
-                  d="M 0 40 L 40 40 40 0"
-                  fill="none"
-                  stroke="#9DB2BF"
-                  strokeWidth="0.5"
-                />
-              </pattern>
-            </defs>
-            <rect
-              width="100%"
-              height="100%"
-              fill="url(#grid-pattern)"
-              opacity="0.15"
-            />
-          </svg>
-        </div>
-
-        {/* Content Layer */}
-        <div className="relative max-w-7xl mx-auto px-6">
-          <h1 className="text-5xl md:text-6xl 2xl:text-7xl font-outfit font-bold mb-6 text-[#DDE6ED]">
-            Get In <span className="text-[#9DB2B9]">Touch</span>
-          </h1>
-          <p className="text-sm lg:text-lg text-[#DDE6ED]/80 max-w-3xl mx-auto leading-relaxed font-outfit">
-            We’re here to help you turn your digital ideas into reality. Whether
-            you’re looking for a new website, a mobile app, a digital marketing
-            strategy, or just want to learn more about how we can support your
-            business, we’d love to hear from you. At NexaVista Technologies, we
-            value every inquiry and are committed to providing prompt and
-            insightful responses.
-          </p>
-        </div>
+    <div
+      className="min-h-screen flex items-center justify-center p-4 md:p-8 relative overflow-hidden"
+      style={{ backgroundColor: "#27354d" }}
+    >
+      {/* Advanced Tech Background Patterns */}
+      <div className="absolute inset-0 opacity-5">
+        {/* Circuit Board Pattern */}
+        <svg
+          className="absolute w-full h-full"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <pattern
+              id="circuit"
+              width="100"
+              height="100"
+              patternUnits="userSpaceOnUse"
+            >
+              <circle cx="10" cy="10" r="2" fill="#9DB2BF" />
+              <circle cx="90" cy="90" r="2" fill="#9DB2BF" />
+              <circle cx="50" cy="50" r="3" fill="#DDE6ED" />
+              <line
+                x1="10"
+                y1="10"
+                x2="50"
+                y2="50"
+                stroke="#9DB2BF"
+                strokeWidth="0.5"
+              />
+              <line
+                x1="50"
+                y1="50"
+                x2="90"
+                y2="90"
+                stroke="#9DB2BF"
+                strokeWidth="0.5"
+              />
+              <line
+                x1="90"
+                y1="10"
+                x2="50"
+                y2="50"
+                stroke="#9DB2BF"
+                strokeWidth="0.5"
+              />
+              <rect x="48" y="8" width="4" height="4" fill="#9DB2BF" />
+              <rect x="88" y="48" width="4" height="4" fill="#9DB2BF" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#circuit)" />
+        </svg>
       </div>
 
-      {/* Content */}
-      <div className="max-w-7xl mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-2 gap-20">
-          {/* Contact Information */}
-          <div className="bg-[#27374D] p-8 rounded-lg space-y-8 shadow-lg">
-            <h2 className="text-3xl font-outfit text-[#DDE6ED]">
-              Let’s Start a Conversation
+      {/* Data Stream Lines */}
+      <div className="absolute inset-0 opacity-10">
+        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient
+              id="dataGradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
+              <stop offset="0%" stopColor="#9DB2BF" stopOpacity="0" />
+              <stop offset="50%" stopColor="#9DB2BF" stopOpacity="1" />
+              <stop offset="100%" stopColor="#9DB2BF" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M0,100 Q250,50 500,100 T1000,100"
+            stroke="url(#dataGradient)"
+            strokeWidth="1"
+            fill="none"
+          />
+          <path
+            d="M0,300 Q300,250 600,300 T1200,300"
+            stroke="url(#dataGradient)"
+            strokeWidth="1"
+            fill="none"
+          />
+          <path
+            d="M0,500 Q350,450 700,500 T1400,500"
+            stroke="url(#dataGradient)"
+            strokeWidth="1"
+            fill="none"
+          />
+        </svg>
+      </div>
+
+      {/* Hexagonal Grid */}
+      <div className="absolute inset-0 opacity-5">
+        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern
+              id="hexagons"
+              width="60"
+              height="52"
+              patternUnits="userSpaceOnUse"
+            >
+              <path
+                d="M30,0 L52,15 L52,37 L30,52 L8,37 L8,15 Z"
+                fill="none"
+                stroke="#DDE6ED"
+                strokeWidth="0.5"
+              />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#hexagons)" />
+        </svg>
+      </div>
+
+      {/* Floating Code Brackets */}
+      <div
+        className="absolute top-20 left-20 text-6xl font-mono opacity-5"
+        style={{ color: "#9DB2BF" }}
+      >
+        {"<>"}
+      </div>
+      <div
+        className="absolute bottom-20 right-20 text-6xl font-mono opacity-5"
+        style={{ color: "#9DB2BF" }}
+      >
+        {"</>"}
+      </div>
+      <div
+        className="absolute top-1/3 right-40 text-4xl font-mono opacity-5"
+        style={{ color: "#DDE6ED" }}
+      >
+        {"{}"}
+      </div>
+
+      {/* Animated Gradient Orbs */}
+      <div
+        className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full opacity-10 blur-3xl"
+        style={{
+          background: "radial-gradient(circle, #9DB2BF 0%, transparent 70%)",
+        }}
+      ></div>
+      <div
+        className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full opacity-10 blur-3xl"
+        style={{
+          background: "radial-gradient(circle, #DDE6ED 0%, transparent 70%)",
+        }}
+      ></div>
+
+      <div className="w-full max-w-7xl bg-[#27354d] relative">
+        {/* Header */}
+        <div className="text-center mb-12 md:mb-16">
+          <h1
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4"
+            style={{ color: "#DDE6ED" }}
+          >
+            Get in <span style={{ color: "#9DB2BF" }}>touch</span>
+          </h1>
+          <p
+            className="text-base md:text-lg lg:text-xl max-w-3xl mx-auto"
+            style={{ color: "#9DB2BF" }}
+          >
+            Reach out, and let's create a universe of possibilities together!
+          </p>
+        </div>
+
+        {/* Main Content Grid */}
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
+          {/* Form Section */}
+          <div
+            className="rounded-2xl p-6 md:p-8"
+            style={{ backgroundColor: "#526D82" }}
+          >
+            <h2
+              className="text-2xl md:text-3xl font-bold mb-2 md:mb-3"
+              style={{ color: "#DDE6ED" }}
+            >
+              Let's connect
             </h2>
-            <p className="text-[#9DB2B9] text-lg font-outfit leading-relaxed">
-              Whether you have a specific project in mind or just want to
-              explore possibilities, we’re here to listen and guide you.
+            <p
+              className="mb-6 md:mb-8 text-sm md:text-base"
+              style={{ color: "#9DB2BF" }}
+            >
+              Let's align our constellations! Reach out and let the magic of
+              collaboration illuminate our skies.
             </p>
 
-            {/* Contact Cards */}
-            <div className="space-y-6">
-              <div className="bg-[#3A4A5C] border border-[#526D84] p-6 rounded-md hover:border-[#9DB2B9] transition-colors shadow-sm">
-                <div className="flex items-center space-x-4">
-                  <div className="bg-[#9DB2B9] p-3 rounded-md">
-                    <Mail className="w-6 h-6 text-[#27374D]" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-outfit text-[#DDE6ED]">
-                      Email Us
-                    </h3>
-                    <p className="text-[#9DB2B9] whitespace-pre-line font-outfit">
-                      hello@company.com
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-[#3A4A5C] border border-[#526D84] p-6 rounded-md hover:border-[#9DB2B9] transition-colors shadow-sm">
-                <div className="flex items-center space-x-4">
-                  <div className="bg-[#9DB2B9] p-3 rounded-md">
-                    <Phone className="w-6 h-6 text-[#27374D]" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-outfit text-[#DDE6ED]">
-                      Call Us
-                    </h3>
-                    <p className="text-[#9DB2B9] font-outfit">
-                      +1 (555) 123-4567
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-[#3A4A5C] border border-[#526D84] p-6 rounded-md hover:border-[#9DB2B9] transition-colors shadow-sm">
-                <div className="flex items-center space-x-4">
-                  <div className="bg-[#9DB2B9] p-3 rounded-md">
-                    <MapPin className="w-6 h-6 text-[#27374D]" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-outfit text-[#DDE6ED]">
-                      Visit Us
-                    </h3>
-                    <p className="text-[#9DB2B9] whitespace-pre-line font-outfit">
-                      123 Business Street{"\n"}City, State 12345
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-[#3A4A5C] border border-[#526D84] p-6 rounded-md hover:border-[#9DB2B9] transition-colors shadow-sm">
-                <div className="flex items-center space-x-4">
-                  <div className="bg-[#9DB2B9] p-3 rounded-md">
-                    <Clock className="w-6 h-6 text-[#27374D]" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-outfit text-[#DDE6ED]">
-                      Office Hours
-                    </h3>
-                    <p className="text-[#9DB2B9] whitespace-pre-line font-outfit">
-                      Mon - Fri: 9:00 AM - 6:00 PM{"\n"}Sat: 10:00 AM - 4:00 PM
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Contact Form */}
-          <div className="bg-[#27374D] p-8 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-outfit mb-6 text-[#DDE6ED]">
-              Send Us a Message
-            </h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {/* First Name */}
-              <div className="bg-[#27374d] p-4 rounded-md">
-                <label
-                  htmlFor="firstName"
-                  className="block text-sm font-outfit mb-2 text-[#DDE6ED]"
-                >
-                  First Name *
-                </label>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="grid grid-cols-2 gap-4">
                 <input
                   type="text"
-                  id="firstName"
-                  name="firstName"
-                  required
-                  value={formData.firstName}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-[#1F2A38] border border-[#526D84] text-[#DDE6ED] placeholder-[#9DB2B9] focus:border-[#DDE6ED] focus:ring-2 focus:ring-[#DDE6ED]/30 outline-none"
-                  placeholder="John"
-                />
-              </div>
-
-              {/* Last Name */}
-              <div className="bg-[#27374d] p-4 rounded-md">
-                <label
-                  htmlFor="lastName"
-                  className="block text-sm font-outfit mb-2 text-[#DDE6ED]"
-                >
-                  Last Name *
-                </label>
-                <input
-                  type="text"
-                  id="lastName"
                   name="lastName"
-                  required
+                  placeholder="Last Name"
                   value={formData.lastName}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-[#1F2A38] border border-[#526D84] text-[#DDE6ED] placeholder-[#9DB2B9] focus:border-[#DDE6ED] focus:ring-2 focus:ring-[#DDE6ED]/30 outline-none"
-                  placeholder="Doe"
-                />
-              </div>
-
-              {/* Email */}
-              <div className="bg-[#27374d] p-4 rounded-md">
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-outfit mb-2 text-[#DDE6ED]"
-                >
-                  Email Address *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
                   required
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-[#1F2A38] border border-[#526D84] text-[#DDE6ED] placeholder-[#9DB2B9] focus:border-[#DDE6ED] focus:ring-2 focus:ring-[#DDE6ED]/30 outline-none"
-                  placeholder="john@example.com"
+                  className="w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 transition-all"
+                  style={{
+                    backgroundColor: "#27354d",
+                    color: "#DDE6ED",
+                    border: "1px solid #526D82",
+                    caretColor: "#9DB2BF",
+                  }}
                 />
-              </div>
-
-              {/* Phone */}
-              <div className="bg-[#27374d] p-4 rounded-md">
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-outfit mb-2 text-[#DDE6ED]"
-                >
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-[#1F2A38] border border-[#526D84] text-[#DDE6ED] placeholder-[#9DB2B9] focus:border-[#DDE6ED] focus:ring-2 focus:ring-[#DDE6ED]/30 outline-none"
-                  placeholder="+1 (555) 123-4567"
-                />
-              </div>
-
-              {/* Subject */}
-              <div className="bg-[#27374d] p-4 rounded-md">
-                <label
-                  htmlFor="subject"
-                  className="block text-sm font-outfit mb-2 text-[#DDE6ED]"
-                >
-                  Subject *
-                </label>
                 <input
                   type="text"
-                  id="subject"
-                  name="subject"
-                  required
-                  value={formData.subject}
+                  name="firstName"
+                  placeholder="First Name"
+                  value={formData.firstName}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-[#1F2A38] border border-[#526D84] text-[#DDE6ED] placeholder-[#9DB2B9] focus:border-[#DDE6ED] focus:ring-2 focus:ring-[#DDE6ED]/30 outline-none"
-                  placeholder="How can we help you?"
+                  required
+                  className="w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 transition-all"
+                  style={{
+                    backgroundColor: "#27354d",
+                    color: "#DDE6ED",
+                    border: "1px solid #526D82",
+                    caretColor: "#9DB2BF",
+                  }}
                 />
               </div>
 
-              {/* Message */}
-              <div className="bg-[#27374d] p-4 rounded-md">
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-outfit mb-2 text-[#DDE6ED]"
-                >
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={5}
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-[#1F2A38] border border-[#526D84] text-[#DDE6ED] placeholder-[#9DB2B9] focus:border-[#DDE6ED] focus:ring-2 focus:ring-[#DDE6ED]/30 outline-none resize-vertical"
-                  placeholder="Tell us about your project or inquiry..."
-                />
-              </div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleInputChange}
+                required
+                className="w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 transition-all"
+                style={{
+                  backgroundColor: "#27354d",
+                  color: "#DDE6ED",
+                  border: "1px solid #526D82",
+                  caretColor: "#9DB2BF",
+                }}
+              />
+
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                value={formData.phone}
+                onChange={handleInputChange}
+                className="w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 transition-all"
+                style={{
+                  backgroundColor: "#27354d",
+                  color: "#DDE6ED",
+                  border: "1px solid #526D82",
+                  caretColor: "#9DB2BF",
+                }}
+              />
+
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                value={formData.subject}
+                onChange={handleInputChange}
+                required
+                className="w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 transition-all"
+                style={{
+                  backgroundColor: "#27354d",
+                  color: "#DDE6ED",
+                  border: "1px solid #526D82",
+                  caretColor: "#9DB2BF",
+                }}
+              />
+
+              <textarea
+                name="message"
+                placeholder="Message"
+                value={formData.message}
+                onChange={handleInputChange}
+                required
+                rows={4}
+                className="w-full px-4 py-3 rounded-lg focus:outline-none focus:ring-2 transition-all resize-none"
+                style={{
+                  backgroundColor: "#27354d",
+                  color: "#DDE6ED",
+                  border: "1px solid #526D82",
+                  caretColor: "#9DB2BF",
+                }}
+              />
 
               <button
                 type="submit"
-                className="w-full bg-[#9DB2B9] text-[#27374D] font-outfit py-4 px-6 hover:bg-[#DDE6ED] transition-colors flex items-center justify-center space-x-2 group rounded-md"
+                className="w-full py-3 md:py-4 rounded-lg font-semibold text-base md:text-lg inline-flex items-center justify-center gap-2 transition-all hover:opacity-90 hover:scale-[1.02] active:scale-[0.98]"
+                style={{
+                  backgroundColor: "#9DB2BF",
+                  color: "#27354d",
+                }}
               >
-                <span>Send Message</span>
-                <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                Connect
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
               </button>
             </form>
+          </div>
+
+          {/* Info Section */}
+          <div
+            className="rounded-2xl p-6 md:p-8 relative overflow-hidden min-h-[500px] flex flex-col justify-between backdrop-blur-sm"
+            style={{ backgroundColor: "#526D82" }}
+          >
+            {/* Enhanced Geometric Pattern Background */}
+            <div className="absolute inset-0 opacity-8">
+              <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <pattern
+                    id="grid"
+                    width="40"
+                    height="40"
+                    patternUnits="userSpaceOnUse"
+                  >
+                    <path
+                      d="M 40 0 L 0 0 0 40"
+                      fill="none"
+                      stroke="#DDE6ED"
+                      strokeWidth="0.5"
+                    />
+                  </pattern>
+                  <pattern
+                    id="dots"
+                    width="20"
+                    height="20"
+                    patternUnits="userSpaceOnUse"
+                  >
+                    <circle cx="10" cy="10" r="1.5" fill="#DDE6ED" />
+                  </pattern>
+                  <pattern
+                    id="binary"
+                    width="80"
+                    height="20"
+                    patternUnits="userSpaceOnUse"
+                  >
+                    <text
+                      x="5"
+                      y="15"
+                      fill="#DDE6ED"
+                      fontSize="10"
+                      fontFamily="monospace"
+                      opacity="0.6"
+                    >
+                      1010
+                    </text>
+                    <text
+                      x="45"
+                      y="15"
+                      fill="#DDE6ED"
+                      fontSize="10"
+                      fontFamily="monospace"
+                      opacity="0.6"
+                    >
+                      0101
+                    </text>
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+                <rect width="100%" height="100%" fill="url(#dots)" />
+                <rect
+                  width="100%"
+                  height="30%"
+                  fill="url(#binary)"
+                  opacity="0.3"
+                />
+              </svg>
+            </div>
+
+            {/* Digital Corner Accents */}
+            <div className="absolute top-0 right-0 w-32 h-32 opacity-20">
+              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M100,0 L100,30 L70,30 M100,0 L70,0 L70,30"
+                  stroke="#DDE6ED"
+                  strokeWidth="2"
+                  fill="none"
+                />
+                <circle cx="85" cy="15" r="2" fill="#9DB2BF" />
+              </svg>
+            </div>
+            <div className="absolute bottom-0 left-0 w-32 h-32 opacity-20">
+              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0,100 L0,70 L30,70 M0,100 L30,100 L30,70"
+                  stroke="#DDE6ED"
+                  strokeWidth="2"
+                  fill="none"
+                />
+                <circle cx="15" cy="85" r="2" fill="#9DB2BF" />
+              </svg>
+            </div>
+
+            {/* Content */}
+            <div className="relative z-10 space-y-8">
+              <div>
+                <h2
+                  className="text-3xl md:text-4xl font-bold mb-4"
+                  style={{ color: "#DDE6ED" }}
+                >
+                  Contact Us
+                </h2>
+                <p
+                  className="text-sm md:text-base leading-relaxed"
+                  style={{ color: "#9DB2BF" }}
+                >
+                  We're here to help you turn your digital ideas into reality.
+                  Whether you're looking for a new website, a mobile app, a
+                  digital marketing strategy, or just want to learn more about
+                  how we can support your business, we'd love to hear from you.
+                  At NexaVista Technologies, we value every inquiry and are
+                  committed to providing prompt and insightful responses.
+                </p>
+              </div>
+
+              <button
+                className="px-6 py-3 rounded-lg font-semibold text-sm md:text-base transition-all hover:scale-105 active:scale-95"
+                style={{
+                  backgroundColor: "#DDE6ED",
+                  color: "#27354d",
+                }}
+              >
+                Book an Appointment
+              </button>
+
+              <div className="space-y-6 pt-4">
+                <div className="space-y-1">
+                  <p
+                    className="text-sm md:text-base"
+                    style={{ color: "#DDE6ED" }}
+                  >
+                    Office No 1, Floor No 3, Plaza 74,
+                  </p>
+                  <p
+                    className="text-sm md:text-base"
+                    style={{ color: "#DDE6ED" }}
+                  >
+                    Spring North Commercial,
+                  </p>
+                  <p
+                    className="text-sm md:text-base"
+                    style={{ color: "#DDE6ED" }}
+                  >
+                    Bahria Town Phase 7,
+                  </p>
+                  <p
+                    className="text-sm md:text-base"
+                    style={{ color: "#DDE6ED" }}
+                  >
+                    Islamabad, Pakistan.
+                  </p>
+                </div>
+
+                <div className="space-y-2 pt-4">
+                  <p
+                    className="text-sm md:text-base font-semibold"
+                    style={{ color: "#DDE6ED" }}
+                  >
+                    +92 (336) 8323237
+                  </p>
+                  <p
+                    className="text-sm md:text-base font-semibold"
+                    style={{ color: "#DDE6ED" }}
+                  >
+                    sales@nexavistatech.com
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Decorative Elements */}
+            <div
+              className="absolute top-4 right-4 w-24 h-24 rounded-full opacity-20"
+              style={{ backgroundColor: "#9DB2BF", filter: "blur(40px)" }}
+            ></div>
+            <div
+              className="absolute bottom-4 left-4 w-32 h-32 rounded-full opacity-20"
+              style={{ backgroundColor: "#DDE6ED", filter: "blur(50px)" }}
+            ></div>
           </div>
         </div>
       </div>
@@ -324,4 +536,4 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+export default ContactForm;

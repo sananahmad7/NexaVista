@@ -10,6 +10,7 @@ import {
   Palette,
   Smartphone,
   TrendingUp,
+  Keyboard,
 } from "lucide-react";
 
 const Navbar = () => {
@@ -39,13 +40,13 @@ const Navbar = () => {
       <nav className="max-w-6xl mx-auto bg-[#DDE6ED] shadow-md rounded-full relative z-10">
         <div className="flex items-center justify-between px-8 py-2">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-3 ">
             <Image
               src="/Main.png"
               alt="CRAFT Logo"
               width={52}
               height={52}
-              className="object-contain"
+              className="object-contain "
             />
           </div>
 
@@ -78,8 +79,8 @@ const Navbar = () => {
               </Link>
 
               {isServicesOpen && (
-                <div className="absolute top-3 bg-gray-100 left-1/2 transform -translate-x-1/2 mt-2 w-[680px] rounded-2xl shadow-xl border border-gray-200 py-4 px-3 z-40">
-                  <div className="grid grid-cols-2 gap-4">
+                <div className="absolute top-4 bg-gray-100 left-1/2 transform -translate-x-1/2 mt-2 w-[680px] rounded-2xl shadow-xl border border-gray-200 py-4 px-3 z-40">
+                  <div className="grid grid-cols-3 gap-4">
                     {/* Web Development */}
                     <Link
                       href="/Services/web-development"
@@ -138,6 +139,20 @@ const Navbar = () => {
                       <div>
                         <h3 className="font-outfit text-[#27374D] text-md mb-1">
                           Digital Marketing
+                        </h3>
+                        <p className="text-[#27374D] text-sm leading-relaxed font-outfit">
+                          Strategic campaigns that grow your online presence
+                        </p>
+                      </div>
+                    </Link>
+                    <Link
+                      href="/Services/copy-writing"
+                      className="group flex items-start space-x-3 p-3 bg-[#DDE6ED] rounded-xl shadow-md hover:bg-gray-300 transition-all duration-200"
+                    >
+                      <Keyboard className="w-5 h-5 text-[#27374D]" />
+                      <div>
+                        <h3 className="font-outfit text-[#27374D] text-md mb-1">
+                          Copy Writing
                         </h3>
                         <p className="text-[#27374D] text-sm leading-relaxed font-outfit">
                           Strategic campaigns that grow your online presence

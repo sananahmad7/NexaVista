@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import LenisProvider from "@/components/LenisProvider";
+import Script from "next/script";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -26,11 +28,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* ✅ Lordicon player script (added once globally) */}
+        <Script
+          src="https://cdn.lordicon.com/lordicon.js"
+          strategy="beforeInteractive"
+        />
+      </head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
         <LenisProvider />
-        <div className="max-w-[1920px] sm:px-4 md:px-6 lg:px-8 mx-auto">
+        <div className="max-w-[1920px]  mx-auto">
           <Navbar />
           <main>{children}</main>
           <Footer />

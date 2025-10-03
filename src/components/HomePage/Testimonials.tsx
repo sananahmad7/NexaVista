@@ -67,14 +67,20 @@ const TestimonialSection = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [resetTrigger, setResetTrigger] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
     }, 7000);
     return () => clearInterval(interval);
-  }, []);
+  }, [resetTrigger]);
+  const handleDotClick = (index: number) => {
+    setCurrentIndex(index);
+    setResetTrigger((prev) => prev + 1); // force reset
+  };
 
+  console.log(resetTrigger);
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
@@ -144,13 +150,6 @@ const TestimonialSection = () => {
 
                   {/* Author Info */}
                   <div className="flex items-center">
-                    <div className="w-14 h-14 rounded-full bg-gray-600 overflow-hidden mr-4 ring-2 ring-[#9DB2B9] ring-opacity-40">
-                      <img
-                        src={testimonial.avatar}
-                        alt={testimonial.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
                     <div>
                       <h4 className="font-outfit text-white text-lg">
                         {testimonial.name}
@@ -174,7 +173,7 @@ const TestimonialSection = () => {
           {testimonials.map((_, index) => (
             <button
               key={index}
-              onClick={() => setCurrentIndex(index)}
+              onClick={() => handleDotClick(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentIndex
                   ? "bg-[#DDE6ED] w-8"

@@ -1,33 +1,79 @@
+import LordIcon from "@/components/LordIcon";
 import { Smartphone, Palette, Link, Gauge, Layers } from "lucide-react";
 
 function MobileExpertise() {
   const expertiseAreas = [
     {
-      icon: <Smartphone className="w-8 h-8" />,
+      icon: (
+        <LordIcon
+          src="https://cdn.lordicon.com/mejxgwft.json"
+          trigger="hover"
+          stroke="bold"
+          state="hover-pinch"
+          colors="primary:#242424,secondary:#27374d"
+          style={{ width: "65px", height: "55px" }}
+        />
+      ),
       title: "Custom iOS Solutions",
       description:
         "Tailored apps that meet your business objectives while delivering a seamless and intuitive user experience across all iOS devices.",
     },
     {
-      icon: <Palette className="w-8 h-8" />,
+      icon: (
+        <LordIcon
+          src="https://cdn.lordicon.com/bzxxzycl.json"
+          trigger="hover"
+          stroke="bold"
+          state="hover-pinch"
+          colors="primary:#242424,secondary:#27374d"
+          style={{ width: "65px", height: "55px" }}
+        />
+      ),
       title: "UI/UX Design",
       description:
         "Intuitive and beautiful designs crafted to align with Apple’s sleek aesthetic, ensuring apps feel natural and engaging for users.",
     },
     {
-      icon: <Link className="w-8 h-8" />,
+      icon: (
+        <LordIcon
+          src="https://cdn.lordicon.com/adbkylwa.json"
+          trigger="hover"
+          stroke="bold"
+          state="hover-pinch"
+          colors="primary:#242424,secondary:#27374d"
+          style={{ width: "65px", height: "55px" }}
+        />
+      ),
       title: "Ecosystem Integration",
       description:
         "Seamlessly integrate with Apple’s ecosystem, including features like Siri, Apple Pay, iCloud, and push notifications to extend functionality.",
     },
     {
-      icon: <Gauge className="w-8 h-8" />,
+      icon: (
+        <LordIcon
+          src="https://cdn.lordicon.com/jecbuzqe.json"
+          trigger="hover"
+          stroke="bold"
+          state="hover-pinch"
+          colors="primary:#242424,secondary:#27374d"
+          style={{ width: "65px", height: "55px" }}
+        />
+      ),
       title: "Performance Optimization",
       description:
         "We fine-tune apps to ensure smooth, efficient performance with minimal resource consumption across iPhone, iPad, and other iOS devices.",
     },
     {
-      icon: <Layers className="w-8 h-8" />,
+      icon: (
+        <LordIcon
+          src="https://cdn.lordicon.com/htdltcjw.json"
+          trigger="hover"
+          stroke="bold"
+          state="hover-pinch"
+          colors="primary:#242424,secondary:#27374d"
+          style={{ width: "65px", height: "55px" }}
+        />
+      ),
       title: "Cross-Platform Development",
       description:
         "Using React Native and Flutter, we deliver powerful apps that run seamlessly on both iOS and Android. This ensures faster development, reduced costs, and consistent user experiences across platforms.",

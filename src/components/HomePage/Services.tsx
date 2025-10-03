@@ -15,7 +15,7 @@ interface Service {
 const services: Service[] = [
   {
     id: "webapp",
-    title: "Full-Stack Web Apps",
+    title: "Web Development",
     description:
       "Modern, scalable web applications built for performance and growth",
     features: [
@@ -100,7 +100,7 @@ const Services: React.FC = () => {
           {services.map((service) => (
             <div
               key={service.id}
-              className=" relative max-w-3xl mx-1 h-[65vh] lg:h-[70vh] xl:h-[72vh] 2xl:h-[72vh] 3xl:h-[72vh]  cursor-pointer  mb-15 transition-all duration-300 ease-in-out "
+              className=" relative max-w-3xl mx-1 h-[55vh] md:h-[59vh] lg:h-[60vh] xl:h-[62vh] 2xl:h-[62vh] 3xl:h-[63vh]  cursor-pointer  mb-15 transition-all duration-300 ease-in-out "
             >
               {/* Main Service Card */}
               <div

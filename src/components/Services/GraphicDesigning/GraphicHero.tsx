@@ -34,9 +34,9 @@ const GraphicHero = () => {
     <div className="bg-gray-50 font-outfit">
       <div className="flex items-start gap-2 lg:gap-3">
         {/* Left Section */}
-        <div className="flex-1 relative overflow-hidden text-white p-8 sm:p-12 lg:p-16 bg-[#1B232E] font-outfit">
+        <div className="flex-1 relative overflow-hidden text-white p-8 sm:p-12 lg:p-16 bg-[#030027] font-outfit">
           {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#1B232E]/95 via-[#1B232E]/80 to-[#10151C]/70 pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#030027] via-[#1B232E]/80 to-[#10151C]/70 pointer-events-none"></div>
 
           {/* Decorative blurred circles */}
           <div className="absolute bottom-[-80] right-[-80] w-98 h-98 bg-purple-400/20 rounded-full "></div>

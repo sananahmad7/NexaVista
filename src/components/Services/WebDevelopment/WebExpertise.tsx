@@ -1,39 +1,95 @@
+"use client";
 import { Code, Database, Zap, Globe, Cpu, Layers } from "lucide-react";
+import LordIcon from "@/components/LordIcon";
 
 function WebExpertise() {
   const expertiseAreas = [
     {
-      icon: <Code className="w-8 h-8" />,
+      icon: (
+        <LordIcon
+          src="https://cdn.lordicon.com/yeokmkuy.json"
+          trigger="hover"
+          stroke="bold"
+          state="hover-pinch"
+          colors="primary:#242424,secondary:#27374d"
+          style={{ width: "65px", height: "55px" }}
+        />
+      ),
       title: "Modern Web Development",
       description:
         "We build responsive, scalable applications using cutting-edge technologies like React.js, Next.js, and Three.js. Our expertise in HTML, CSS, and JavaScript ensures clean, maintainable code that delivers exceptional user experiences across all devices.",
     },
     {
-      icon: <Database className="w-8 h-8" />,
+      icon: (
+        <LordIcon
+          src="https://cdn.lordicon.com/psrsekxp.json"
+          trigger="hover"
+          stroke="bold"
+          state="hover-pinch"
+          colors="primary:#242424,secondary:#27374d"
+          style={{ width: "65px", height: "55px" }}
+        />
+      ),
       title: "Robust Data Management",
       description:
         "Our team leverages MySQL and MongoDB to create efficient, scalable database solutions. We design data architectures that grow with your business, ensuring optimal performance and data integrity for your applications.",
     },
     {
-      icon: <Zap className="w-8 h-8" />,
+      icon: (
+        <LordIcon
+          src="https://cdn.lordicon.com/zymgccfr.json"
+          trigger="hover"
+          stroke="bold"
+          state="hover-pinch"
+          colors="primary:#242424,secondary:#27374d"
+          style={{ width: "65px", height: "55px" }}
+        />
+      ),
       title: "Seamless API Integrations",
       description:
         "We excel at connecting your applications with third-party services through robust API integrations. Our approach ensures smooth data flow and enhanced functionality, making your systems work together harmoniously.",
     },
     {
-      icon: <Globe className="w-8 h-8" />,
+      icon: (
+        <LordIcon
+          src="https://cdn.lordicon.com/igcctxvk.json"
+          trigger="hover"
+          stroke="bold"
+          state="hover-pinch"
+          colors="primary:#242424,secondary:#27374d"
+          style={{ width: "65px", height: "55px" }}
+        />
+      ),
       title: "Full-Stack Solutions",
       description:
         "From frontend interfaces to backend infrastructure, we provide comprehensive full-stack development using Node.js and PHP. Our holistic approach ensures all components of your application work seamlessly together.",
     },
     {
-      icon: <Cpu className="w-8 h-8" />,
+      icon: (
+        <LordIcon
+          src="https://cdn.lordicon.com/ohcvbvqh.json"
+          trigger="hover"
+          stroke="bold"
+          state="hover-pinch"
+          colors="primary:#242424,secondary:#27374d"
+          style={{ width: "65px", height: "55px" }}
+        />
+      ),
       title: "AI-Enhanced Applications",
       description:
         "We incorporate artificial intelligence to enhance user experience and optimize business operations. Our AI applications provide intelligent insights, automation, and personalized experiences that drive business growth.",
     },
     {
-      icon: <Layers className="w-8 h-8" />,
+      icon: (
+        <LordIcon
+          src="https://cdn.lordicon.com/anjpobbb.json"
+          trigger="hover"
+          stroke="bold"
+          state="hover-pinch"
+          colors="primary:#242424,secondary:#27374d"
+          style={{ width: "65px", height: "55px" }}
+        />
+      ),
       title: "Scalable Architecture",
       description:
         "We design and implement secure, scalable architectures tailored to your business needs. Our solutions are built to handle growth, ensuring your applications remain performant and reliable as your business expands.",
